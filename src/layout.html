@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {{> meta }}
+</head>
+<body>
+    <div id="wrap">
+        {{> header }}
+        <div id="smoother-wrapper">
+            <div id="smoother-content">
+                <div id="contentsWrap">
+                    <div class="sublayout">
+                      <div class="sublayout__header">
+                        <ol class="sublayout__breadcrumb">
+                            <li class="first">
+                                <a href="#" title="홈으로 이동"><span>홈</span></a>
+                            </li>
+                            <li><a href="#"><span>1 Depth</span></a></li>
+                            <li><strong title="현재 페이지">2 Depth</strong></li>
+                        </ol>
+                        <div class="sublayout__page">타이틀 영역</div>
+                        <div class="sublayout__desc">서비스 안내 영역 서비스 안내 영역 서비스 안내 영역</div>
+                        <div class="image-background">
+                            <img src="./assets/images/portal/bg1.png" alt="">
+                        </div>
+                      </div>
+                      <!-- /sublayout__header -->
+                       
+                      <div class="sublayout__body sublayout__gray">
+                        <div class="sublayout__title"><span>우리나라의 무인도서는 <em class="point"><b>몇개일까?</b></em></span></div>
+                      </div>
+                      <!-- //sublayout__body -->
+                    </div>
+                    <!-- //sublayout -->
+                </div>        
+            </div>
+        </div>
+        
+        <!-- //contentsWrap -->
+        {{> footer }}
+    </div>
+    <script type="module" src="/js/portal.js"></script>
+    <script type="module" src="/js/pages/index.js"></script>
+</body>
+</html>
