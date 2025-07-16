@@ -32,9 +32,11 @@
 
 [data-page='islands-status']{
     .sublayout__title._white{
-        color: #000;
-        span::after{
-            background-color: var(--color-primary);
+        @include responsive($desktop){
+            color: #000;
+            span::after{
+                background-color: var(--color-primary);
+            }
         }
     }
 }

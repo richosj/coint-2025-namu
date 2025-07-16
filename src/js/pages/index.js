@@ -1,4 +1,79 @@
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother);
+
+  
+    const nav = document.querySelector("#nav");
+    const toggleBtn = document.querySelector(".mobile-btn-menu");
+    const depth1Buttons = document.querySelectorAll(".gnb-lv1 > a");
+
+    const isMobile = () => window.innerWidth <= 1024;
+
+    const toggleMenu = () => {
+      if (isMobile()) {
+        const isActive = nav.classList.contains("mobile-active");
+
+        if (isActive) {
+          // 메뉴 닫기
+          nav.classList.remove("mobile-active");
+          toggleBtn.setAttribute("aria-expanded", "false");
+          toggleBtn.setAttribute("aria-label", "메뉴 열기");
+          toggleBtn.setAttribute("title", "메뉴 열기");
+          toggleBtn.classList.remove("active");
+          // 서브메뉴도 모두 닫기
+          document.querySelectorAll(".gnb-submenu").forEach((submenu) => {
+            submenu.classList.remove("show");
+          });
+        } else {
+          // 메뉴 열기
+          nav.classList.add("mobile-active");
+          toggleBtn.setAttribute("aria-expanded", "true");
+          toggleBtn.setAttribute("aria-label", "메뉴 닫기");
+          toggleBtn.setAttribute("title", "메뉴 닫기");
+          toggleBtn.classList.add("active");
+        }
+      }
+    };
+
+    // 모바일 서브메뉴 토글
+    depth1Buttons.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        if (isMobile()) {
+          e.preventDefault();
+          const submenu = btn.nextElementSibling;
+          if (submenu && submenu.classList.contains("gnb-submenu")) {
+            submenu.classList.toggle("show");
+            btn.setAttribute(
+              "aria-expanded",
+              submenu.classList.contains("show")
+            );
+          }
+        }
+      });
+    });
+
+    toggleBtn?.addEventListener("click", toggleMenu);
+
+    // ESC 키로 메뉴 닫기
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && nav.classList.contains("mobile-active")) {
+        toggleMenu();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (!isMobile()) {
+        nav.classList.remove("mobile-active");
+        toggleBtn.setAttribute("aria-expanded", "false");
+        toggleBtn.setAttribute("aria-label", "메뉴 열기");
+        toggleBtn.setAttribute("title", "메뉴 열기");
+        toggleBtn.classList.remove("active");
+        // 서브메뉴도 모두 닫기
+        document.querySelectorAll(".gnb-submenu").forEach((submenu) => {
+          submenu.classList.remove("show");
+        });
+      }
+    });
+  
+  
   ScrollSmoother.create({
     wrapper: "#smoother-wrapper",
     content: "#smoother-content",

@@ -261,6 +261,7 @@
                     //padding: 1.5rem 2rem;
                     width: clamp(140px, 20vw, 250px);
                     font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+                    white-space: nowrap;
                 }
                 .gnb-submenu{
                     flex-grow: 1;
