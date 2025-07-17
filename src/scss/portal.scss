@@ -10,6 +10,7 @@
 
 @use 'components/button';
 @use 'components/card';
+@use 'components/modal';
 
 
 @use 'layout/header';
@@ -17,5 +18,7 @@
 
 @use 'layout/sublayout';
 @use 'pages/portal-intro.scss';
+@use 'pages/portal-as.scss';
+@use 'pages/portal-guide.scss';
 
 

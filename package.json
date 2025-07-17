@@ -1,6 +1,7 @@
 {
   "name": "2025_AF_P03",
   "version": "1.0.0",
+  "homepage": "https://all4uiteam.github.io/2025_AF_P03",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

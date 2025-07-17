@@ -1,7 +1,11 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/functions' as *;
 @use '../abstracts/mixins' as *;
-
+body{
+    &:has([data-page='islands-status']){
+        background-color: #f3f6f9;
+    }
+}
 /* 무인도서 현황 */
 [data-page='islands-status']{
     .sublayout__content{

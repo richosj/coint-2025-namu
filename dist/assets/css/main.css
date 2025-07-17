@@ -205,6 +205,15 @@ em {
   max-width: var(--container-xl);
 }
 
+.md-block {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .md-block {
+    display: block;
+  }
+}
+
 .svg-icon {
   forced-color-adjust: none;
   -webkit-mask-repeat: no-repeat;
@@ -512,6 +521,28 @@ em {
 
 .marker-14 {
   background-image: url("../images/marker-14.png");
+}
+
+.icon-download,
+.icon-arrow-right {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.icon-download {
+  background-image: url("../images/ico-download.png");
+  width: 1.8rem;
+  height: 1.5rem;
+}
+
+.icon-arrow-right {
+  background-image: url("../images/ico-arrow-right.png");
+  width: 0.9rem;
+  height: 1.4rem;
 }
 
 .map-header {
