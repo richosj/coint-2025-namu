@@ -2,6 +2,9 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/functions' as *;
 @use '../abstracts/mixins' as *;
+[data-page='islands-guide']{
+    .image-background::after{display: none;}
+}
 .islands-guide-notice{
     .alert{
         display: flex;
@@ -81,7 +84,17 @@
 }
 
 .islands-guide-read{
-    
+    .container{
+        position: relative;
+        //height: 100dvh;
+        overflow: hidden;
+    }
+    .islands-guide-card{
+        // position: absolute;
+        // //top: 0;
+        // top: 0; left: 50%;
+        //transform: translate(-50%, 100%);
+    }
 }
 .islands-guide-card{
     display: flex;
@@ -476,6 +489,70 @@
         }
         .not-available{
             span::before{background-color: #fc6b88;}
+        }
+    }
+}
+.islands-guide-fine{
+    .table-desc{
+        text-align: left;
+        font-size: var(--font-size-lg);
+        color: var(--text-color-tertiary);
+        margin-top: 2rem;
+        @include responsive($desktop){
+            font-size: 1.4rem;
+        }
+        @include responsive($tablet){
+            font-size: 1.2rem;
+            br{
+                display: none;
+            }
+        }
+    }
+    @include responsive($desktop){
+        .table-wrap{
+            overflow-x: auto;
+            width: 100%;
+        }
+    }
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        white-space: nowrap;
+        //table-layout: fixed;
+        thead{
+            th{
+                background-color: #439cd6;
+                color: #fff;
+                padding: 1.5rem .5rem;
+                font-weight: 500;
+                border-left: 1px solid #cecece;
+                @include responsive($desktop){
+                    font-size: 1.4rem;
+                }
+                @include responsive($tablet){
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    border: 1px solid #e1e1e1;
+                    padding: 1.5rem .5rem;
+                    font-weight: 500;
+                    text-align: center;
+                    @include responsive($desktop){
+                        font-size: 1.4rem;
+                    }
+                    @include responsive($tablet){
+                        font-size: 1.2rem;
+                    }
+                    b{
+                        color: #439cd6;
+                        font-weight: 700;
+                    }
+                }
+            }
         }
     }
 }

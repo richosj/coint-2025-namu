@@ -8,17 +8,21 @@
 
 @use 'components/icon';
 
+@use 'components/form';
 @use 'components/button';
 @use 'components/card';
 @use 'components/modal';
+@use 'components/pagination';
 
 
 @use 'layout/header';
 @use 'layout/footer';
 
 @use 'layout/sublayout';
+@use 'pages/board.scss';
 @use 'pages/portal-intro.scss';
 @use 'pages/portal-as.scss';
 @use 'pages/portal-guide.scss';
+@use 'pages/portal-statistics.scss';
 
 

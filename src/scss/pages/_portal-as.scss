@@ -21,7 +21,7 @@ body{
     }
   }
 [data-page='islands-as']{
-
+    .image-background::after{display: none;}
 }
 
 .islands-as-grid-1{

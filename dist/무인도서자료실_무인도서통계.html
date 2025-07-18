@@ -1,0 +1,378 @@
+<!-- @pageTitle 무인도서 자료실-무인도서 통계 -->
+<!-- @pageCreated 2025-07-17 -->
+<!-- @pageUpdated 2025-07-17 -->
+<!-- @pageNote  -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="해양수산부 무인도서 종합정보제공">
+    <meta property="og:description" content="무인도서 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
+    
+    <meta name="subject" content="무인도서(무인도)">
+    <meta name="title" content="해양수산부 무인도서(무인도) 종합정보제공">
+    <meta name="description" content="무인도서(무인도) 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
+    <meta name="keywords" content="무인도,무인도 정보,무인도 정보조회,무인도서,무인도서 정보관리,무인도서 종합정보시스템,해양수산부">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    
+    <link rel="manifest" href="site.webmanifest">
+    
+    <title>해양수산부 무인도서 종합정보제공</title>
+    <link rel="stylesheet" as="style" href="./font/pretendard-gov-subset.css" />
+    <script src="./lib/gsap/gsap.min.js"></script>
+    <script src="./lib/gsap/ScrollTrigger.min.js"></script>
+    <script src="./lib/gsap/ScrollToPlugin.min.js"></script>
+    <script src="./lib/gsap/ScrollSmoother.js"></script>  <script type="module" src="./assets/js/modulepreload-polyfill.js"></script>
+  <script type="module" src="./assets/js/index2.js"></script>
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header-container">
+                <h1 class="logo"><a href="/" title="홈 바로가기"></a></h1>
+                <nav id="nav">
+                    <ul id="gnb" class="gnb">
+                        <li class="gnb-lv1"><a href="./map.html" class="current">지도로 보는 무인도서</a>
+                            <div class="gnb-submenu"></div>
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서안내_무인도서정의.html">무인도서 안내</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_무인도서정의.html">무인도서 정의</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_무인도서현황.html">무인도서 현황</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_이용방법.html">무인도서 이용방법</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서자료실_무인도서통계.html">무인도서 자료실</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서통계.html">무인도서 통계</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서OpenAPI.html">무인도서 OpenAPI</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서홍보.html">무인도서 홍보</a></li>
+                                </ul>
+                            </div>
+        
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서커뮤니티_공지사항_목록.html">무인도서 커뮤니티</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서커뮤니티_공지사항_목록.html">공지사항</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서커뮤니티_FAQ.html">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <button type="button" class="mobile-btn-menu" title="메뉴 열기">
+                        <span class="mobile-btn-menu__line">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-bg"></div>
+        </header>
+        <div id="contentsWrap">
+            <div class="sublayout" data-page="islands-statistics">
+                <div class="sublayout__header">
+                    <ol class="sublayout__breadcrumb">
+                        <li class="first">
+                            <a href="#" title="홈으로 이동"><span>홈</span></a>
+                        </li>
+                        <li><a href="#"><span>무인도서 자료실</span></a></li>
+                        <li><strong title="현재 페이지">무인도서 통계</strong></li>
+                    </ol>
+                    <div class="sublayout__page">무인도서 통계</div>
+                    <div class="sublayout__desc">무인도서의 다양한 통계에 대해 안내합니다.</div>
+                    <div class="image-background">
+                        <img src="./assets/images/bg2.png" alt="">
+                    </div>
+                </div>
+                <!-- /sublayout__header -->
+
+                <div class="sublayout__body">
+                    <div class="sublayout__content">
+                        <div class="sublayout__title">
+                            <span>무인도서 <em class="point"><b>통계도표</b></em></span>
+                        </div>
+                        <div class="container">
+                            <div class="statistics">
+                                <!-- 차트 필터 -->
+                                <div class="statistics-filters">
+                                    <div>
+                                        <select class="form-select" title="선택">
+                                            <option value="">행정지역별 무인도서</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <select class="form-select" title="선택">
+                                            <option value="">시도 선택</option>
+                                        </select>
+                                        <select class="form-select" title="선택">
+                                            <option value="">시군구 선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- 차트 영역 -->
+                                <div class="statistics-chart"><canvas id="bar-chart" class="chart__canvas"></canvas></div>
+                            </div>
+                            <!-- /statistics -->
+                             <!-- 차트 지역별? -->
+                             <div class="statistics-regions">
+                                <button type="button" class="active">
+                                    <span class="chart-type">전체</span>
+                                    <span class="count">2,818</span>
+                                </button>
+                                <button type="button">
+                                    <span class="chart-type">전라남도</span>
+                                    <span class="count">2,818</span>
+                                </button>
+                                <button type="button">
+                                    <span class="chart-type">경상남도</span>
+                                    <span class="count">2,818</span>
+                                </button>
+                                <button type="button">
+                                    <span class="chart-type">인천광역시</span>
+                                    <span class="count">2,818</span>
+                                </button>
+                                <button type="button">
+                                    <span class="chart-type">전라북도</span>
+                                    <span class="count">2,818</span>
+                                </button>
+                                <button type="button">
+                                    <span class="chart-type">제주도</span>
+                                    <span class="count">2,818</span>
+                                </button>
+                                <button type="button">
+                                    <span class="chart-type">부산광역시</span>
+                                    <span class="count">2,818</span>
+                                </button>
+                                <button type="button">
+                                    <span class="chart-type">기타</span>
+                                    <span class="count">208</span>
+                                </button>
+                            </div>
+
+                            <div class="board-list">
+                                <div class="board-list__header">
+                                    <div class="board-list__header-info">검색 결과 <b>814</b>건</div>
+                                    <div class="board-list__header-utils">
+                                        <button type="button" class="btn" title="다운로드">엑셀 다운로드 <i class="icon-download"></i></button>
+                                    </div>
+                                </div>
+                                <div class="board-list__body">
+                                    <table>
+                                    <colgroup>
+                                        <col style="width: 6%;">
+                                        <col style="width: 18%;">
+                                        <col style="width: 32%;">
+                                        <col style="width: 14%;">
+                                        <col style="width: 14%;">
+                                        <col style="width: 10%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">번호</th>
+                                            <th scope="col">도서명</th>
+                                            <th scope="col">소재지</th>
+                                            <th scope="col">무인도서 관리현황</th>
+                                            <th scope="col">주변해역 관리현황</th>
+                                            <th scope="col">소유구분</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="number">10</td>
+                                            <td>오래비(마가섬)</td>
+                                            <td class="text-left"><a href="#" class="ellipsis">강원도 강릉시 연곡면 853강원도 강릉시 연곡면 853강원도 강릉시 연곡면 853강원도 강릉시 연곡면 853강원도 강릉시 연곡면 853강원도 강릉시 연곡면 853강원도 강릉시 연곡면 853강원도 강릉시 연곡면 853강원도 강릉시 연곡면 853강원도 강릉시 연곡면 853강원도 강릉시 연곡면 853강원도 강릉시 연곡면 853</a></td>
+                                            <td>이용가능</td>
+                                            <td>이용가능</td>
+                                            <td>국유지</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="number">10</td>
+                                            <td>오래비(마가섬)</td>
+                                            <td class="text-left"><a href="#" class="ellipsis">강릉시 연곡면 853강원도 강릉시 연곡면 853</a></td>
+                                            <td>이용가능</td>
+                                            <td>이용가능</td>
+                                            <td>국유지</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                    </table>
+                                </div>
+                                <!-- //board-list__body -->
+
+                                <div class="board-list__footer">
+                                    <div class="pagination">
+                                        <a class="page-navi prev disabled" href="#">이전</a>
+                                        <div class="page-links">
+                                            <a class="page-link" href="#">1</a>
+                                            <a class="page-link" href="#">2</a>
+                                            <a class="page-link" href="#">3</a>
+                                            <a class="page-link active" href="#"><span class="visually-hidden">현재페이지 </span>4</a>
+                                            <a class="page-link" href="#">5</a>
+                                            <a class="page-link" href="#">6</a>
+                                            <a class="page-link" href="#">7</a>
+                                            <a class="page-link" href="#">8</a>
+                                            <span class="page-link link-dot">...</span>
+                                            <a class="page-link" href="#">99</a>
+                                        </div>
+                                        <a class="page-navi next" href="#">다음</a>
+                                    </div>
+                                </div>
+                                <!-- //board-list__footer -->
+                            </div>
+                            <!-- //board-list -->
+                        </div>
+                    </div>
+                    <!-- //sublayout__content -->
+
+                </div>
+                <!-- //sublayout__body -->
+            </div>
+            <!-- //sublayout -->
+        </div>
+        <!-- //contentsWrap -->
+        <footer id="footer" class="footer">
+            <div class="footer-link">
+                <div class="container">
+                    <a href="#" target="_blank" class="link" title="새창 열림">
+                        <span>토지이음 홈페이지</span>
+                        <i class="ico-blank"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-content">
+                <div class="container">
+                    <h2 class="logo">
+                        <span class="visually-hidden">해양수산부</span>
+                    </h2>
+                    <div class="ft-info">
+                        <div class="addr">(30110) 세종특별자치시 다솜2로 94(어진동) 정부세종청사 5동 해양수산부 </div>
+                        <div class="tel">
+                            <strong>대표전화</strong>
+                            <span><a href="tel:044-200-5355">044-200-5355</a> (해양수산부 해양영토과)</span>
+                        </div>
+                        <div class="mail">
+                            <strong>시스템 관련문의</strong>
+                            <span><a href="mailto:kjk@korea.kr">kjk@korea.kr</a></span>
+                        </div>
+                    </div>
+        
+                    <div class="ft-links">
+                        <div class="ft-links-inner">
+                            <a href="#" target="_blank" class="bold">개인정보처리방침</a>
+                            <a href="#" target="_blank" class="bold">이메일무단수집거부</a>
+                            <a href="#" target="_blank" class="bold">저작권보호 및 정책</a>
+                        </div>
+                        <div class="copyright">
+                            <p> Ministry of the Oceans and Fisheries. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+
+    </div>
+    <!-- 임시 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        // 모바일에서 테이블 td에 th 제목 추가
+        function addLabelsToTable() {
+            const tables = document.querySelectorAll('.board-list__body table');
+            
+            tables.forEach(table => {
+                const thead = table.querySelector('thead');
+                const tbody = table.querySelector('tbody');
+                
+                if (!thead || !tbody) return;
+                
+                // 헤더 텍스트 가져오기 (번호 제외)
+                const headers = Array.from(thead.querySelectorAll('th')).slice(1).map(th => th.textContent.trim());
+                
+                // 각 행의 td에 라벨 추가 (번호 제외)
+                tbody.querySelectorAll('tr').forEach(row => {
+                    const cells = Array.from(row.querySelectorAll('td')).slice(1); // 번호 제외
+                    
+                    cells.forEach((cell, index) => {
+                        if (index < headers.length) {
+                            const originalContent = cell.innerHTML;
+                            cell.innerHTML = `<span class="mobile-label">${headers[index]}:</span> ${originalContent}`;
+                        }
+                    });
+                });
+            });
+        }
+        
+        // 화면 크기에 따라 라벨 표시/숨김
+        function handleResize() {
+            const isMobile = window.innerWidth <= 768;
+            const mobileLabels = document.querySelectorAll('.mobile-label');
+            
+            mobileLabels.forEach(label => {
+                label.style.display = isMobile ? 'inline' : 'none';
+            });
+        }
+        
+        // 초기 실행
+        document.addEventListener('DOMContentLoaded', function() {
+            addLabelsToTable();
+            handleResize();
+        });
+        
+        // 리사이즈 이벤트
+        window.addEventListener('resize', handleResize);
+    </script>
+    <script>
+        const labels = [
+          'South Sudan','Libya','Sierra Leone','Mongolia',
+          'Paraguay','Timor Leste','Iraq','Panama','Gambia','Mozambique'
+        ];
+        const data = [20,30,51,44,62.35,85,49,38,60,40];
+        new Chart(
+          document.getElementById('bar-chart').getContext('2d'),
+          {
+            type: 'bar',
+            data: { labels, datasets: [{
+              label: '값',
+              data,
+              backgroundColor: 'rgba(54, 162, 235, 0.7)'
+            }]},
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                y: { beginAtZero: true, max: 100 }
+              },
+              plugins: {
+                legend: { display: false },
+                tooltip: { callbacks: {
+                  label: ctx => ctx.parsed.y
+                }}
+              }
+            }
+          }
+        );
+      </script>
+</body>
+</html>

@@ -1,4 +1,16 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother);
+ScrollSmoother.create({
+  wrapper: "#smoother-wrapper",
+  content: "#smoother-content",
+  smooth: 2,
+  speed: 1,
+  normalizeScroll: true,
+  ignoreMobileResize: true,
+  smoothTouch: 0.1,
+  effects: true,
+  preventDefault: true,
+  normalizeScroll: { allowNestedScroll: true }
+});
 const nav = document.querySelector("#nav");
 const toggleBtn = document.querySelector(".mobile-btn-menu");
 const depth1Buttons = document.querySelectorAll(".gnb-lv1 > a");

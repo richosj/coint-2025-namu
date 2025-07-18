@@ -8,6 +8,7 @@ body{
 }
 /* 무인도서 현황 */
 [data-page='islands-status']{
+    .image-background::after{display: none;}
     .sublayout__content{
         position: relative;
         margin: 0 -2rem;
@@ -278,9 +279,6 @@ body{
     .lines{
         height: .3rem;
         background: url('@/assets/images/portal/intro/repeat-line.png') repeat 0 0;
-        &.lines-1{
-            
-        }
     }
 }
 

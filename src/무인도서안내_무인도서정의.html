@@ -199,9 +199,66 @@
                 </div>
             </div>
         </div>
-        <script>
-        // 공통 모달 스크립트
-        // showModal({ title: '무인도서 백서', content: '여기에 내용' })
+    </div>
+    <script type="module" src="/js/portal.js"></script>
+    <script type="module" src="/js/pages/index.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother);
+
+        const timeLine = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.islands-as-grid-1',
+                start: 'top center',
+                scrub: 1.5,
+                end: '+=130%',
+            }
+        });
+
+        gsap.set('.islands-as-grid-1-1', { x: 100, autoAlpha: 0});
+        gsap.set('.islands-as-grid-1-2', { x: -100, autoAlpha: 0});
+        gsap.set('.islands-as-grid-1-3', { x: 100, autoAlpha: 0});
+
+        timeLine.to('.islands-as-grid-1-1', {
+            x: 0,
+            autoAlpha: 1,
+            ease: 'power2.inOut'
+        })
+        .to('.islands-as-grid-1-2', {
+            x: 0,
+            autoAlpha: 1,
+            ease: 'power2.inOut'
+        })
+        .to('.islands-as-grid-1-3', {
+            x: 0,
+            autoAlpha: 1,
+            ease: 'power2.inOut'
+        })
+
+        const timeLine2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.islands-as-grid-2',
+                start: 'top center',
+                scrub: 1.5,
+                end: 'bottom 60%',
+            }
+        });
+
+        gsap.set('.islands-as-grid-2-1', { y: 100, autoAlpha: 0});
+        gsap.set('.islands-as-grid-2-2', { y: -100, autoAlpha: 0});
+
+        timeLine2.to('.islands-as-grid-2-1', {
+            y: 0,
+            autoAlpha: 1,
+            ease: 'power2.inOut'
+        })
+        .to('.islands-as-grid-2-2', {
+            y: 0,
+            autoAlpha: 1,
+            ease: 'power2.inOut'
+        })
+
+
 
         function callPopup(){
             showModal({title: '무인도서 백서', content: '여기에 내용'});
@@ -230,13 +287,9 @@
                 if(e.key === 'Escape') hideModal();
             });
         });
-        </script>
-    </div>
-    <script type="module" src="/js/portal.js"></script>
-    <script type="module" src="/js/pages/index.js"></script>
 
-    <script>
-        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother);
+
+        
     </script>
 </body>
 </html>
