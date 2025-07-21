@@ -545,6 +545,14 @@ em {
   height: 1.4rem;
 }
 
+.ico-arrow-right2 {
+  -webkit-mask-image: url("../images/ico-right-arrow.svg");
+  mask-image: url("../images/ico-right-arrow.svg");
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(23, 100, 220);
+}
+
 .btn {
   display: inline-flex;
   border: 1px solid #1d1d1d;
@@ -572,6 +580,11 @@ em {
     height: 1.3rem;
     background-size: cover;
   }
+}
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
 }
 
 .map-header {

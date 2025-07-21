@@ -1,7 +1,7 @@
-<!-- @pageTitle 무인도서 커뮤니티-공지사항-상세 -->
+<!-- @pageTitle 무인도서 자료실-무인도서 OpenAPI 조회 -->
 <!-- @pageCreated 2025-07-21 -->
 <!-- @pageUpdated 2025-07-21 -->
-<!-- @pageNote  -->
+<!-- @pageNote 모바일 지원 안함 -->
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -32,7 +32,8 @@
     <script src="./lib/gsap/gsap.min.js"></script>
     <script src="./lib/gsap/ScrollTrigger.min.js"></script>
     <script src="./lib/gsap/ScrollToPlugin.min.js"></script>
-    <script src="./lib/gsap/ScrollSmoother.js"></script>  <script type="module" src="./assets/js/modulepreload-polyfill.js"></script>
+    <script src="./lib/gsap/ScrollSmoother.js"></script>    
+  <script type="module" src="./assets/js/modulepreload-polyfill.js"></script>
   <script type="module" src="./assets/js/index2.js"></script>
   <link rel="stylesheet" href="./assets/css/index.css">
 </head>
@@ -89,19 +90,19 @@
             <div class="header-bg"></div>
         </header>
         <div id="contentsWrap">
-            <div class="sublayout" data-page="islands-community">
+            <div class="sublayout" data-page="islands-api">
                 <div class="sublayout__header">
                     <ol class="sublayout__breadcrumb">
                         <li class="first">
                             <a href="#" title="홈으로 이동"><span>홈</span></a>
                         </li>
-                        <li><a href="#"><span>무인도서 커뮤니티</span></a></li>
-                        <li><strong title="현재 페이지">공지사항</strong></li>
+                        <li><a href="#"><span>무인도서 자료실</span></a></li>
+                        <li><strong title="현재 페이지">무인도서 Open API</strong></li>
                     </ol>
-                    <div class="sublayout__page">공지사항</div>
-                    <div class="sublayout__desc">무인도서 관련 공지 및 업데이트 정보를 전해드립니다.</div>
+                    <div class="sublayout__page">무인도서 Open API</div>
+                    <div class="sublayout__desc">누구나 손쉽게 활용하는 무인도서 데이터 연계 서비스를 제공합니다.</div>
                     <div class="image-background">
-                        <img src="./assets/images/bg3.png" alt="">
+                        <img src="./assets/images/bg2.png" alt="">
                     </div>
                 </div>
                 <!-- /sublayout__header -->
@@ -109,70 +110,67 @@
                 <div class="sublayout__body">
                     <div class="sublayout__content">
                         <div class="container">
-                            <div class="notice-detail">
-                                <div class="notice-detail__header">
-                                    <div class="notice-detail__category">공지사항</div>
-                                    <h1 class="notice-detail__title">무인도서 정보 시스템 개편 안내</h1>
-                                    <div class="notice-detail__meta">
-                                        <div class="notice-detail__info">
-                                            <span class="notice-detail__date">2025.01.15</span>
-                                            <span class="notice-detail__views">조회수 1,234</span>
+                            <div class="sublayout__title"><span>Open API <em class="point"><b>발급키 조회</b></em></span></div>
+                            
+                            <!-- // api_terms -->
+                            <div class="api-explain-section">
+                                </div>
+
+                                <div class="api-form">
+                                    <div class="api-form__row">
+                                        <div class="api-form__item">
+                                            <strong>신청 API</strong>
+                                            <input type="text" value="무인도서 정보 OpenAPI" readonly>
                                         </div>
-                                        
+                                        <div class="api-form__item">
+                                            <strong>서비스 신청일</strong>
+                                            <input type="text" value="2025-06-09" readonly>
+                                        </div>
                                     </div>
-                                </div>
-                                
-                                <div class="notice-detail__content">
-                                    <p>해사안전 주체가 자발적으로 안전관리 수준을 높여갈 수 있도록 해상화물운송사업자를 대상으로 2024년 해사안전 우수사업자를 지정하기 위해 
-                                        붙임과 같이 안내문 및 신청서를 공지하오니 참고하시기 바랍니다.</p>
-                                        <br>
-
-                                    <p>해사안전 주체가 자발적으로 안전관리 수준을 높여갈 수 있도록 해상화물운송사업자를 대상으로 2024년 해사안전 우수사업자를 지정하기 위해 
-                                        붙임과 같이 안내문 및 신청서를 공지하오니 참고하시기 바랍니다.</p>
-                                        <br>
-
-                                    <p>해사안전 주체가 자발적으로 안전관리 수준을 높여갈 수 있도록 해상화물운송사업자를 대상으로 2024년 해사안전 우수사업자를 지정하기 위해 
-                                        붙임과 같이 안내문 및 신청서를 공지하오니 참고하시기 바랍니다.</p>
-                                </div>
-                                
-                                <div class="notice-detail__attachments">
-                                    <h3 class="notice-detail__attachments-title">첨부파일</h3>
-                                    <ul class="notice-detail__attachments-list">
-                                        <li>
-                                            <a href="#" class="attachment-item">
-                                                <i class="icon-file"></i>
-                                                <span class="attachment-name">무인도서_시스템_개편안내서.pdf</span>
-                                                <span class="attachment-size">(2.5MB)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="attachment-item">
-                                                <i class="icon-file"></i>
-                                                <span class="attachment-name">시스템_변경사항_체크리스트.xlsx</span>
-                                                <span class="attachment-size">(1.2MB)</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="notice-detail__navigation">
-                                    <div class="notice-detail__nav-item notice-detail__nav-prev">
-                                        <a href="#" class="nav-link">
-                                            <span class="nav-label">이전글</span>
-                                            <span class="nav-title">무인도서 현황 통계 업데이트 안내</span>
-                                        </a>
+                                    <div class="api-form__row">
+                                        <div class="api-form__item">
+                                            <strong>인증수단</strong>
+                                            <input type="text" value="네이버" readonly>
+                                        </div>
+                                        <div class="api-form__item">
+                                            <strong>사용자 유형</strong>
+                                            <input type="text" value="개인 및 그 외" readonly>
+                                        </div>
                                     </div>
-                                    <div class="notice-detail__nav-item notice-detail__nav-next">
-                                        <a href="#" class="nav-link">
-                                            <span class="nav-label">다음글</span>
-                                            <span class="nav-title">2025년 무인도서 관리 정책 변경사항</span>
-                                        </a>
+                                    <div class="api-form__row">
+                                        <div class="api-form__item">
+                                            <strong>소속/회사명</strong>
+                                            <input type="text" value="올포랜드" readonly>
+                                        </div>
+                                        <div class="api-form__item">
+                                            <strong>시스템명</strong>
+                                            <input type="text" value="올포랜드 홈페이지" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="api-form__row">
+                                        <div class="api-form__item">
+                                            <strong>활용용도</strong>
+                                            <input type="text" value="테스트" readonly>
+                                        </div>
+                                        <div class="api-form__item">
+                                            <strong>서비스 URL</strong>
+                                            <input type="text" value="uii.mof.go.kr" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="api-form__row">
+                                        <div class="api-form__item w-full">
+                                            <strong>신청목적</strong>
+                                            <textarea readonly rows="8">테스트</textarea>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="notice-detail__actions">
-                                <a href="#" class="btn">목록으로</a>
+                            <!-- //api-explain-section -->
+                            <div class="api-form-fab">
+                                <a href="무인도서자료실_무인도서OPENAPI.html" class="btn">API 레퍼런스로 가기</a>
+                                <button type="button" class="btn btn-primary">신청 취소하기</button>
                             </div>
+
                         </div>
                     </div>
                     <!-- //sublayout__content -->
@@ -222,6 +220,6 @@
                 </div>
             </div>
         </footer>    </div>
-    
 </body>
+
 </html>

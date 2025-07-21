@@ -1,0 +1,405 @@
+<!-- @pageTitle 무인도서 자료실-무인도서 OpenAPI 신청 -->
+<!-- @pageCreated 2025-07-21 -->
+<!-- @pageUpdated 2025-07-21 -->
+<!-- @pageNote Code 플러그인 추가 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="해양수산부 무인도서 종합정보제공">
+    <meta property="og:description" content="무인도서 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
+    
+    <meta name="subject" content="무인도서(무인도)">
+    <meta name="title" content="해양수산부 무인도서(무인도) 종합정보제공">
+    <meta name="description" content="무인도서(무인도) 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
+    <meta name="keywords" content="무인도,무인도 정보,무인도 정보조회,무인도서,무인도서 정보관리,무인도서 종합정보시스템,해양수산부">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    
+    <link rel="manifest" href="site.webmanifest">
+    
+    <title>해양수산부 무인도서 종합정보제공</title>
+    <link rel="stylesheet" as="style" href="./font/pretendard-gov-subset.css" />
+    <script src="./lib/gsap/gsap.min.js"></script>
+    <script src="./lib/gsap/ScrollTrigger.min.js"></script>
+    <script src="./lib/gsap/ScrollToPlugin.min.js"></script>
+    <script src="./lib/gsap/ScrollSmoother.js"></script>    <!-- head 안에 추가 -->
+    <link href="./lib/prism/prism.css" rel="stylesheet" />
+    <link href="./lib/prism/prism-line-numbers.css" rel="stylesheet" />
+    <script src="./lib/prism/prism.js"></script>
+    <script src="./lib/prism/prism-line-numbers.min.js"></script>
+    <!-- 언어별 로더 -->
+    <script src="./lib/prism/prism-javascript.min.js"></script>
+    <script src="./lib/prism/prism-java.min.js"></script>
+  <script type="module" src="./assets/js/modulepreload-polyfill.js"></script>
+  <script type="module" src="./assets/js/index2.js"></script>
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header-container">
+                <h1 class="logo"><a href="/" title="홈 바로가기"></a></h1>
+                <nav id="nav">
+                    <ul id="gnb" class="gnb">
+                        <li class="gnb-lv1"><a href="./map.html" class="current">지도로 보는 무인도서</a>
+                            <div class="gnb-submenu"></div>
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서안내_무인도서정의.html">무인도서 안내</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_무인도서정의.html">무인도서 정의</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_무인도서현황.html">무인도서 현황</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_이용방법.html">무인도서 이용방법</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서자료실_무인도서통계.html">무인도서 자료실</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서통계.html">무인도서 통계</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서OpenAPI.html">무인도서 OpenAPI</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서홍보.html">무인도서 홍보</a></li>
+                                </ul>
+                            </div>
+        
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서커뮤니티_공지사항_목록.html">무인도서 커뮤니티</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서커뮤니티_공지사항_목록.html">공지사항</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서커뮤니티_FAQ.html">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <button type="button" class="mobile-btn-menu" title="메뉴 열기">
+                        <span class="mobile-btn-menu__line">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-bg"></div>
+        </header>
+        <div id="contentsWrap">
+            <div class="sublayout" data-page="islands-api">
+                <div class="sublayout__header">
+                    <ol class="sublayout__breadcrumb">
+                        <li class="first">
+                            <a href="#" title="홈으로 이동"><span>홈</span></a>
+                        </li>
+                        <li><a href="#"><span>무인도서 자료실</span></a></li>
+                        <li><strong title="현재 페이지">무인도서 Open API</strong></li>
+                    </ol>
+                    <div class="sublayout__page">무인도서 Open API</div>
+                    <div class="sublayout__desc">누구나 손쉽게 활용하는 무인도서 데이터 연계 서비스를 제공합니다.</div>
+                    <div class="image-background">
+                        <img src="./assets/images/bg2.png" alt="">
+                    </div>
+                </div>
+                <!-- /sublayout__header -->
+
+                <div class="sublayout__body">
+                    <div class="sublayout__content">
+                        <div class="container">
+                            <div class="sublayout__title"><span>Open API <em class="point"><b>이용약관</b></em></span></div>
+                            <div class="api-terms">
+                                <strong>제 1 조 [목적]</strong>
+                                <p>본 약관은 해양수산부의 무인도서 종합정보제공 서비스(이하 무인도서)에서 제공하는 오픈API 서비스(이하
+                                    API 서비스)의 이용에 관한 제반 사항과 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
+                                <br> <strong>제2조 [약관의 효력 및 변경]</strong>
+                                <p>
+                                    ① 이 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br> 가. "이용자"이라 함은 서비스에서 정한
+                                    메일인증(OATH)으로 로그인하고 이 약관에 동의한 후 API 서비스를 제공받는 자를 말합니다.<br> 나.
+                                    API라 함은 Application Programming Interface의 약자로서 이용자가 API 서비스의
+                                    검색결과를 자신이 구축한 사이트에서 사용할 수 있도록 해양수산부가 제공하는 등록값의 집합을 말합니다.<br> 다.
+                                    인증Key라 함은 관련 시스템이 API 서비스 이용을 승낙 받은 이용자임을 식별할 수 있도록 해양수산부에서 할당하는
+                                    고유한 값을 말합니다.<br> ② 이 약관에서 사용하는 용어 중 제1항에서 정하지 아니한 것은 관계 법령에서 정하는
+                                    바에 따르며, 그 외에는 일반 관례에 따릅니다.
+                                </p>
+                                <br> <strong>제 3 조 [약관의 효력 및 변경]</strong>
+                                <p>
+                                    ① 이 약관은 이용자의 동의와 해양수산부의 승낙으로 효력을 발생합니다. 이용자가 이 약관에 동의함으로써 API 서비스
+                                    이용계약이 성립합니다.<br> ② 해양수산부는 관련 법령에 위배되지 않는 범위 내에서 이 약관의 내용을 개정할 수
+                                    있으며, 개정 약관은 API 서비스 페이지 또는 연결화면을 통하여 공지함으로써 효력을 발휘합니다.<br> ③
+                                    해양수산부가 이 약관을 개정할 경우 해양수산부는 15일 전에 개정 약관을 본 조 제2항의 방법으로 이용자에게
+                                    공지합니다.
+                                </p>
+                                <br> <strong>제 4 조 [API 서비스의 제공 및 이용 시
+                                    주의사항]</strong>
+                                <p>
+                                    ① 이용자는 API 서비스를 이용함에 있어 API 서비스 페이지를 통해 인증Key를 발급 받아야 하며, 발급 받은
+                                    인증Key를 이용하여 API 서비스를 제공 받을 수 있습니다.<br> ② 이용자는 API 서비스를 이용한 검색결과를
+                                    노출함에 있어 선정적, 폭력적, 혐오적인 내용을 포함하여 반사회적, 비도덕적, 불법적인 내용과 결합 또는 연계하거나
+                                    인접하도록 구성할 수 없으며 검색결과의 공공성을 준수하여야 합니다.<br> ③ 이용자는 API 서비스를 이용한
+                                    검색결과를 독립적으로 노출하여야 하며 검색결과의 앞, 뒤, 중간 등에 다른 내용을 삽입하거나 왜곡할 수 없고, 타인으로
+                                    하여금 검색결과의 내용 및 의도 등을 오인케 하여서는 안 됩니다.<br> ④ 이용자는 해양수산부의 API 서비스를
+                                    모방하거나, 해양수산부의 브랜드를 모방, 도용하여서는 안 됩니다.
+                                </p>
+                                <br> <strong>제 5 조 [인증Key의 이용 및 관리]</strong>
+                                <p>
+                                    ① 이용자는 발급 받은 인증Key를 타인에게 제공, 공개하거나 공유할 수 없으며, 발급 받은 이용자 본인에 한하여 이를
+                                    사용할 수 있습니다.<br> ② 이용자는 발급 시 요청하는 사항에 대해 정확히 입력함으로서 여러 개의 인증Key를
+                                    발급받아 사용할 수 있습니다.
+                                </p>
+                                <br> <strong>제 6 조 [지적재산권의 귀속]</strong>
+                                <p>
+                                    ① 해양수산부가 제공하는 API 및 관련 프로그램의 저작권은 해양수산부에 있으며, 해양수산부는 사정에 따라 API 또는
+                                    API 서비스를 변경하거나 중단할 수 있습니다.<br> ② API 서비스를 이용한 검색결과는 해양수산부 또는
+                                    제3자에게 저작권이 귀속되어 있으며, 해양수산부의 API 서비스 이용 승낙으로 인하여 이용자가 검색결과에 대한 저작권
+                                    또는 사용권을 취득하는 것은 아닙니다.<br> ③ 이용자는 API 서비스를 통하여 실시간으로 제공되는 검색결과를
+                                    연동할 수 있을 뿐이며, 검색결과를 복제 또는 저장하거나 전송할 수 없습니다.<br> ④ 이용자는 API 서비스를
+                                    이용하여 검색결과를 노출하는 페이지에 해양수산부가 정한 방식에 따라 ＂해양수산부 OPEN API"를 사용한 결과물임을
+                                    명시해야 합니다.<br> ⑤ 해양수산부의 무인도서 API 서비스 이용 승낙이 무인도서의 이용자에게 해양수산부의
+                                    등록상표 또는 저작물에 대한 이용권을 부여하는 것으로 해석될 수 없습니다. 이용자는 해양수산부가 특별히 허락한 경우에
+                                    한하여만 본 항에 명시한 해양수산부의 등록상표 또는 저작물을 사용할 수 있으며, 그러한 경우에도 해양수산부의 등록상표
+                                    또는 저작물의 이용기준을 준수하여야 하고 임의로 이를 변형하거나 훼손하여서는 안 됩니다.
+                                </p>
+                                <br> <strong>제 7 조 [해양수산부의 책임 제한]</strong>
+                                <p>
+                                    ① 해양수산부는 약관, 서비스별 안내, 기타 해양수산부가 정한 이용기준을 준수하지 않은 이용으로 인한 결과에 대하여
+                                    책임을 지지 않습니다.<br> ② 해양수산부는 API 서비스를 통하여 특정 키워드에 대한 검색결과를 요청 받은 경우
+                                    검색 알고리즘에 따라 검색결과를 제공할 뿐이며 검색결과에 대한 신뢰성, 정당성, 적법성 등을 보증하지는 않습니다.<br>
+                                    ③ 해양수산부는 API 서비스의 사용불능으로 인하여 이용자에게 발생한 손해에 대하여 책임을 지지 않습니다.<br>
+                                    ④ API 서비스는 이용자의 사용환경 등에 따라 정상적으로 동작하지 않거나 해양수산부가 예견하지 못한 오류가 존재할 수
+                                    있습니다.<br> ⑤ 해양수산부는 이용자가 API 서비스를 이용하여 기대하는 효과를 얻지 못하거나 상실한 것에
+                                    대하여 책임을 지지 않습니다.<br> ⑥ 해양수산부는 이용자 상호간 및 이용자와 제3자 상호 간에 서비스를 매개로
+                                    발생한 분쟁에 대해 개입할 의무가 없으며, 이로 인한 손해를 배상할 책임도 없습니다.
+                                </p>
+                            </div>
+                            <div class="api-terms-agree">
+                                <label for="apiAgree">
+                                    <input type="checkbox" id="apiAgree">
+                                    <i></i>
+                                    <span>위 이용약관에 동의합니다.</span>
+                                </label>
+                            </div>
+                            <!-- // api_terms -->
+                            <div class="api-explain-section">
+                                <div class="sublayout__title"><span>Open API <em class="point"><b>발급요청</b></em></span>
+                                </div>
+
+                                <div class="api-form">
+                                    <div class="alert-required">
+                                        <span>*</span> 필수 입력 항목
+                                    </div>
+                                    <div class="api-form__row">
+                                        <div class="api-form__item">
+                                            <label for="certTypeNm">신청 API</label>
+                                            <input type="text" id="certTypeNm" value="무인도서 정보 OpenAPI" readonly>
+                                        </div>
+                                        <div class="api-form__item">
+                                            <label for="userDi">사용자 정보</label>
+                                            <input type="text" id="userDi" value="오승준" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="api-form__row">
+                                        <div class="api-form__item">
+                                            <label for="userTypeCd">사용자 유형 <i class="required"></i></label>
+                                            <select id="userTypeCd" class="form-select">
+                                                <option value="" disabled selected>사용자 유형을 선택해주세요</option>
+                                                <option value="1000101">국가기관 및 지자체</option>
+                                                <option value="1000102">공공기관</option>
+                                                <option value="1000103">기업</option>
+                                                <option value="1000104">개인 및 그 외</option>
+                                            </select>
+                                        </div>
+                                        <div class="api-form__item">
+                                            <label for="ogdpNm">소속/회사명 <i class="required"></i></label>
+                                            <input type="text" id="ogdpNm" placeholder="소속/회사명을 입력해주세요">
+                                        </div>
+                                    </div>
+                                    <div class="api-form__row">
+                                        <div class="api-form__item">
+                                            <label for="sysNm">시스템명 <i class="required"></i></label>
+                                            <input type="text" id="sysNm" placeholder="예) 무인도서 정보시스템">
+                                        </div>
+                                        <div class="api-form__item">
+                                            <label for="utlzUsgCd">활용용도 <i class="required"></i></label>
+                                            <select id="utlzUsgCd" class="form-select">
+                                                <option value="" disabled selected>활용용도를 선택해주세요</option>
+                                                <option value="1000201">웹 사이트 개발</option>
+                                                <option value="1000202">앱 개발(모바일, 솔루션 등)</option>
+                                                <option value="1000203">참고자료</option>
+                                                <option value="1000204">연구(논문 등)</option>
+                                                <option value="1000205">기타</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="api-form__row">
+                                        <div class="api-form__item w-full">
+                                            <label for="svcUrl">서비스 URL <i class="required"></i></label>
+                                            <input type="text" id="svcUrl" placeholder="예) uii.mof.go.kr/UII">
+                                        </div>
+                                    </div>
+                                    <div class="api-form__row">
+                                        <div class="api-form__item w-full">
+                                            <label for="aplyPrps">신청목적 <i class="required"></i></label>
+                                            <textarea id="aplyPrps" placeholder="신청목적을 입력해주세요" rows="8"></textarea>
+                                            <div class="limit-text">
+                                                <span class="count">0</span><em>/</em>1000
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="api-form-fab">
+                                    <button type="button" class="btn">취소하기</button>
+                                    <button type="button" class="btn btn-primary" id="regBtn">조회/신청하기</button>
+                                </div>
+
+                            </div>
+                            <!-- //api-explain-section -->
+
+                        </div>
+                    </div>
+                    <!-- //sublayout__content -->
+
+                </div>
+                <!-- //sublayout__body -->
+            </div>
+            <!-- //sublayout -->
+        </div>
+        <!-- //contentsWrap -->
+        <footer id="footer" class="footer">
+            <div class="footer-link">
+                <div class="container">
+                    <a href="#" target="_blank" class="link" title="새창 열림">
+                        <span>토지이음 홈페이지</span>
+                        <i class="ico-blank"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-content">
+                <div class="container">
+                    <h2 class="logo">
+                        <span class="visually-hidden">해양수산부</span>
+                    </h2>
+                    <div class="ft-info">
+                        <div class="addr">(30110) 세종특별자치시 다솜2로 94(어진동) 정부세종청사 5동 해양수산부 </div>
+                        <div class="tel">
+                            <strong>대표전화</strong>
+                            <span><a href="tel:044-200-5355">044-200-5355</a> (해양수산부 해양영토과)</span>
+                        </div>
+                        <div class="mail">
+                            <strong>시스템 관련문의</strong>
+                            <span><a href="mailto:kjk@korea.kr">kjk@korea.kr</a></span>
+                        </div>
+                    </div>
+        
+                    <div class="ft-links">
+                        <div class="ft-links-inner">
+                            <a href="#" target="_blank" class="bold">개인정보처리방침</a>
+                            <a href="#" target="_blank" class="bold">이메일무단수집거부</a>
+                            <a href="#" target="_blank" class="bold">저작권보호 및 정책</a>
+                        </div>
+                        <div class="copyright">
+                            <p> Ministry of the Oceans and Fisheries. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>    </div>
+
+    <script>
+
+        const urlPattern = /^(https?:\/\/)?((www\.)?[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?(\/[^\s]*)?$/;
+
+        document.getElementById('regBtn').addEventListener('click', function (event) {
+
+            event.preventDefault();
+            const svcUrl = document.getElementById('svcUrl').value;
+            const ogdpNm = document.getElementById('ogdpNm').value;
+            const sysNm = document.getElementById('sysNm').value;
+            const aplyPrps = document.getElementById('aplyPrps').value;
+            const utlzUsgCd = document.getElementById('utlzUsgCd').value;
+            const userTypeCd = document.getElementById('userTypeCd').value;
+            const inputs = [userTypeCd, ogdpNm, sysNm, utlzUsgCd, svcUrl, aplyPrps];
+            const inputNm = ['userTypeCd', 'ogdpNm', 'sysNm', 'utlzUsgCd', 'svcUrl', 'aplyPrps'];
+            const korNm = ['사용자 유형을', '소속/회사명을', '시스템명을', '활용용도를', '서비스 URL을', '신청목적을'];
+            let field = '';
+            let fieldNm = '';
+            const checkbox = document.getElementById('apiAgree');
+            //약관체크
+            if (!checkbox.checked) {
+                alert('약관에 동의해 주신 후 신청 가능합니다.');
+                return;
+            }
+            //각 텍스트 필드 alert
+            for (let i = 0; i < inputs.length; i++) {
+                if (!inputs[i]) {
+                    field = inputNm[i];
+                    fieldNm = korNm[i];
+                    break;
+                }
+            } if (field) {
+                alert(fieldNm + ' 입력해 주세요.');
+                document.getElementById(field).focus();
+                return;
+            }
+            //url 체크
+            if (!urlPattern.test(svcUrl)) {
+                alert('유효한 URL 형식이 아닙니다.');
+                document.getElementById('svcUrl').focus();
+                return;
+            }
+        });
+
+        // 텍스트 카운터 기능
+        document.addEventListener('DOMContentLoaded', function() {
+            const textarea = document.getElementById('aplyPrps');
+            const countSpan = document.querySelector('.limit-text .count');
+            const maxLength = 1000;
+            
+            if (textarea && countSpan) {
+                // 초기 카운트 설정
+                countSpan.textContent = textarea.value.length;
+                
+                // 입력 이벤트 리스너
+                textarea.addEventListener('input', function() {
+                    const currentLength = this.value.length;
+                    countSpan.textContent = currentLength;
+                    
+                    // 최대 길이에 도달하면 입력 제한
+                    if (currentLength >= maxLength) {
+                        this.value = this.value.substring(0, maxLength);
+                        countSpan.textContent = maxLength;
+                    }
+                });
+                
+                // 키보드 이벤트로 추가 제한
+                textarea.addEventListener('keydown', function(e) {
+                    if (this.value.length >= maxLength && 
+                        e.key !== 'Backspace' && 
+                        e.key !== 'Delete' && 
+                        e.key !== 'ArrowLeft' && 
+                        e.key !== 'ArrowRight' && 
+                        e.key !== 'ArrowUp' && 
+                        e.key !== 'ArrowDown' &&
+                        !e.ctrlKey && 
+                        !e.metaKey) {
+                        e.preventDefault();
+                    }
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>

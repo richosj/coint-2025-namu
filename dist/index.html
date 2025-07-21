@@ -27,12 +27,24 @@
     <script src="./lib/gsap/gsap.min.js"></script>
     <script src="./lib/gsap/ScrollTrigger.min.js"></script>
     <script src="./lib/gsap/ScrollToPlugin.min.js"></script>
-    <script src="./lib/gsap/ScrollSmoother.js"></script>  <script type="module" src="./assets/js/modulepreload-polyfill.js"></script>
+    <script src="./lib/gsap/ScrollSmoother.js"></script>    <style>
+        @font-face {
+            font-family: 'ChosunGu';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+  <script type="module" src="./assets/js/modulepreload-polyfill.js"></script>
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
 <body>
     <style>
+        body{
+            padding-top: 3rem;
+            font-family: 'ChosunGu';
+        }
         table{
             border-collapse: collapse;
             background: white;
@@ -40,35 +52,27 @@
             margin: 0 auto;
             position: relative;
         }
-        table thead tr{    height: 60px;background: #36304a;}
+        table thead tr{background-color: #f8f8f8;}
         table thead th{
             text-align: center;
-            font-family: OpenSans-Regular;
-            font-size: 18px;
-            color: #fff;
+            font-size: 14px;
+            color: #333;
             line-height: 1.2;
-            font-weight: unset;
+            font-weight: 500;
         }
-        table tbody tr {
-            height: 50px;
+        table td:first-child{
+            text-decoration: underline;
         }
         table td, table th {
-            text-align: center;
-            padding: 0 10px;
+            border: 1px solid #ddd;   
+            padding: 7px 10px;
             white-space: nowrap;
         }
-        tbody tr:hover {
-            color: #555555;
-            background-color: #f5f5f5;
-            cursor: pointer;
-        }
-        tbody tr:nth-child(even) {
-            background-color: #f5f5f5;
-        }
+        
         
         .link-page{
             margin: 0 auto;
-            width: 1400px;
+            width: 1200px;
         }
         h1{
             padding-bottom: 2rem;
@@ -104,7 +108,7 @@
             display: none;
         }
     </style>
-    <h1>화면목록</h1>
+    <h1>2025 무인도서 서비스 개편 사업</h1>
     
     <div class="link-page">
         <div class="search-box">
@@ -158,17 +162,31 @@
                     <td></td>
                 </tr>
                 <tr>
+                    <td><a href="./무인도서자료실_무인도서OPENAPI-신청.html" target="_blank">무인도서자료실_무인도서OPENAPI-신청.html</a></td>
+                    <td>무인도서 자료실-무인도서 OpenAPI 신청</td>
+                    <td>2025-07-21</td>
+                    <td>2025-07-21</td>
+                    <td>Code 플러그인 추가</td>
+                </tr>
+                <tr>
+                    <td><a href="./무인도서자료실_무인도서OPENAPI-조회.html" target="_blank">무인도서자료실_무인도서OPENAPI-조회.html</a></td>
+                    <td>무인도서 자료실-무인도서 OpenAPI 조회</td>
+                    <td>2025-07-21</td>
+                    <td>2025-07-21</td>
+                    <td>모바일 지원 안함</td>
+                </tr>
+                <tr>
                     <td><a href="./무인도서자료실_무인도서OPENAPI.html" target="_blank">무인도서자료실_무인도서OPENAPI.html</a></td>
-                    <td>무인도서자료실_무인도서OPENAPI</td>
-                    <td></td>
-                    <td></td>
+                    <td>무인도서 자료실-무인도서 OPENAPI</td>
+                    <td>2025-07-18</td>
+                    <td>2025-07-18</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td><a href="./무인도서자료실_무인도서통계.html" target="_blank">무인도서자료실_무인도서통계.html</a></td>
                     <td>무인도서 자료실-무인도서 통계</td>
-                    <td>2025-07-17</td>
-                    <td>2025-07-17</td>
+                    <td>2025-07-18</td>
+                    <td>2025-07-18</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -180,23 +198,23 @@
                 </tr>
                 <tr>
                     <td><a href="./무인도서커뮤니티_FAQ.html" target="_blank">무인도서커뮤니티_FAQ.html</a></td>
-                    <td>무인도서커뮤니티_FAQ</td>
-                    <td></td>
-                    <td></td>
+                    <td>무인도서 커뮤니티-FAQ</td>
+                    <td>2025-07-21</td>
+                    <td>2025-07-21</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td><a href="./무인도서커뮤니티_공지사항_목록.html" target="_blank">무인도서커뮤니티_공지사항_목록.html</a></td>
-                    <td>무인도서커뮤니티_공지사항_목록</td>
-                    <td></td>
-                    <td></td>
+                    <td>무인도서 커뮤니티-공지사항-목록</td>
+                    <td>2025-07-21</td>
+                    <td>2025-07-21</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td><a href="./무인도서커뮤니티_공지사항_상세.html" target="_blank">무인도서커뮤니티_공지사항_상세.html</a></td>
-                    <td>무인도서커뮤니티_공지사항_상세</td>
-                    <td></td>
-                    <td></td>
+                    <td>무인도서 커뮤니티-공지사항-상세</td>
+                    <td>2025-07-21</td>
+                    <td>2025-07-21</td>
                     <td></td>
                 </tr>
             </tbody>

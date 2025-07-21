@@ -100,6 +100,8 @@
     background-color: #000;
 }
 
+
+
 @for $i from 1 through 7 {
     .ico-legend-#{$i}{
         background-image: url('@/assets/images/map/ico-legend-#{$i}.png');
@@ -166,4 +168,8 @@
     background-image: url('@/assets/images/portal/ico-arrow-right.png');
     width: .9rem;
     height: 1.4rem;
+}
+.ico-arrow-right2{
+    @include icon-style('@/assets/images/portal/ico-right-arrow.svg',2rem,2rem);
+    background-color: rgb(23,100,220);
 }

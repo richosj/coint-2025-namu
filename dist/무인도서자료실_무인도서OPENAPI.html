@@ -1,0 +1,614 @@
+<!-- @pageTitle 무인도서 자료실-무인도서 OPENAPI -->
+<!-- @pageCreated 2025-07-18 -->
+<!-- @pageUpdated 2025-07-18 -->
+<!-- @pageNote  -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="해양수산부 무인도서 종합정보제공">
+    <meta property="og:description" content="무인도서 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
+    
+    <meta name="subject" content="무인도서(무인도)">
+    <meta name="title" content="해양수산부 무인도서(무인도) 종합정보제공">
+    <meta name="description" content="무인도서(무인도) 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
+    <meta name="keywords" content="무인도,무인도 정보,무인도 정보조회,무인도서,무인도서 정보관리,무인도서 종합정보시스템,해양수산부">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    
+    <link rel="manifest" href="site.webmanifest">
+    
+    <title>해양수산부 무인도서 종합정보제공</title>
+    <link rel="stylesheet" as="style" href="./font/pretendard-gov-subset.css" />
+    <script src="./lib/gsap/gsap.min.js"></script>
+    <script src="./lib/gsap/ScrollTrigger.min.js"></script>
+    <script src="./lib/gsap/ScrollToPlugin.min.js"></script>
+    <script src="./lib/gsap/ScrollSmoother.js"></script>	<!-- head 안에 추가 -->
+	<link href="./lib/prism/prism.css" rel="stylesheet" />
+	<link href="./lib/prism/prism-line-numbers.css" rel="stylesheet" />
+	<script src="./lib/prism/prism.js"></script>
+	<script src="./lib/prism/prism-line-numbers.min.js"></script>
+	<!-- 언어별 로더 -->
+	<script src="./lib/prism/prism-javascript.min.js"></script>
+	<script src="./lib/prism/prism-java.min.js"></script>
+  <script type="module" src="./assets/js/modulepreload-polyfill.js"></script>
+  <script type="module" src="./assets/js/index2.js"></script>
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header-container">
+                <h1 class="logo"><a href="/" title="홈 바로가기"></a></h1>
+                <nav id="nav">
+                    <ul id="gnb" class="gnb">
+                        <li class="gnb-lv1"><a href="./map.html" class="current">지도로 보는 무인도서</a>
+                            <div class="gnb-submenu"></div>
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서안내_무인도서정의.html">무인도서 안내</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_무인도서정의.html">무인도서 정의</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_무인도서현황.html">무인도서 현황</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_이용방법.html">무인도서 이용방법</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서자료실_무인도서통계.html">무인도서 자료실</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서통계.html">무인도서 통계</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서OpenAPI.html">무인도서 OpenAPI</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서홍보.html">무인도서 홍보</a></li>
+                                </ul>
+                            </div>
+        
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서커뮤니티_공지사항_목록.html">무인도서 커뮤니티</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서커뮤니티_공지사항_목록.html">공지사항</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서커뮤니티_FAQ.html">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <button type="button" class="mobile-btn-menu" title="메뉴 열기">
+                        <span class="mobile-btn-menu__line">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-bg"></div>
+        </header>
+        <div id="contentsWrap">
+            <div class="sublayout" data-page="islands-api">
+                <div class="sublayout__header">
+                    <ol class="sublayout__breadcrumb">
+                        <li class="first">
+                            <a href="#" title="홈으로 이동"><span>홈</span></a>
+                        </li>
+                        <li><a href="#"><span>무인도서 자료실</span></a></li>
+                        <li><strong title="현재 페이지">무인도서 Open API</strong></li>
+                    </ol>
+                    <div class="sublayout__page">무인도서 Open API</div>
+                    <div class="sublayout__desc">누구나 손쉽게 활용하는 무인도서 데이터 연계 서비스를 제공합니다.</div>
+                    <div class="image-background">
+                        <img src="./assets/images/bg2.png" alt="">
+                    </div>
+                </div>
+                <!-- /sublayout__header -->
+
+                <div class="sublayout__body">
+                    <div class="sublayout__content">
+                        <div class="container">
+
+                            <div class="api-exlain-gate">
+                                <div>해양수산부에서 무인도서와 그 주변해역을 보전 및 관리하기 위해 구축한 무인도서 정보를 다른 정보시스템에서 연계·활용할 수 있도록 Open-API 서비스를 제공합니다.</div>
+                                <div>무인도서 API는 무인도서 정보를 요청 형식에 따라 XML과 JSON 형식으로 제공받을 수 있도록 구현되어 있으며, 파일 데이터는 무인도서 통계 서비스에서 엑셀파일로 <br>다운로드 받으실 수 있습니다.</div>
+                            </div>
+                            
+                            <div class="api-explain-section">
+                                <div class="sublayout__title"><span>요청  <em class="point"><b>메시지 명세</b></em></span></div>
+								<div class="action-util">
+									<a href="##" class="api-explain-url">요청 URL 바로가기 <i class="svg-icon ico-arrow-right2"></i></a>
+								</div>
+								<div class="mobile-table-scroll">
+									<table class="apiTable">
+										<caption class="visually-hidden">API 호출 정보를 제공합니다</caption>
+										<thead class="apiThead">
+											<tr>
+												<th>항목명(영문)</th>
+												<th>항목명(국문)</th>
+												<th>조건</th>
+												<th>설명</th>
+												<th>샘플데이터</th>
+											</tr>
+										</thead>
+										<tbody class="apiTbody">
+											<tr>
+												<td>serviceKey</td>
+												<td>인증키</td>
+												<td>필수</td>
+												<td>발급받은 인증키</td>
+												<td>Oo8YvUp5giSVM4Ws</td>
+											</tr>
+											<tr>
+												<td>format</td>
+												<td>데이터형식</td>
+												<td>필수</td>
+												<td><b>xml</b> 또는 <b>json</b></td>
+												<td>json</td>
+											</tr>
+											<tr>
+												<td>keyword</td>
+												<td>검색어</td>
+												<td>옵션</td>
+												<td>도서 명</td>
+												<td>오리바위,황도</td>
+											</tr>
+											<tr>
+												<td>numOfRows</td>
+												<td>페이지당 출력될 건수</td>
+												<td>옵션</td>
+												<td>기본값 : 10</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>pageNo</td>
+												<td>출력될 페이지 번호</td>
+												<td>옵션</td>
+												<td>기본값 : 1</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>sgg</td>
+												<td>시군구코드</td>
+												<td>옵션</td>
+												<td>법정동 시군구코드 5자리<br><p style="font-size: 14px;">* 행정표준코드 관리시스템 참고</p></td>
+												<td>26140</td>
+											</tr>
+											<tr>
+												<td>type</td>
+												<td>관리유형</td>
+												<td>옵션</td>
+												<td>
+													<div class="api-in-list-title">무인도서 관리유형</div>
+													<div class="api-in-list">
+														<ul>
+															<li>
+																<div class="item">
+																	<span class="badge"><b>절대보전</b></span>
+																	<div class="txt"><span>1000</span></div>
+																</div>
+															</li>
+															<li>
+																<div class="item">
+																<span class="badge"><b>준보전</b></span>
+																<div class="txt"><span>0100</span></div>
+																</div>
+															</li>
+															<li>
+																<div class="item">
+																<span class="badge"><b>이용가능</b></span>
+																<div class="txt"><span>0010</span></div>
+																</div>
+															</li>
+															<li>
+																<div class="item">
+																<span class="badge"><b>개발가능</b></span>
+																<div class="txt"><span>0001</span></div>
+																</div>
+															</li>
+															<li>
+																<div class="item">
+																<span class="badge"><b>이용가능/개발가능</b></span>
+																<div class="txt"><span>0011</span></div>
+																</div>
+															</li>
+															<li>
+																<div class="item">
+																<span class="badge"><b>준보전/개발가능</b></span>
+																<div class="txt"><span>0101</span></div>
+																</div>
+															</li>
+															<li>
+																<div class="item">
+																<span class="badge"><b>미지정</b></span>
+																<div class="txt"><span>0000</span></div>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</td>
+												<td>0001</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+                            </div>
+                            <!-- //api-explain-section -->
+                            <div class="api-explain-section">
+                                <div class="sublayout__title"><span>응답 메시지 명세  <em class="point"><b>출력결과</b></em></span></div>
+								<div class="mobile-table-scroll">
+									<table class="apiTable border">
+										<caption class="visually-hidden">출력결과 제공</caption>
+										<thead class="apiThead">
+											<tr>
+												<th colspan="2">출력명</th>
+												<th>출력 설명</th>
+												<th>샘플데이터</th>
+											</tr>
+										</thead>
+										<tbody class="apiTbody">
+											<tr>
+												<td rowspan="3" class="bdl0">header</td>
+												<td>resultCode</td>
+												<td>응답코드</td>
+												<td>200</td>
+											</tr>
+											<tr>
+												<td>resultMsg</td>
+												<td>응답 메시지</td>
+												<td>정상</td>
+											</tr>
+											<tr>
+												<td>totalCnt</td>
+												<td>전체 데이터 개수</td>
+												<td>2918</td>
+											</tr>
+											<tr>
+												<td rowspan="27" class="bdl0">contents</td>
+												<td>manageNo</td>
+												<td>관리번호</td>
+												<td>영해기점-05</td>
+											</tr>
+											<tr>
+												<td>uiiNm</td>
+												<td>무인도서명</td>
+												<td>1.5미이터암</td>
+											</tr>
+											<tr>
+												<td>sidoNm</td>
+												<td>시도명</td>
+												<td>부산광역시</td>
+											</tr>
+											<tr>
+												<td>sigunguNm</td>
+												<td>시군구명</td>
+												<td>해운대구</td>
+											</tr>
+											<tr>
+												<td>emdNm</td>
+												<td>읍면동명</td>
+												<td>송정동</td>
+											</tr>
+											<tr>
+												<td>liNm</td>
+												<td>리명</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>lnm</td>
+												<td>지번</td>
+												<td>945</td>
+											</tr>
+											<tr>
+												<td>lnmAdiDc</td>
+												<td>지번 부가설명</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>landPosesnSe</td>
+												<td>토지 소유 구분</td>
+												<td>국유지</td>
+											</tr>
+											<tr>
+												<td>landOwnrList</td>
+												<td>토지 소유자</td>
+												<td>해양수산부</td>
+											</tr>
+											<tr>
+												<td>ladAllAr</td>
+												<td>토지 전체 면적</td>
+												<td>50</td>
+											</tr>
+											<tr>
+												<td>golndAr</td>
+												<td>국유지 면적</td>
+												<td>50</td>
+											</tr>
+											<tr>
+												<td>publndAr</td>
+												<td>공유지 면적</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>pvtlndAr</td>
+												<td>사유지 면적</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>xtnAddtDc</td>
+												<td>면적 부가 설명</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>lndcgr</td>
+												<td>지목</td>
+												<td>잡종지</td>
+											</tr>
+											<tr>
+												<td>mngTyCd</td>
+												<td>무인도서 관리유형 코드</td>
+												<td>1000</td>
+											</tr>
+											<tr>
+												<td>mngTy</td>
+												<td>무인도서 관리유형</td>
+												<td>절대보전</td>
+											</tr>
+											<tr>
+												<td>cfrSareaMngCd</td>
+												<td>주변해역 관리유형 코드</td>
+												<td>1000</td>
+											</tr>
+											<tr>
+												<td>cfrSareaMngTy</td>
+												<td>주변해역 관리유형</td>
+												<td>절대보전</td>
+											</tr>
+											<tr>
+												<td>landDstc</td>
+												<td>육지와의 거리</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>landDstcDc</td>
+												<td>육지와의 거리 부가설명</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>prposSeList</td>
+												<td>용도 구분</td>
+												<td>도시지역미지정</td>
+											</tr>
+											<tr>
+												<td>pnttrtseaUiiCn</td>
+												<td>영해기점 무인도서 유무</td>
+												<td>영해기점</td>
+											</tr>
+											<tr>
+												<td>lat</td>
+												<td>위도</td>
+												<td>35.169228</td>
+											</tr>
+											<tr>
+												<td>lot</td>
+												<td>경도</td>
+												<td>129.21747</td>
+											</tr>
+											<tr>
+												<td>dsgnAncmntYmd</td>
+												<td>지정고시일(법정고시일)</td>
+												<td>2023-09-18</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //mobile-table-scroll -->
+                            </div>
+                            <!-- //api-explain-section -->
+                            <div class="api-explain-section">
+                                <div class="sublayout__title"><span>응답 메시지 명세  <em class="point"><b>응답코드</b></em></span></div>
+								<div class="mobile-table-scroll">
+									<table class="apiTable border">
+										<caption style="display: none;">응답코드 제공</caption>
+										<thead class="apiThead">
+											<tr>
+												<th>구분</th>
+												<th>응답코드</th>
+												<th>설명</th>
+											</tr>
+										</thead>
+										<tbody class="apiTbody">
+											<tr>
+												<td class="bdl0">SUCCESS</td>
+												<td>200</td>
+												<td>정상</td>
+											</tr>
+											<tr>
+												<td rowspan="6" class="bdl0">ERROR</td>
+												<td>110</td>
+												<td>등록되지 않은 인증키입니다.</td>
+											</tr>
+											<tr>
+												<td>120</td>
+												<td>사용 중지된 인증키 입니다.</td>
+											</tr>
+											<tr>
+												<td>210</td>
+												<td>필수 파라미터가 누락되었습니다.</td>
+											</tr>
+											<tr>
+												<td>220</td>
+												<td>파라미터 값이 유효하지 않습니다.</td>
+											</tr>
+											<tr>
+												<td>230</td>
+												<td>제공되지 않는 데이터형식 입니다.</td>
+											</tr>
+											<tr>
+												<td>900</td>
+												<td>알 수 없는 에러가 발생하였습니다.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+                            </div>
+                            <!-- //api-explain-section -->
+                            <div class="api-explain-section">
+                                <div class="sublayout__title"><span>샘플 <em class="point"><b>코드</b></em></span></div>
+								<nav class="api-code-nav">
+									<ul>
+										<li><a href="#java">Java</a></li>
+										<li><a href="#javascript">JavaScript</a></li>
+									</ul>
+								</nav>
+
+								<div class="api-code-section">
+									<div class="java">
+										<pre class="line-numbers"><code class="language-java">
+/** java 샘플 코드 */
+BufferedReader in = null;
+try {
+	// 호출할url
+	URL obj = new URL("http://uii.mof.go.kr/UII/api/openApi.do?serviceKey=인증키&format=데이터형식");
+	HttpURLConnection con = (HttpURLConnection)obj.openConnection();
+	con.setRequestMethod("GET");
+	in = new BufferedReader(new InputStreamReader(con.getInputStream(), "UTF-8"));
+	String line;
+	while((line = in.readLine()) != null) {
+		// response를 차례대로 출력
+		System.out.println(line);
+	}
+} catch(Exception e) {
+		e.printStackTrace();
+} finally {
+	if(in != null)
+	try {
+		in.close();
+	}
+	catch(Exception e){
+		e.printStackTrace();
+	}
+}
+										</code></pre>
+									</div>
+									<div class="javascript">
+										<pre class="line-numbers"><code class="language-javascript">
+/** javascript 샘플 코드 */
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		var response = xhttp.responseText;
+		console.log(response); //response를 출력
+	}
+};
+xhttp.open("GET", "http://uii.mof.go.kr/UII/api/openApi.do?serviceKey=인증키&format=데이터형식", true);
+
+xhttp.send();
+										</code></pre>
+									</div>
+								</div>
+                                
+								<div class="api-code-apply">
+									<a href="무인도서자료실_무인도서OPENAPI-신청.html" type="button" class="btn-apply">조회/신청하기</a>
+								</div>
+                            </div>
+                            <!-- //api-explain-section -->
+
+                        </div>
+                    </div>
+                    <!-- //sublayout__content -->
+
+                </div>
+                <!-- //sublayout__body -->
+            </div>
+            <!-- //sublayout -->
+        </div>
+        <!-- //contentsWrap -->
+        <footer id="footer" class="footer">
+            <div class="footer-link">
+                <div class="container">
+                    <a href="#" target="_blank" class="link" title="새창 열림">
+                        <span>토지이음 홈페이지</span>
+                        <i class="ico-blank"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-content">
+                <div class="container">
+                    <h2 class="logo">
+                        <span class="visually-hidden">해양수산부</span>
+                    </h2>
+                    <div class="ft-info">
+                        <div class="addr">(30110) 세종특별자치시 다솜2로 94(어진동) 정부세종청사 5동 해양수산부 </div>
+                        <div class="tel">
+                            <strong>대표전화</strong>
+                            <span><a href="tel:044-200-5355">044-200-5355</a> (해양수산부 해양영토과)</span>
+                        </div>
+                        <div class="mail">
+                            <strong>시스템 관련문의</strong>
+                            <span><a href="mailto:kjk@korea.kr">kjk@korea.kr</a></span>
+                        </div>
+                    </div>
+        
+                    <div class="ft-links">
+                        <div class="ft-links-inner">
+                            <a href="#" target="_blank" class="bold">개인정보처리방침</a>
+                            <a href="#" target="_blank" class="bold">이메일무단수집거부</a>
+                            <a href="#" target="_blank" class="bold">저작권보호 및 정책</a>
+                        </div>
+                        <div class="copyright">
+                            <p> Ministry of the Oceans and Fisheries. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>    </div>
+    
+    <script>
+        // API 코드 탭 기능
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabNav = document.querySelector('.api-code-nav');
+            const tabSections = document.querySelectorAll('.api-code-section > div');
+            
+            if (!tabNav) return;
+            
+            tabSections.forEach((section, index) => {
+                section.style.display = index === 0 ? 'block' : 'none';
+            });
+            
+            tabNav.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (e.target.tagName === 'A') {
+                    const targetId = e.target.getAttribute('href').substring(1);
+
+                    tabNav.querySelectorAll('a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    tabSections.forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    e.target.classList.add('active');
+                    const targetSection = document.querySelector(`.${targetId}`);
+                    if (targetSection) {
+                        targetSection.style.display = 'block';
+                    }
+                }
+            });
+            const firstTab = tabNav.querySelector('a');
+            if (firstTab) {
+                firstTab.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

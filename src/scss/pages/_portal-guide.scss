@@ -361,12 +361,12 @@
             padding: 2rem;
         }
         .btn-close{
-            
             width: 2.4rem;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
             display: none;
+            justify-self: flex-end;
             i{
                 background-color: #000;
             }
