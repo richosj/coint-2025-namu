@@ -64,12 +64,14 @@
     width: 100%;
     background: #fff;
     border: 1px solid #e0e0e0;
-    
+    border-radius: 1.2rem;
+    overflow: hidden;
     &__header {
         background: #f8f9fa;
         color: #333;
         padding: 4rem 3rem;
         border-bottom: 1px solid #e0e0e0;
+        
         @media (max-width: $tablet) {
             padding: 1.4rem;
         }
@@ -324,18 +326,19 @@
 
 // FAQ 섹션
 .faq-section {
-    width: 100%;
-    background: #fff;
-    border: 1px solid #e0e0e0;
     margin-bottom: 4rem;
 }
 
 .faq-list {
     .faq-item {
-        border-bottom: 1px solid #e0e0e0;
-        
-        &:last-child {
-            border-bottom: 0;
+        border: 1px solid #e0e0e0;
+        overflow: hidden;
+        border-radius: .6rem;
+        +.faq-item{
+            margin-top: 3.4rem;
+        }
+        &:has(.active){
+            border-color: var(--color-primary);
         }
     }
     
@@ -344,67 +347,73 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 2rem 3rem;
+        padding: 2rem 2.4rem;
         background: #fff;
         border: none;
         cursor: pointer;
         transition: all 0.3s ease;
         text-align: left;
         
-        &:hover {
-            background: #f8f9fa;
-        }
-        
         &.active {
-            background: #f8f9fa;
-            
+            .faq-text{
+                color: var(--color-primary);
+                &::before{
+                    background-color: var(--color-primary);
+                    border-color: var(--color-primary);
+                }
+            }
             .faq-icon {
                 transform: rotate(180deg);
             }
         }
         
         .faq-text {
-            font-size: 1.6rem;
+            font-size: 1.9rem;
             font-weight: 500;
             color: #212529;
             line-height: 1.4;
+            display: inline-flex;
+            align-items: center;
+            gap:0 1.6rem;
+            &::before{
+                transition: all 0.3s ease;
+               content: 'Q';
+               border-radius: 50%;
+               width: 3.2rem;
+               height: 3.2rem;
+               border: 1px solid #555;
+               background-color: #717171;
+               color: #fff;
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               font-weight: 500;
+               font-size: 1.9rem;
+            }
+            @media (max-width: $tablet) {
+                gap:0 .5rem;
+                font-size: 1.4rem;
+                &::before{
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    font-size: 1.4rem;
+                }
+            }
         }
         
         .faq-icon {
-            width: 1.6rem;
-            height: 1.6rem;
+            width: 2.4rem;
+            height: 2.4rem;
             position: relative;
             transition: transform 0.3s ease;
-            flex-shrink: 0;
+            flex-shrink : 0;
             margin-left: 2rem;
-            
-            &::before,
-            &::after {
-                content: '';
-                position: absolute;
-                background: #6c757d;
-                transition: all 0.3s ease;
-            }
-            
-            &::before {
-                width: 100%;
-                height: 2px;
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
-            }
-            
-            &::after {
-                width: 2px;
-                height: 100%;
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            
-            &.active::after {
-                transform: translateX(-50%) rotate(90deg);
-                opacity: 0;
+            background: url('@/assets/images/portal/icon_size.png') no-repeat;
+            transition: all 0.3s ease;
+            @media (max-width: $tablet) {
+                width: 2rem;
+                height: 2rem;
+                background-size: 100% auto;
             }
         }
         
@@ -426,35 +435,50 @@
     .faq-answer {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
-        background: #f8f9fa;
-        
+        transition: all 0.3s ease;
         &.active {
             max-height: 50rem;
+        }
+
+        &-text{
+            font-size: 1.9rem;
+            color: #212529;
+            line-height: 1.4;
+            display: flex;
+            gap:0 1.6rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+            &::before{
+                transition: all 0.3s ease;
+               content: 'A';
+               border-radius: 50%;
+               width: 3.2rem;
+               height: 3.2rem;
+               border: 1px solid #17A595;
+               background-color: #17A595;
+               color: #fff;
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               font-weight: 500;
+               font-size: 1.9rem;
+               flex-shrink: 0;
+            }
+            @media (max-width: $tablet) {
+                gap:0 .5rem;
+                font-size: 1.4rem;
+                &::before{
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    font-size: 1.4rem;
+                }
+            }
         }
         
         .faq-content {
             padding: 0 3rem 2rem 3rem;
-            
-            p {
-                font-size: 1.5rem;
-                line-height: 1.6;
-                color: #495057;
-                margin-bottom: 1.5rem;
-                
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-            
             @media (max-width: $tablet) {
                 padding: 0 2rem 1.5rem 2rem;
-                
-                p {
-                    font-size: 1.4rem;
-                    line-height: 1.5;
-                    margin-bottom: 1rem;
-                }
             }
         }
     }
