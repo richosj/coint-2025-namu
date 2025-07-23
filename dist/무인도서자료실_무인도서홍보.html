@@ -1,0 +1,419 @@
+<!-- @pageTitle 무인도서 자료실-무인도서 홍보 -->
+<!-- @pageCreated 2025-07-23 -->
+<!-- @pageUpdated 2025-07-23 -->
+<!-- @pageNote  -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="해양수산부 무인도서 종합정보제공">
+    <meta property="og:description" content="무인도서 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
+    
+    <meta name="subject" content="무인도서(무인도)">
+    <meta name="title" content="해양수산부 무인도서(무인도) 종합정보제공">
+    <meta name="description" content="무인도서(무인도) 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
+    <meta name="keywords" content="무인도,무인도 정보,무인도 정보조회,무인도서,무인도서 정보관리,무인도서 종합정보시스템,해양수산부">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    
+    <link rel="manifest" href="site.webmanifest">
+    
+    <title>해양수산부 무인도서 종합정보제공</title>
+    <link rel="stylesheet" as="style" href="./font/pretendard-gov-subset.css" />
+    <script src="./lib/gsap/gsap.min.js"></script>
+    <script src="./lib/gsap/ScrollTrigger.min.js"></script>
+    <script src="./lib/gsap/ScrollToPlugin.min.js"></script>
+    <script src="./lib/gsap/ScrollSmoother.js"></script>
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css">
+    <script src="./lib/swiper/swiper-bundle.min.js"></script>
+  <script type="module" src="./assets/js/modulepreload-polyfill.js"></script>
+  <script type="module" src="./assets/js/index2.js"></script>
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header-container">
+                <h1 class="logo"><a href="/" title="홈 바로가기"></a></h1>
+                <nav id="nav">
+                    <ul id="gnb" class="gnb">
+                        <li class="gnb-lv1"><a href="./map.html" class="current">지도로 보는 무인도서</a>
+                            <div class="gnb-submenu"></div>
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서안내_무인도서정의.html">무인도서 안내</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_무인도서정의.html">무인도서 정의</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_무인도서현황.html">무인도서 현황</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_이용방법.html">무인도서 이용방법</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서자료실_무인도서통계.html">무인도서 자료실</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서통계.html">무인도서 통계</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서OpenAPI.html">무인도서 OpenAPI</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서홍보.html">무인도서 홍보</a></li>
+                                </ul>
+                            </div>
+        
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서커뮤니티_공지사항_목록.html">무인도서 커뮤니티</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서커뮤니티_공지사항_목록.html">공지사항</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서커뮤니티_FAQ.html">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <button type="button" class="mobile-btn-menu" title="메뉴 열기">
+                        <span class="mobile-btn-menu__line">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-bg"></div>
+        </header>
+        <div id="contentsWrap">
+            <div class="sublayout" data-page="islands-promotion">
+                <div class="sublayout__header">
+                    <ol class="sublayout__breadcrumb">
+                        <li class="first">
+                            <a href="#" title="홈으로 이동"><span>홈</span></a>
+                        </li>
+                        <li><a href="#"><span>무인도서 자료실</span></a></li>
+                        <li><strong title="현재 페이지">무인도서 홍보</strong></li>
+                    </ol>
+                    <div class="sublayout__page">무인도서 홍보</div>
+                    <div class="sublayout__desc">다양한 무인도서 정보에 대해 안내합니다.</div>
+                    <div class="image-background">
+                        <img src="./assets/images/bg2.png" alt="">
+                    </div>
+                </div>
+                <!-- /sublayout__header -->
+
+                <div class="sublayout__body">
+                    <div class="sublayout__title"><span>자주 찾는 <em class="point"><b>무인도서</b></em></span></div>
+                    <div class="sublayout__content">
+                        <div class="container">
+                            <!-- 최근 게시물 -->
+                            <div class="ofmonth-islands">
+                                <div class="image">
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/dummy.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/dummy.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/dummy.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/dummy.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div class="hgroup">
+                                        <button type="button" class="swiper-button-prev"></button>
+                                        <h3 class="title">5월의 무인도서</h3>
+                                        <button type="button" class="swiper-button-next"></button>
+                                    </div>
+                                    <div class="desc">
+                                        <h4 class="subject">윤돌도</h4>
+                                        <div class="text">
+                                            삼 형제의 효심이 담긴 섬. 윤돌도는 행정구역상 경상남도 구조라리에 있는 무인도서로
+                                            높이 약 40m, 길이 약 230m, 면적 11,207m의 남북 방향으로 신장된 종상형 구조를 
+                                            보인다. 구조라 해수욕장과 자연유산인 거제윤돌섬 상록수림 등이 있다.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //최근 게시물 -->
+
+                            <div class="search-form search-form--promotion">
+                                <div class="search-row">
+                                    <strong>검색기간</strong>
+                                    <div class="data-selectors">
+                                        <select class="form-select">
+                                            <option value="">YYYY</option>
+                                        </select>
+                                        <select class="form-select">
+                                            <option value="">MM</option>
+                                        </select>
+                                        <span class="separator">~</span>
+                                        <select class="form-select">
+                                            <option value="">YYYY</option>
+                                        </select>
+                                        <select class="form-select">
+                                            <option value="">MM</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="md-rows">
+                                        <strong>검색지역</strong>
+                                        <select class="form-select">
+                                            <option value="">시도 선택 </option>
+                                        </select>
+                                        <select class="form-select">
+                                            <option value="">시군구 선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-row">
+                                    <strong>검색단어</strong>
+                                    <input type="text" placeholder="제목을 입력해주세요" class="form-input">
+                                    <button type="button" class="btn"><i aria-hidden="true"></i>검색</button>
+                                </div>
+                                <div class="search-desc">
+                                    ※ 한가지만 선택하여도 검색 하실 수 있습니다.
+                                </div>
+                            </div>
+                            <!-- //search-form -->
+                            
+
+                            <div class="board-list gall">
+                                <div class="board-list__header">
+                                    <div class="board-list__header-info">검색 결과 <b>814</b>건</div>
+                                </div>
+                                <div class="board-list__body">
+                                    <ul id="gallery" class="gallery-list">
+                                        <li class="gallery-item">
+                                            <div class="image">
+                                                <a href="#"><img src="./assets/images/dummy.png" alt=""></a>
+                                            </div>
+                                            <div class="info">
+                                                <div class="hgroup">
+                                                    <h4 class="title"><a href="#">무인도서 홍보무인도서 홍보무인도서 홍보무인도서 홍보무인도서 홍보무인도서 홍보무인도서 홍보무인도서 홍보무인도서 홍보무인도서 홍보</a></h4>
+                                                    <span class="date">2025년 5월</span>
+                                                </div>
+                                                <div class="desc">
+                                                    <a href="#">
+                                                        자연생태계 연구에 중요한 상록활엽수가 가득한 무인도서를 확인해 보세요.
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="gallery-item">
+                                            <div class="image">
+                                                <a href="#"><img src="./assets/images/dummy.png" alt=""></a>
+                                            </div>
+                                            <div class="info">
+                                                <div class="hgroup">
+                                                    <h4 class="title"><a href="#">무인도서 홍보</a></h4>
+                                                    <span class="date">2025년 5월</span>
+                                                </div>
+                                                <div class="desc">
+                                                    <a href="#">
+                                                        자연생태계 연구에 중요한 상록활엽수가 가득한 무인도서를 확인해 보세요.
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="gallery-item">
+                                            <div class="image">
+                                                <a href="#"><img src="./assets/images/dummy.png" alt=""></a>
+                                            </div>
+                                            <div class="info">
+                                                <div class="hgroup">
+                                                    <h4 class="title"><a href="#">무인도서 홍보</a></h4>
+                                                    <span class="date">2025년 5월</span>
+                                                </div>
+                                                <div class="desc">
+                                                    <a href="#">
+                                                        자연생태계 연구에 중요한 상록활엽수가 가득한 무인도서를 확인해 보세요.
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="gallery-item">
+                                            <div class="image">
+                                                <a href="#"><img src="./assets/images/dummy.png" alt=""></a>
+                                            </div>
+                                            <div class="info">
+                                                <div class="hgroup">
+                                                    <h4 class="title"><a href="#">무인도서 홍보</a></h4>
+                                                    <span class="date">2025년 5월</span>
+                                                </div>
+                                                <div class="desc">
+                                                    <a href="#">
+                                                        자연생태계 연구에 중요한 상록활엽수가 가득한 무인도서를 확인해 보세요.
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="gallery-item">
+                                            <div class="image">
+                                                <a href="#"><img src="./assets/images/dummy.png" alt=""></a>
+                                            </div>
+                                            <div class="info">
+                                                <div class="hgroup">
+                                                    <h4 class="title"><a href="#">무인도서 홍보</a></h4>
+                                                    <span class="date">2025년 5월</span>
+                                                </div>
+                                                <div class="desc">
+                                                    <a href="#">
+                                                        자연생태계 연구에 중요한 상록활엽수가 가득한 무인도서를 확인해 보세요.자연생태계 연구에 중요한 상록활엽수가 가득한 무인도서를 확인해 보세요.자연생태계 연구에 중요한 상록활엽수가 가득한 무인도서를 확인해 보세요.
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="gallery-item">
+                                            <div class="image">
+                                                <a href="#"><img src="./assets/images/dummy.png" alt=""></a>
+                                            </div>
+                                            <div class="info">
+                                                <div class="hgroup">
+                                                    <h4 class="title"><a href="#">무인도서 홍보</a></h4>
+                                                    <span class="date">2025년 5월</span>
+                                                </div>
+                                                <div class="desc">
+                                                    <a href="#">
+                                                        자연생태계 연구에 중요한 상록활엽수가 가득한 무인도서를 확인해 보세요.
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- //board-list__body -->
+
+                                <div class="board-list__footer">
+                                    <div class="pagination">
+                                        <a class="page-navi prev disabled" href="#">이전</a>
+                                        <div class="page-links">
+                                            <a class="page-link" href="#">1</a>
+                                            <a class="page-link" href="#">2</a>
+                                            <a class="page-link" href="#">3</a>
+                                            <a class="page-link active" href="#"><span class="visually-hidden">현재페이지 </span>4</a>
+                                            <a class="page-link" href="#">5</a>
+                                            <a class="page-link" href="#">6</a>
+                                            <a class="page-link" href="#">7</a>
+                                            <a class="page-link" href="#">8</a>
+                                            <span class="page-link link-dot">...</span>
+                                            <a class="page-link" href="#">99</a>
+                                        </div>
+                                        <a class="page-navi next" href="#">다음</a>
+                                    </div>
+                                </div>
+                                <!-- //board-list__footer -->
+                            </div>
+                            <!-- //board-list -->
+                        </div>
+                    </div>
+                    <!-- //sublayout__content -->
+
+                </div>
+                <!-- //sublayout__body -->
+            </div>
+            <!-- //sublayout -->
+        </div>
+        <!-- //contentsWrap -->
+        <footer id="footer" class="footer">
+            <div class="footer-link">
+                <div class="container">
+                    <a href="#" target="_blank" class="link" title="새창 열림">
+                        <span>토지이음 홈페이지</span>
+                        <i class="ico-blank"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-content">
+                <div class="container">
+                    <h2 class="logo">
+                        <span class="visually-hidden">해양수산부</span>
+                    </h2>
+                    <div class="ft-info">
+                        <div class="addr">(30110) 세종특별자치시 다솜2로 94(어진동) 정부세종청사 5동 해양수산부 </div>
+                        <div class="tel">
+                            <strong>대표전화</strong>
+                            <span><a href="tel:044-200-5355">044-200-5355</a> (해양수산부 해양영토과)</span>
+                        </div>
+                        <div class="mail">
+                            <strong>시스템 관련문의</strong>
+                            <span><a href="mailto:kjk@korea.kr">kjk@korea.kr</a></span>
+                        </div>
+                    </div>
+        
+                    <div class="ft-links">
+                        <div class="ft-links-inner">
+                            <a href="#" target="_blank" class="bold">개인정보처리방침</a>
+                            <a href="#" target="_blank" class="bold">이메일무단수집거부</a>
+                            <a href="#" target="_blank" class="bold">저작권보호 및 정책</a>
+                        </div>
+                        <div class="copyright">
+                            <p> Ministry of the Oceans and Fisheries. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>    </div>
+    
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            pagination: false,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            speed: 1000,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                slideChange: function(){
+                    const currentSlide = this.activeIndex;
+                    const title = document.querySelector('.ofmonth-islands .details .hgroup .title');
+                    const subject = document.querySelector('.ofmonth-islands .details .desc .subject');
+                    const text = document.querySelector('.ofmonth-islands .details .desc .text');
+                    const image = document.querySelector('.ofmonth-islands .image img');
+                    if(currentSlide === 0){
+                        title.textContent = '5월의 무인도서';
+                        subject.textContent = '윤돌도1';
+                        text.textContent = '삼 형제의 효심이 담긴 섬. 윤돌도는 행정구역상 경상남도 구조라리에 있는 무인도서로  높이 약 40m, 길이 약 230m, 면적 11,207m의 남북 방향으로 신장된 종상형 구조를 보인다. 구조라 해수욕장과 자연유산인 거제윤돌섬 상록수림 등이 있다.';
+                    } else if(currentSlide === 1){
+                        title.textContent = '6월의 무인도서';
+                        subject.textContent = '윤돌도2';
+                        text.textContent = '삼 형제의 효심이 담긴 섬. 윤돌도는 행정구역상 경상남도 구조라리에 있는 무인도서로  높이 약 40m, 길이 약 230m, 면적 11,207m의 남북 방향으로 신장된 종상형 구조를 보인다. 구조라 해수욕장과 자연유산인 거제윤돌섬 상록수림 등이 있다.';
+                    } else if(currentSlide === 2){
+                        title.textContent = '7월의 무인도서';
+                        subject.textContent = '윤돌도3';
+                        text.textContent = '삼 형제의 효심이 담긴 섬. 윤돌도는 행정구역상 경상남도 구조라리에 있는 무인도서로  높이 약 40m, 길이 약 230m, 면적 11,207m의 남북 방향으로 신장된 종상형 구조를 보인다. 구조라 해수욕장과 자연유산인 거제윤돌섬 상록수림 등이 있다.';
+                    } else if(currentSlide === 3){
+                        title.textContent = '8월의 무인도서';
+                        subject.textContent = '윤돌도4';
+                        text.textContent = '삼 형제의 효심이 담긴 섬. 윤돌도는 행정구역상 경상남도 구조라리에 있는 무인도서로  높이 약 40m, 길이 약 230m, 면적 11,207m의 남북 방향으로 신장된 종상형 구조를 보인다. 구조라 해수욕장과 자연유산인 거제윤돌섬 상록수림 등이 있다.';
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

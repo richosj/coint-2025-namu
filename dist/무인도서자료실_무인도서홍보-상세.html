@@ -1,0 +1,270 @@
+<!-- @pageTitle 무인도서 자료실-무인도서 상세 -->
+<!-- @pageCreated 2025-07-23 -->
+<!-- @pageUpdated 2025-07-23 -->
+<!-- @pageNote  -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="해양수산부 무인도서 종합정보제공">
+    <meta property="og:description" content="무인도서 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
+    
+    <meta name="subject" content="무인도서(무인도)">
+    <meta name="title" content="해양수산부 무인도서(무인도) 종합정보제공">
+    <meta name="description" content="무인도서(무인도) 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
+    <meta name="keywords" content="무인도,무인도 정보,무인도 정보조회,무인도서,무인도서 정보관리,무인도서 종합정보시스템,해양수산부">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    
+    <link rel="manifest" href="site.webmanifest">
+    
+    <title>해양수산부 무인도서 종합정보제공</title>
+    <link rel="stylesheet" as="style" href="./font/pretendard-gov-subset.css" />
+    <script src="./lib/gsap/gsap.min.js"></script>
+    <script src="./lib/gsap/ScrollTrigger.min.js"></script>
+    <script src="./lib/gsap/ScrollToPlugin.min.js"></script>
+    <script src="./lib/gsap/ScrollSmoother.js"></script>
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css">
+    <script src="./lib/swiper/swiper-bundle.min.js"></script>
+  <script type="module" src="./assets/js/modulepreload-polyfill.js"></script>
+  <script type="module" src="./assets/js/index2.js"></script>
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header-container">
+                <h1 class="logo"><a href="/" title="홈 바로가기"></a></h1>
+                <nav id="nav">
+                    <ul id="gnb" class="gnb">
+                        <li class="gnb-lv1"><a href="./map.html" class="current">지도로 보는 무인도서</a>
+                            <div class="gnb-submenu"></div>
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서안내_무인도서정의.html">무인도서 안내</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_무인도서정의.html">무인도서 정의</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_무인도서현황.html">무인도서 현황</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_이용방법.html">무인도서 이용방법</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서자료실_무인도서통계.html">무인도서 자료실</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서통계.html">무인도서 통계</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서OpenAPI.html">무인도서 OpenAPI</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서홍보.html">무인도서 홍보</a></li>
+                                </ul>
+                            </div>
+        
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서커뮤니티_공지사항_목록.html">무인도서 커뮤니티</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서커뮤니티_공지사항_목록.html">공지사항</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서커뮤니티_FAQ.html">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <button type="button" class="mobile-btn-menu" title="메뉴 열기">
+                        <span class="mobile-btn-menu__line">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-bg"></div>
+        </header>
+        <div id="contentsWrap">
+            <div class="sublayout" data-page="islands-promotion">
+                <div class="sublayout__header">
+                    <ol class="sublayout__breadcrumb">
+                        <li class="first">
+                            <a href="#" title="홈으로 이동"><span>홈</span></a>
+                        </li>
+                        <li><a href="#"><span>무인도서 자료실</span></a></li>
+                        <li><strong title="현재 페이지">무인도서 홍보</strong></li>
+                    </ol>
+                    <div class="sublayout__page">무인도서 홍보</div>
+                    <div class="sublayout__desc">다양한 무인도서 정보에 대해 안내합니다.</div>
+                    <div class="image-background">
+                        <img src="./assets/images/bg2.png" alt="">
+                    </div>
+                </div>
+                <!-- /sublayout__header -->
+
+                <div class="sublayout__body">
+                    <div class="sublayout__title"><span>2025년 5월의 <em class="point"><b>무인도서</b></em></span></div>
+                    <div class="sublayout__content">
+                        <!-- 이미지  -->
+                        <div class="ofmonth-view-islands">
+                            <div class="container">
+                                <div class="swiper">
+                                    <div class="swiper-button-prev"></div>
+                                    
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/dummy22.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/dummy22.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/dummy22.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/dummy22.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //이미지 -->
+
+                        <div class="container">
+                            
+                        </div>
+
+                        <div class="background-put">
+                            <div class="container">
+                                <div class="ofmonth-grid">
+                                    <div class="islands-card">
+                                        <div class="label">무인도</div>
+                                        <ul>
+                                            <li>
+                                                <span>무인도서명 :</span>
+                                                <span>윤돌도</span>
+                                            </li>
+                                            <li>
+                                                <span>소재지 :</span>
+                                                <span>경상남도 거제시 일운면 구조라리 산72</span>
+                                            </li>
+                                            <li>
+                                                <span>무인도서 관리유형 :</span>
+                                                <span>이용가능</span>
+                                            </li>
+                                        </ul>
+                                        <div class="image"><img src="./assets/images/card-image-01.png" alt="무인도" aria-hidden="true"></div>
+                                    </div>
+                                    <div class="islands-card">
+                                        <div class="hgroup">
+                                            <div class="label">지도로 보는 무인도서</div>
+                                            <a href="#" target="_blank">지도에서 보기<i></i></a>
+                                        </div>
+
+                                        <div class="map-area">
+                                            <div class="map-iframe"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ofmonth-social">
+                                    <div class="ofmonth-social__desc">
+                                        <h3>무인도서섬이 궁금하신가요?</h3>
+                                        <p>섬에 자세한 내용을 페이스북이나 블로그를 통해 확인 해보세요. 페이스북, 블로그 아이콘을 클릭하시면 관련사이트로 이동합니다</p>
+                                    </div>
+                                    <div class="ofmonth-social__links">
+                                        <a href="https://www.facebook.com/mofkor" target="_blank"></a>
+                                        <a href="https://blog.naver.com/koreamof/" target="_blank"></a>
+                                    </div>
+                                </div>
+
+                                <div class="ofmonth-footer">
+                                    <a href="#" class="btn">목록으로</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //sublayout__content -->
+
+                </div>
+                <!-- //sublayout__body -->
+            </div>
+            <!-- //sublayout -->
+        </div>
+        <!-- //contentsWrap -->
+        <footer id="footer" class="footer">
+            <div class="footer-link">
+                <div class="container">
+                    <a href="#" target="_blank" class="link" title="새창 열림">
+                        <span>토지이음 홈페이지</span>
+                        <i class="ico-blank"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-content">
+                <div class="container">
+                    <h2 class="logo">
+                        <span class="visually-hidden">해양수산부</span>
+                    </h2>
+                    <div class="ft-info">
+                        <div class="addr">(30110) 세종특별자치시 다솜2로 94(어진동) 정부세종청사 5동 해양수산부 </div>
+                        <div class="tel">
+                            <strong>대표전화</strong>
+                            <span><a href="tel:044-200-5355">044-200-5355</a> (해양수산부 해양영토과)</span>
+                        </div>
+                        <div class="mail">
+                            <strong>시스템 관련문의</strong>
+                            <span><a href="mailto:kjk@korea.kr">kjk@korea.kr</a></span>
+                        </div>
+                    </div>
+        
+                    <div class="ft-links">
+                        <div class="ft-links-inner">
+                            <a href="#" target="_blank" class="bold">개인정보처리방침</a>
+                            <a href="#" target="_blank" class="bold">이메일무단수집거부</a>
+                            <a href="#" target="_blank" class="bold">저작권보호 및 정책</a>
+                        </div>
+                        <div class="copyright">
+                            <p> Ministry of the Oceans and Fisheries. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>    </div>
+    
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            pagination: false,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 1000,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+</body>
+
+</html>
