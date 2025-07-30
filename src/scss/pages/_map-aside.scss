@@ -132,7 +132,11 @@
     box-shadow: 0 2px 6px 0 rgba(0,0,0,0.04);
     padding: 2rem;
     margin-bottom: 16px;
-
+    transition: all 0.3s;
+    &:hover{
+        border-color: #1764DC;
+        background-color: rgba(#1764DC, 0.04);
+    }
     &__title {
         font-weight: 700;
         color: var(--color-primary);

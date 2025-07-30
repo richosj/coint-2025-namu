@@ -187,6 +187,111 @@ body{
     }
 }
 
+.island-count-viewmap{
+    text-align: center;
+    @media (max-width: 768px) {
+        text-align: left;
+    }
+    .img{
+        @media (max-width: 768px) {
+            display: block;
+            width: 100%;
+        }
+        .pc{
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+        .mobile{
+            display: none;
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+    }
+    div{
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        @media (max-width: 768px) {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .label-counting{
+        position: absolute;
+        box-shadow: 1.37px 3.76px 0px rgba(#ededed, .7);
+        border: 1px solid #cecece;
+        border-radius: 1.6rem;
+        padding: 0.8rem 1.5rem;
+        line-height: 1;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1.7rem;
+        background-color: #fff;
+        em{
+            color: #17a495;
+        }
+        @media (max-width: 768px) {
+            position: static;
+            font-size: 1.1rem;
+            padding: .5rem 0;
+            text-align: center;
+            width: 30%;
+        }
+    }
+    .label-counting--1{
+        top: 13%;
+        left: -30%;
+    }
+    .label-counting--2{
+        top: 26%;
+        left: -25%;
+    }
+    .label-counting--3{
+        top: 12%;
+        right:-20%;
+    }
+    .label-counting--4{
+        top: 39.5%;
+        left: -25%;
+    }   
+    .label-counting--5{
+        top: 52%;
+        left: -24%;
+    }
+    .label-counting--6{
+        top: 69.5%;
+        left: -42%;
+    }   
+    .label-counting--7{
+        top: 39%;
+        right: -32%;
+    }
+    .label-counting--8{
+        top: 56.3%;
+        right: -34%;
+        
+    }
+    .label-counting--9{
+        top: 66%;
+        right: -22%;
+    }
+    .label-counting--10{
+        top: 79%;
+        right: 0;
+    }
+    .label-counting--11{
+        bottom: 2.5%;
+        left: 41%;
+    }
+}
+
 .chart {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));

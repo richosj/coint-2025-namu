@@ -1308,6 +1308,11 @@ body, html {
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04);
   padding: 2rem;
   margin-bottom: 16px;
+  transition: all 0.3s;
+}
+.island-card:hover {
+  border-color: #1764DC;
+  background-color: rgba(23, 100, 220, 0.04);
 }
 .island-card__title {
   font-weight: 700;

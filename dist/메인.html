@@ -1,0 +1,625 @@
+<!-- @pageTitle 메인 -->
+<!-- @pageCreated 2025-07-29 -->
+<!-- @pageUpdated 2025-07-29 -->
+<!-- @pageNote  -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="해양수산부 무인도서 종합정보제공">
+    <meta property="og:description" content="무인도서 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
+    
+    <meta name="subject" content="무인도서(무인도)">
+    <meta name="title" content="해양수산부 무인도서(무인도) 종합정보제공">
+    <meta name="description" content="무인도서(무인도) 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
+    <meta name="keywords" content="무인도,무인도 정보,무인도 정보조회,무인도서,무인도서 정보관리,무인도서 종합정보시스템,해양수산부">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    
+    <link rel="manifest" href="site.webmanifest">
+    
+    <title>해양수산부 무인도서 종합정보제공</title>
+    <link rel="stylesheet" as="style" href="./font/pretendard-gov-subset.css" />
+    <script src="./lib/gsap/gsap.min.js"></script>
+    <script src="./lib/gsap/ScrollTrigger.min.js"></script>
+    <script src="./lib/gsap/ScrollToPlugin.min.js"></script>
+    <script src="./lib/gsap/ScrollSmoother.js"></script>    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css">
+    <script src="./lib/swiper/swiper-bundle.min.js"></script>
+  <script type="module" src="./assets/js/modulepreload-polyfill.js"></script>
+  <script type="module" src="./assets/js/index2.js"></script>
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <!-- 닫힘 상태에선 출력 없이 정지 (모션 반복으로 메모리 낭비 방지) -->
+    <div id="dialog" class="dialog">
+        <div class="dialog-content">
+            <div class="dialog-content__header">
+                <div class="dialog-content__title">
+                    <span>무인도서 종합정보 서비스 - 2025년 상반기 만족도 조사</span>
+                    <button type="button" class="dialog-content__close">닫기</button>
+                </div>
+            </div>
+            <div class="dialog-content__body">
+                <div class="dialog-survey">
+                    <div class="dialog-survey__title">
+                        <span>(조사기간 : 2025년 6월 2일 ~ 6월 13일)</span>
+                    </div>
+                    <div class="dialog-survey__content">
+                        <div class="bg">
+                            <p>해양수산부는 2013년부터 무인도서에대한 정보를 구축하여 2016년부터 무인도서 종합정보제공서비스(홈페이
+                                지)를 운영 중이며, 고객서비스 향상을 위해 주기적으로 사용자 만족도 조사를 실시하고 있습니다.</p>
+    
+                            <p>본 설문을 통해 조사된 귀하의 소중한 의견은 다음 홈페이지 개편과 업무처리 개선을 위해 적극 반영하고자 하오
+                                니, 바쁘시더라도 잠시 시간을 내시어 설문에 참여해 주시면 감사하겠습니다.</p>
+    
+                            <p>아울러, 개인의 비밀에 속하는 사항은 통계법 제33조(비밀의 보호)에 따라 엄격히 보호되며 통계작성 외의 목적
+                                으로는 일체 사용되지 않음을 알려드립니다.</p>
+    
+                            <p>설문에 참여해 주신 분들을대상으로 추첨을 통하여 소정의 사은품을 지급하도록 하겠습니다.      </p>
+    
+                            <div class="right-text">2025년 6월</div>
+    
+                            <div class="center-text">- 해양수산부 해양영토과 -</div>
+                        </div>
+                        <div class="dialog-survey__link">
+                            <a href="#">만족도 조사 설문 참여하기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="deco deco-1"><img src="./assets/images/dialog.png" alt=""></div>
+                <div class="deco deco-2"><img src="./assets/images/dialog2.png" alt=""></div>
+                <div class="deco deco-3"><img src="./assets/images/dialog3.png" alt=""></div>
+            </div>
+            <div class="dialog-content__footer">
+                <div class="dialog-content__footer-left">
+                    <label>
+                        <input type="checkbox" name="today" id="today">
+                        <span>오늘 하루 열지 않기</span>
+                    </label>
+                    <button type="button" class="dialog-content__close">닫기</button>
+                </div>
+            </div>
+        </div>
+        <div class="dialog-dimmer"></div>
+    </div>
+
+
+    <div id="wrap">
+        <header class="header">
+            <div class="header-container">
+                <h1 class="logo"><a href="/" title="홈 바로가기"></a></h1>
+                <nav id="nav">
+                    <ul id="gnb" class="gnb">
+                        <li class="gnb-lv1"><a href="./map.html" class="current">지도로 보는 무인도서</a>
+                            <div class="gnb-submenu"></div>
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서안내_무인도서정의.html">무인도서 안내</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_무인도서정의.html">무인도서 정의</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_무인도서현황.html">무인도서 현황</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서안내_이용방법.html">무인도서 이용방법</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서자료실_무인도서통계.html">무인도서 자료실</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서통계.html">무인도서 통계</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서OpenAPI.html">무인도서 OpenAPI</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서자료실_무인도서홍보.html">무인도서 홍보</a></li>
+                                </ul>
+                            </div>
+        
+                        </li>
+                        <li class="gnb-lv1"><a href="./무인도서커뮤니티_공지사항_목록.html">무인도서 커뮤니티</a>
+                            <div class="gnb-submenu">
+                                <ul class="gnb-submenu-list">
+                                    <li class="gnb-submenu-item"><a href="./무인도서커뮤니티_공지사항_목록.html">공지사항</a></li>
+                                    <li class="gnb-submenu-item"><a href="./무인도서커뮤니티_FAQ.html">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <button type="button" class="mobile-btn-menu" title="메뉴 열기">
+                        <span class="mobile-btn-menu__line">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-bg"></div>
+        </header>        <div id="contentsWrap" class="home">
+
+            <div class="home-visual">
+                <div class="home-visual__slide">
+                    <div class="home-visual__caption">
+                        <div class="inwrap">
+                            <div class="slide__subtitle">사람이 떠난 자리, 자연이 빚은 예술</div>
+                            <div class="slide__title">대화도</div>
+
+                            <div class="flaking">
+                                <b class="active">1</b>
+                                <span>/</span>
+                                <span class="total">100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="image" data-subtitle="사람이 떠난 자리, 자연이 빚은 예술" data-title="대화도" style="background-image: url('./assets/images/bg-1.png');"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image" data-subtitle="사람이 떠난 자리, 자연이 빚은 예술" data-title="대화도2" style="background-image: url('./assets/images/bg-1.png');"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image" data-subtitle="사람이 떠난 자리, 자연이 빚은 예술" data-title="대화도3" style="background-image: url('./assets/images/bg-1.png');"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image" data-subtitle="사람이 떠난 자리, 자연이 빚은 예술" data-title="대화도4" style="background-image: url('./assets/images/bg-1.png');"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image" data-subtitle="사람이 떠난 자리, 자연이 빚은 예술" data-title="대화도5" style="background-image: url('./assets/images/bg-1.png');"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home-visual__search">
+                    <div class="inwrap">
+                        <div class="subject"><img src="./assets/images/search-title.png" alt=""></div>
+                        <div class="search__form">
+                            <input type="text" placeholder="찾으시는 무인도서를 입력해주세요.">
+                            <button type="button">검색</button>
+                        </div>
+                        <div class="search__keyword">
+                            <strong>추천 무인도서</strong>
+                            <a href="#">윤돌도</a>
+                            <a href="#">윤돌도</a>
+                            <a href="#">윤돌도</a>
+                            <a href="#">윤돌도</a>
+                            <a href="#">윤돌도</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="home-links">
+                <div class="container">
+                    <div class="home-links__grid">
+                        <a href="#" class="home-links__item">
+                            <div class="home-links__icon"><img src="./assets/images/home-links-1.png" alt=""></div>
+                            <span class="home-links__text">입도 가능한 <b>무인도서</b></span>
+                        </a>
+                        
+                        <a href="#" class="home-links__item">
+                            <div class="home-links__icon"><img src="./assets/images/home-links-2.png" alt=""></div>
+                            <span class="home-links__text">개발 가능한 <b>무인도서</b></span>
+                        </a>
+                        
+                        <a href="#" class="home-links__item">
+                            <div class="home-links__icon"><img src="./assets/images/home-links-3.png" alt=""></div>
+                            <span class="home-links__text">국유지 <b>무인도서</b></span>
+                        </a>
+                        
+                        <a href="#" class="home-links__item">
+                            <div class="home-links__icon"><img src="./assets/images/home-links-4.png" alt=""></div>
+                            <span class="home-links__text">사유지 <b>무인도서</b></span>
+                        </a>
+                        
+                        <a href="#" class="home-links__item">
+                            <div class="home-links__icon"><img src="./assets/images/home-links-5.png" alt=""></div>
+                            <span class="home-links__text">접근성 좋은 <b>무인도서</b></span>
+                        </a>
+                        
+                        <a href="#" class="home-links__item">
+                            <div class="home-links__icon"><img src="./assets/images/home-links-6.png" alt=""></div>
+                            <span class="home-links__text">소형 <b>무인도서</b></span>
+                        </a>
+                        
+                        <a href="#" class="home-links__item">
+                            <div class="home-links__icon"><img src="./assets/images/home-links-7.png" alt=""></div>
+                            <span class="home-links__text">지형도면이 있는 <b>무인도서</b></span>
+                        </a>
+                        
+                        <a href="#" class="home-links__item">
+                            <div class="home-links__icon"><img src="./assets/images/home-links-8.png" alt=""></div>
+                            <span class="home-links__text">보호/보전 <b>무인도서</b></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- // home-links -->
+
+            <div class="home-month">
+                <div class="home-title">
+                    <span>재미있는 정보를 담은 <br class="mobile-block"><b>이달의 무인도서</b>를 만나보세요</span>
+                </div>
+                <div class="container">
+                    <div class="home-month-slide">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="##" class="home-month-slide__item">
+                                        <div class="thumb"><img src="./assets/images/dummy.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">윤돌도</div>
+                                            <div class="desc">자연생태계 연구에 중요한 상록활엽수가 가득한 
+                                                무인도서를 확인해 보세요.</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="##" class="home-month-slide__item">
+                                        <div class="thumb"><img src="./assets/images/dummy.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도</div>
+                                            <div class="desc">자연생태계 연구에 중요한 상록활엽수가 가득한 
+                                                무인도서를 확인해 보세요.자연생태계 연구에 중요한 상록활엽수가 가득한 
+                                                무인도서를 확인해 보세요.</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="##" class="home-month-slide__item">
+                                        <div class="thumb"><img src="./assets/images/dummy.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">윤돌도</div>
+                                            <div class="desc">자연생태계 연구에 중요한 상록활엽수가 가득한 
+                                                무인도서를 확인해 보세요.</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="##" class="home-month-slide__item">
+                                        <div class="thumb"><img src="./assets/images/dummy.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도윤돌도</div>
+                                            <div class="desc">자연생태계 연구에 중요한 상록활엽수가 가득한 
+                                                무인도서를 확인해 보세요.자연생태계 연구에 중요한 상록활엽수가 가득한 
+                                                무인도서를 확인해 보세요.</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="##" class="home-month-slide__item">
+                                        <div class="thumb"><img src="./assets/images/dummy.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">윤돌도</div>
+                                            <div class="desc">자연</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-slide__nav">
+                            <div class="home-slide__pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // home-month -->
+
+            <div class="home-guide">
+                <div class="home-title">
+                    <span><b>무인도서가 무엇인지</b>, <br class="mobile-block">어떻게 구분되는지 알아보세요</span>
+                </div>
+                <div class="container">
+                    <div class="home-guide__grid">
+                        <div class="home-guide__item">
+                            <div class="home-guide__header">
+                                <span>#무인도서 정의</span>
+                            </div>
+                            <div class="home-guide__content">
+                                <div class="home-guide__info">
+                                    <h3>무인도서란?</h3>
+                                    <p>자연적으로 형성된 육지로서 바다로 둘러싸여 있고, 만조 시에도 수면 위에 노출되어 있으며, 사람이 거주하지 않는 섬을 말합니다.</p>
+                                    <a href="#" class="home-guide__link home__link">
+                                        자세히 보기
+                                        <i></i>
+                                    </a>
+                                </div>
+                                <div class="home-guide__icon">
+                                    <img src="./assets/images/guide-1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="home-guide__item">
+                            <div class="home-guide__header">
+                                <span>#무인도서 이용방법</span>
+                            </div>
+                            <div class="home-guide__content">
+                                <div class="home-guide__info">
+                                    <h3>무인도서 여행, 제대로 준비하기!</h3>
+                                    <p>해양수산부 종합정보사이트에서 위치, 특성, 접근성을 확인하여 무인도서 여행을 계획해보세요.</p>
+                                    <a href="#" class="home-guide__link home__link">
+                                        자세히 보기
+                                        <i></i>
+                                    </a>
+                                </div>
+                                <div class="home-guide__icon">
+                                    <img src="./assets/images/guide-2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="home-guide__item large">
+                            <div class="home-guide__content">
+                                <div class="home-guide__header">
+                                    <span>#무인도서 현황</span>
+                                </div>
+                                <div class="home-guide__info">
+                                    <h3>숨어 있는 섬, 무인도서</h3>
+                                    <p>우리나라에는 약 2,918개의 무인도서가 존재합니다. <br> 어느 지역이 가장 많은 섬을 품고 있을까요?</p>
+                                </div>
+                            </div>
+                            <a href="#" class="home-guide__link home__link">
+                                자세히 보기
+                                <i></i>
+                            </a>
+                            <div class="home-guide__number">2,918개</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // home-guide -->
+
+            <div class="home-statistics">
+                <div class="home-title">무인도서에 대한 <br class="mobile-block"><b>다양한 통계</b>를 확인해 보세요</div>
+                <div class="container">
+                    <div class="home-statistics__slide">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#" class="home-statistics__item">
+                                        <div class="title">행정지역별  통계도표</div>
+                                        <div class="desc">전국의 무인도서를 시도 및 시군구별로 구분해 수량과 
+                                            위치를 정리한 표입니다.</div>
+                                        <div class="chart_area"><img src="./assets/images/chart-1.png" alt=""></div>
+                                        <div class="home-statistics__link ">
+                                            <span class="home__link">자세히 보기 <i></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="home-statistics__item">
+                                        <div class="title">행무인도서 관리유형별 통계</div>
+                                        <div class="desc">관리유형(절대보전, 준보전, 개발가능, 이용가능 등)으로 
+                                            구분하여 각 유형별 분포 현황을 제공합니다. </div>
+                                        <div class="chart_area"><img src="./assets/images/chart-2.png" alt=""></div>
+                                        <div class="home-statistics__link">
+                                            <span class="home__link">자세히 보기 <i></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="home-statistics__item">
+                                        <div class="title">면적별  통계도표</div>
+                                        <div class="desc">면적 구간에 따라 무인도서를 분류함으로써, 전체 
+                                            무인도서의 크기 특성과 분포현황을 제공합니다</div>
+                                        <div class="chart_area"><img src="./assets/images/chart-3.png" alt=""></div>
+                                        <div class="home-statistics__link">
+                                            <span class="home__link">자세히 보기 <i></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="home-statistics__item">
+                                        <div class="title">행무인도서 관리유형별 통계</div>
+                                        <div class="desc">관리유형(절대보전, 준보전, 개발가능, 이용가능 등)으로 
+                                            구분하여 각 유형별 분포 현황을 제공합니다. </div>
+                                        <div class="chart_area"><img src="./assets/images/chart-2.png" alt=""></div>
+                                        <div class="home-statistics__link">
+                                            <span class="home__link">자세히 보기 <i></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="home-statistics__item">
+                                        <div class="title">면적별  통계도표</div>
+                                        <div class="desc">면적 구간에 따라 무인도서를 분류함으로써, 전체 
+                                            무인도서의 크기 특성과 분포현황을 제공합니다</div>
+                                        <div class="chart_area"><img src="./assets/images/chart-3.png" alt=""></div>
+                                        <div class="home-statistics__link">
+                                            <span class="home__link">자세히 보기 <i></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-slide__nav">
+                            <div class="home-slide__pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <footer id="footer" class="footer">
+            <div class="footer-link">
+                <div class="container">
+                    <a href="#" target="_blank" class="link" title="새창 열림">
+                        <span>토지이음 홈페이지</span>
+                        <i class="ico-blank"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-content">
+                <div class="container">
+                    <h2 class="logo">
+                        <span class="visually-hidden">해양수산부</span>
+                    </h2>
+                    <div class="ft-info">
+                        <div class="addr">(30110) 세종특별자치시 다솜2로 94(어진동) 정부세종청사 5동 해양수산부 </div>
+                        <div class="tel">
+                            <strong>대표전화</strong>
+                            <span><a href="tel:044-200-5355">044-200-5355</a> (해양수산부 해양영토과)</span>
+                        </div>
+                        <div class="mail">
+                            <strong>시스템 관련문의</strong>
+                            <span><a href="mailto:kjk@korea.kr">kjk@korea.kr</a></span>
+                        </div>
+                    </div>
+        
+                    <div class="ft-links">
+                        <div class="ft-links-inner">
+                            <a href="#" target="_blank" class="bold">개인정보처리방침</a>
+                            <a href="#" target="_blank" class="bold">이메일무단수집거부</a>
+                            <a href="#" target="_blank" class="bold">저작권보호 및 정책</a>
+                        </div>
+                        <div class="copyright">
+                            <p> Ministry of the Oceans and Fisheries. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>    </div>
+
+    <script>
+        const dialog = document.getElementById('dialog');
+            const today = document.getElementById('today');
+            const close = document.querySelectorAll('.dialog-content__close');
+
+            if(today.checked){
+                dialog.remove();
+            }
+            close.forEach(item => {
+                item.addEventListener('click', () => {
+                    dialog.remove();
+                });
+            });
+            today.addEventListener('change', () => {
+                if(today.checked){
+                    dialog.remove();
+                }
+            });
+            const homeVisualSlide = new Swiper('.home-visual__slide .swiper', {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                navigation: false,
+                pagination: false,
+                loop: true,
+                speed: 1000,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                on: {
+                    init: function () {
+                        const total = document.querySelector('.flaking .total');
+                        if (total) total.textContent = this.slides.length;
+                        updateFlaking(this);
+                    },
+                    slideChange: function () {
+                        updateFlaking(this);
+                    }
+                }
+            });
+
+            function updateFlaking(swiper) {
+                const currentNum = swiper.realIndex + 1; // 0부터 시작하니까 +1
+
+                const currentSlide = swiper.slides[swiper.activeIndex];
+                const subtitle = currentSlide.querySelector('.image[data-subtitle]');
+                const title = currentSlide.querySelector('.image[data-title]');
+
+                if(subtitle){
+                    document.querySelector('.slide__subtitle').textContent = subtitle.getAttribute('data-subtitle');
+                }
+                if(title){
+                    document.querySelector('.slide__title').textContent = title.getAttribute('data-title');
+                }
+                
+                document.querySelector('.flaking b').textContent = currentNum;
+            }
+
+
+        const homeMonthSlide = new Swiper('.home-month-slide .swiper', {
+            slidesPerView: 3,
+            spaceBetween: 24,
+            navigation: {
+                nextEl: '.home-month-slide .swiper-button-next',
+                prevEl: '.home-month-slide .swiper-button-prev',
+            },
+            pagination: {
+                el: '.home-month-slide .home-slide__pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 16
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 24
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 24
+                }
+            }
+        });
+        const homeStatisticsSlide = new Swiper('.home-statistics__slide .swiper', {
+            slidesPerView: 3,
+            spaceBetween: 24,
+            navigation: {
+                nextEl: '.home-statistics__slide .swiper-button-next',
+                prevEl: '.home-statistics__slide .swiper-button-prev',
+            },
+            pagination: {
+                el: '.home-statistics__slide .home-slide__pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 24
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 24
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

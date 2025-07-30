@@ -1,5 +1,3 @@
-import "./modulepreload-polyfill.js";
-/* empty css     */
 (() => {
   function init() {
     if (document.getElementById("map")) {

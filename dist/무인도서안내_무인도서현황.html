@@ -148,11 +148,22 @@
                                         <div class="label">시도별 무인도서 현황</div>
                                         <div class="island-card-content">
                                             <div class="island-count-viewmap">
-                                                <img src="./assets/images/maparea-image.png" alt="아래 상세 설명"
-                                                    aria-hidden="true">
-                                                <div class="visually-hidden">
-                                                    인천 153개, 경기 37개, 강원 29개, 충남 252개, 전북 105개, 전남 1,743개, 경북 19개, 울산 4개,
-                                                    부산 42개, 경남 475개, 제주 59개
+                                                <div>
+                                                    <span class="img">
+                                                        <img class="pc" src="./assets/images/maparea-image.png" alt="아래 상세 설명" aria-hidden="true">
+                                                        <img class="mobile" src="./assets/images/maparea-image-mobile.png" alt="아래 상세 설명" aria-hidden="true">
+                                                    </span>
+                                                    <span class="label-counting label-counting--1">인천 <em>153개</em></span>
+                                                    <span class="label-counting label-counting--2">경기 <em>37개</em></span>
+                                                    <span class="label-counting label-counting--3">강원 <em>29개</em></span>
+                                                    <span class="label-counting label-counting--4">충남 <em>252개</em></span>
+                                                    <span class="label-counting label-counting--5">전북 <em>105개</em></span>
+                                                    <span class="label-counting label-counting--6">전남 <em>1,743개</em></span>
+                                                    <span class="label-counting label-counting--7">경북 <em>19개</em></span>
+                                                    <span class="label-counting label-counting--8">울산 <em>4개</em></span>
+                                                    <span class="label-counting label-counting--9">부산 <em>42개</em></span>
+                                                    <span class="label-counting label-counting--10">경남 <em>475개</em></span>
+                                                    <span class="label-counting label-counting--11">제주 <em>59개</em></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -343,7 +354,7 @@
             });
         }
         ScrollTrigger.matchMedia({
-            "(min-width: 1024px)": function () {
+            "(min-width: 320px)": function () {
 
         // init set
         gsap.set(islandsStatusGrid1, {

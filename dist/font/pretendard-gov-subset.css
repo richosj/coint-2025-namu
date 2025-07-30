@@ -69,3 +69,20 @@ http://scripts.sil.org/OFL
 	font-display: swap;
 	src: local('Pretendard GOV Thin'), url(./woff2-subset/PretendardGOV-Thin.subset.woff2) format('woff2'), url(./woff-subset/PretendardGOV-Thin.subset.woff) format('woff');
 }
+
+
+@font-face {
+    font-family: 'HANAMDAUM';
+    src: url(./hanam/HANAMDAUM.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'HANAMDAUM_body';
+    src: url(./hanam/HANAMDAUM_Body.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
