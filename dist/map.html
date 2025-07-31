@@ -1,7 +1,7 @@
 <!-- @pageTitle 지도로 보는 무인도서 -->
 <!-- @pageCreated 2025-07-08 -->
-<!-- @pageUpdated 2025-07-08 -->
-<!-- @pageNote  -->
+<!-- @pageUpdated 2025-07-31 -->
+<!-- @pageNote a태그 > button, 정보창, slider 스크립트추가 등! -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -125,12 +125,12 @@
             
                     <div class="aside-content-list">
                         <div class="island-card">
-                            <div class="island-card__title"><a href="#">두루더러섬(밤섬, 두루도리도) 두루더러섬(밤섬, 두루도리도두루더러섬(밤섬,
-                                    두루도리도두루더러섬(밤섬, 두루도리도두루더러섬(밤섬, 두루도리도</a></div>
+                            <div class="island-card__title"><button type="button" class="btn-island-card">두루더러섬(밤섬, 두루도리도) 두루더러섬(밤섬,
+                                    두루도리도두루더러섬(밤섬, 두루도리도두루더러섬(밤섬, 두루도리도</button></div>
                             <div class="island-card__address">강원도 강릉시 안현동 853강원도 강릉시 안현동 853강원도 강릉시 안현동 853강원도 강릉시 안현동
                                 853</div>
                             <div class="island-card__info">
-                                <span class="island-card__label"><i class="svg-icon ico-info" aria-hidden="true"></i>
+                                <span class="island-card__label"><i class="svg-icon ico-info active" aria-hidden="true"></i>
                                     무인도서 관리유형</span>
                                 <span class="island-card__badge available">이용가능</span>
                             </div>
@@ -141,7 +141,7 @@
                             </div>
                         </div>
                         <div class="island-card">
-                            <div class="island-card__title"><a href="#">두루더러섬(밤섬, 두루도리도)</a></div>
+                            <div class="island-card__title"><button type="button" class="btn-island-card">두루더러섬(밤섬, 두루도리도)</button></div>
                             <div class="island-card__address">강원도 강릉시 안현동 853</div>
                             <div class="island-card__info">
                                 <span class="island-card__label"><i class="svg-icon ico-info" aria-hidden="true"></i>
@@ -155,7 +155,7 @@
                             </div>
                         </div>
                         <div class="island-card">
-                            <div class="island-card__title"><a href="#">두루더러섬(밤섬, 두루도리도)</a></div>
+                            <div class="island-card__title"><button type="button" class="btn-island-card">두루더러섬(밤섬, 두루도리도)</button></div>
                             <div class="island-card__address">강원도 강릉시 안현동 853</div>
                             <div class="island-card__info">
                                 <span class="island-card__label"><i class="svg-icon ico-info" aria-hidden="true"></i>
@@ -169,7 +169,7 @@
                             </div>
                         </div>
                         <div class="island-card">
-                            <div class="island-card__title"><a href="#">두루더러섬(밤섬, 두루도리도)</a></div>
+                            <div class="island-card__title"><button type="button" class="btn-island-card">두루더러섬(밤섬, 두루도리도)</button></div>
                             <div class="island-card__address">강원도 강릉시 안현동 853</div>
                             <div class="island-card__info">
                                 <span class="island-card__label"><i class="svg-icon ico-info" aria-hidden="true"></i>
@@ -183,7 +183,7 @@
                             </div>
                         </div>
                         <div class="island-card">
-                            <div class="island-card__title"><a href="#">두루더러섬(밤섬, 두루도리도)</a></div>
+                            <div class="island-card__title"><button type="button" class="btn-island-card">두루더러섬(밤섬, 두루도리도)</button></div>
                             <div class="island-card__address">강원도 강릉시 안현동 853</div>
                             <div class="island-card__info">
                                 <span class="island-card__label"><i class="svg-icon ico-info" aria-hidden="true"></i>
@@ -197,7 +197,7 @@
                             </div>
                         </div>
                         <div class="island-card">
-                            <div class="island-card__title"><a href="#">두루더러섬(밤섬, 두루도리도)</a></div>
+                            <div class="island-card__title"><button type="button" class="btn-island-card">두루더러섬(밤섬, 두루도리도)</button></div>
                             <div class="island-card__address">강원도 강릉시 안현동 853</div>
                             <div class="island-card__info">
                                 <span class="island-card__label"><i class="svg-icon ico-info" aria-hidden="true"></i>
@@ -490,9 +490,11 @@
                                         </div>
                                     </div>
                                     <div class="legend-tab2-content">
-                    					<ul class="map-serviceList-legend" id="legendDiv">
-                    						<li><span class="legend-color" style="border:2px solid rgb(10, 0, 255, 0.6); background-color: rgba(75, 137, 220, 0.5);"></span>어장 정보</li>
-                    					</ul>
+                                        <ul class="map-serviceList-legend" id="legendDiv">
+                                            <li><span class="legend-color"
+                                                    style="border:2px solid rgb(10, 0, 255, 0.6); background-color: rgba(75, 137, 220, 0.5);"></span>어장
+                                                정보</li>
+                                        </ul>
                                     </div>
                                     <div class="legend-tab2-content">
                                         <div class="pin-list">
@@ -500,7 +502,7 @@
                                         </div>
                                     </div>
                                     <div class="legend-tab2-content">
-                    					<ul class="map-serviceList-legend" id="legendDiv">
+                                        <ul class="map-serviceList-legend" id="legendDiv">
                                             <!-- <li value="tritPln" class="legend-nm active">국토계획 용도 지역·지구 등</li> -->
                                             <li><span class="legend-color"
                                                     style="border:2px solid rgb(80,130,130); background-color: rgb(80,130,130);"></span>도시지역
@@ -581,10 +583,10 @@
                                                     style="border:2px solid rgb(140,140,140); background-color: rgb(128,128,128);"></span>기타기반시설
                                             </li>
                                         </ul>
-                                        
+                    
                                     </div>
                                     <div class="legend-tab2-content">
-                    					<ul class="map-serviceList-legend" id="legendDiv">
+                                        <ul class="map-serviceList-legend" id="legendDiv">
                                             <li><span class="legend-color"
                                                     style="border:2px solid rgb(19,19,19); background-color: rgb(205,233,247);"></span>기타
                                             </li>
@@ -673,10 +675,10 @@
                                                     style="border:2px solid rgb(19,19,19); background-color: rgb(243,216,248);"></span>잡종지
                                             </li>
                                         </ul>
-                                        
+                    
                                     </div>
                                     <div class="legend-tab2-content">
-                    					<ul class="map-serviceList-legend" id="legendDiv">
+                                        <ul class="map-serviceList-legend" id="legendDiv">
                                             <!-- <li value="indvdLandPrice" class="legend-nm active">개별공시지가 지목</li> -->
                                             <li><span class="legend-color"
                                                     style="border:2px solid rgb(110,110,110); background-color: rgb(205,233,247);"></span>기타
@@ -766,7 +768,7 @@
                                                     style="border:2px solid rgb(110,110,110); background-color: rgb(243,216,248);"></span>잡종지
                                             </li>
                                         </ul>
-                    				</div>
+                                    </div>
                     
                                 </div>
                                 <div class="legend-tab-content">
@@ -776,7 +778,7 @@
                                             <span>통행량 적음</span>
                                             <span>통행량 많음</span>
                                         </div>
-                                      </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1148,7 +1150,7 @@
                 </div>
             </div>
             <!-- // 레이어옵션 -->
-            <div class="option-panel" data-option-panel="optionPanel2">
+            <div class="option-panel" id="background-maps" data-option-panel="optionPanel2">
                 <div class="option-panel-inner">
                     <button class="option-close" type="button" title="닫기"><i class="svg-icon ico-close2"></i></button>
                     <div class="option-panel-title">배경지도</div>

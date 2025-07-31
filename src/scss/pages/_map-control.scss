@@ -353,7 +353,8 @@ body:has(.option-panel.show){
   flex-direction: column;
   gap: 0.4rem;
   &__item, &__item2 {
-    border-radius: 0.4rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
     //margin-bottom: 0.5rem;
     background: #fafafa;
   }
@@ -542,7 +543,7 @@ body:has(.option-panel.show){
     border: 2px solid transparent;
     cursor: pointer;
     transition: border 0.2s;
-    &:focus { outline: 2px solid #2196f3; }
+    //&:focus { outline: 2px solid #2196f3; }
     &--selected { }
   }
   &__opacity {
@@ -551,7 +552,23 @@ body:has(.option-panel.show){
     gap: 0.8rem;
     input[type='range'] {
       flex: 1;
-      accent-color: #2196f3;
+      -webkit-appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 5px;
+      background: linear-gradient(to right, #555 100%, #ccc 0%);
+      outline: none;
+      cursor: pointer;
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 1rem;
+        height: 1rem;
+        background: #555;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-top: -1px;
+      }
     }
     span {
       min-width: 40px;
@@ -942,4 +959,11 @@ body:has([data-option-panel="optionPanel2"].show){
       display: block;
     }
   }
+}
+
+#background-maps{
+  @media screen and (min-width: 1025px) {
+    max-width: 25rem;
+  }
+  
 }

@@ -115,7 +115,7 @@
 }
 
 
-@for $i from 1 through 2 {
+@for $i from 1 through 3 {
     .ico-pin-#{$i}{
         background-image: url('@/assets/images/map/ico-pin-#{$i}.png');
         width: 1.8rem;
@@ -125,6 +125,10 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
     }
+}
+.ico-pin-3{
+    background-size: cover;
+    background-position: 50% 0;
 }
 
 .marker{

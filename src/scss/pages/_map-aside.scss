@@ -26,10 +26,11 @@
     background: linear-gradient(to right, #17A595, #3658D3);
     padding: 2rem;
     position: relative;
+    border-radius:0 0 3.5rem 0;
     .btn-header-extend{
         position: absolute;
         right: 0rem;
-        top: 0rem;
+        top: -2rem;
         width: 8.8rem;
         height: 3.3rem;
         background: url('@/assets/images/map/btn-header-extend.png') no-repeat center center / contain;
@@ -89,6 +90,7 @@
     // 콘텐츠 영역
     padding: 0 2rem;
     height: calc(100% - 16rem);
+    background: url('@/assets/images/map/base.png') no-repeat 0 0;
 }
 
 .search-summary-bar{
@@ -142,7 +144,7 @@
         color: var(--color-primary);
         margin-bottom: 1rem;
         font-size: 1.9rem;
-        a {
+        .btn-island-card {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; 
@@ -173,6 +175,12 @@
             font-size: 1.5rem;
             color: #888;
             gap: 0 .4rem;
+            .svg-icon{
+                cursor: pointer;
+                &.active{
+                    background-color: #000;
+                }
+            }
         }
 
         .island-card__badge {
@@ -447,4 +455,135 @@
         }
     }
     
+}
+
+// 무인도서 법률 안내 팝업
+.law-info-popup {
+    position: absolute;
+    z-index: 10000;
+    top: 10%;
+    left: 10%;
+}
+
+.law-info-content {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid #C6C6C6;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 24px;
+        
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: -11px;
+        left: 24px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #C6C6C6;
+        z-index: -1;
+    }
+}
+
+.law-info-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.4rem;
+    padding-bottom: 1.5rem;
+    h3 {
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: #1d1d1d;
+        margin: 0;
+    }
+    
+    .law-info-close {
+        background: url('@/assets/images/map/close.png') no-repeat center center;
+        width: 1.6rem;
+        height: 1.6rem;
+        font-size: 0;
+        border: 0;
+    }
+}
+
+.law-info-body {
+    padding: 2.4rem;
+    padding-top: 0;
+}
+
+.law-article {
+    h4 {
+        font-size: 1.57rem;
+        color: #1D1D1D;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: #555;
+        margin: 0;
+        
+        .highlight {
+            background: rgba(#17A595,0.1);
+            border: 1px solid rgba(#17A595,0.2);
+            padding: 2px 4px;
+            border-radius: .4rem;
+            color: #17A595;
+        }
+    }
+}
+
+.law-reference {
+    margin-top: rem;
+    font-size: 1.3rem;
+    color: #717171;
+}
+
+// 모바일 반응형
+@media (max-width: 768px) {
+    .law-info-content {
+        width: 95%;
+        margin: 20px;
+    }
+    
+    .law-info-header {
+        padding: 16px 20px 12px;
+        
+        h3 {
+            font-size: 16px;
+        }
+    }
+    
+    .law-info-body {
+        padding: 16px 20px 20px;
+    }
+    
+    .law-article {
+        h4 {
+            font-size: 15px;
+        }
+        
+        p {
+            font-size: 14px;
+        }
+    }
 }

@@ -1,7 +1,7 @@
-<!-- @pageTitle 지도로 보는 무인도서 -->
+<!-- @pageTitle 지도로 보는 무인도서 숨김창 확인 -->
 <!-- @pageCreated 2025-07-30 -->
-<!-- @pageUpdated 2025-07-30 -->
-<!-- @pageNote  -->
+<!-- @pageUpdated 2025-07-31 -->
+<!-- @pageNote a태그 > button, 정보창, slider 스크립트추가 등! -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -37,6 +37,7 @@
         .poi-popup{display: block;}
         .area-info-popup{display: block;}
         .slide-popup{display: block;}
+        .map-context-menu{display: block !important;}
     </style>
   <script type="module" src="./assets/js/modulepreload-polyfill.js"></script>
   <script type="module" src="./assets/js/map2.js"></script>
@@ -130,12 +131,12 @@
             
                     <div class="aside-content-list">
                         <div class="island-card">
-                            <div class="island-card__title"><a href="#">두루더러섬(밤섬, 두루도리도) 두루더러섬(밤섬, 두루도리도두루더러섬(밤섬,
-                                    두루도리도두루더러섬(밤섬, 두루도리도두루더러섬(밤섬, 두루도리도</a></div>
+                            <div class="island-card__title"><button type="button" class="btn-island-card">두루더러섬(밤섬, 두루도리도) 두루더러섬(밤섬,
+                                    두루도리도두루더러섬(밤섬, 두루도리도두루더러섬(밤섬, 두루도리도</button></div>
                             <div class="island-card__address">강원도 강릉시 안현동 853강원도 강릉시 안현동 853강원도 강릉시 안현동 853강원도 강릉시 안현동
                                 853</div>
                             <div class="island-card__info">
-                                <span class="island-card__label"><i class="svg-icon ico-info" aria-hidden="true"></i>
+                                <span class="island-card__label"><i class="svg-icon ico-info active" aria-hidden="true"></i>
                                     무인도서 관리유형</span>
                                 <span class="island-card__badge available">이용가능</span>
                             </div>
@@ -146,7 +147,7 @@
                             </div>
                         </div>
                         <div class="island-card">
-                            <div class="island-card__title"><a href="#">두루더러섬(밤섬, 두루도리도)</a></div>
+                            <div class="island-card__title"><button type="button" class="btn-island-card">두루더러섬(밤섬, 두루도리도)</button></div>
                             <div class="island-card__address">강원도 강릉시 안현동 853</div>
                             <div class="island-card__info">
                                 <span class="island-card__label"><i class="svg-icon ico-info" aria-hidden="true"></i>
@@ -160,7 +161,7 @@
                             </div>
                         </div>
                         <div class="island-card">
-                            <div class="island-card__title"><a href="#">두루더러섬(밤섬, 두루도리도)</a></div>
+                            <div class="island-card__title"><button type="button" class="btn-island-card">두루더러섬(밤섬, 두루도리도)</button></div>
                             <div class="island-card__address">강원도 강릉시 안현동 853</div>
                             <div class="island-card__info">
                                 <span class="island-card__label"><i class="svg-icon ico-info" aria-hidden="true"></i>
@@ -174,7 +175,7 @@
                             </div>
                         </div>
                         <div class="island-card">
-                            <div class="island-card__title"><a href="#">두루더러섬(밤섬, 두루도리도)</a></div>
+                            <div class="island-card__title"><button type="button" class="btn-island-card">두루더러섬(밤섬, 두루도리도)</button></div>
                             <div class="island-card__address">강원도 강릉시 안현동 853</div>
                             <div class="island-card__info">
                                 <span class="island-card__label"><i class="svg-icon ico-info" aria-hidden="true"></i>
@@ -188,7 +189,7 @@
                             </div>
                         </div>
                         <div class="island-card">
-                            <div class="island-card__title"><a href="#">두루더러섬(밤섬, 두루도리도)</a></div>
+                            <div class="island-card__title"><button type="button" class="btn-island-card">두루더러섬(밤섬, 두루도리도)</button></div>
                             <div class="island-card__address">강원도 강릉시 안현동 853</div>
                             <div class="island-card__info">
                                 <span class="island-card__label"><i class="svg-icon ico-info" aria-hidden="true"></i>
@@ -202,7 +203,7 @@
                             </div>
                         </div>
                         <div class="island-card">
-                            <div class="island-card__title"><a href="#">두루더러섬(밤섬, 두루도리도)</a></div>
+                            <div class="island-card__title"><button type="button" class="btn-island-card">두루더러섬(밤섬, 두루도리도)</button></div>
                             <div class="island-card__address">강원도 강릉시 안현동 853</div>
                             <div class="island-card__info">
                                 <span class="island-card__label"><i class="svg-icon ico-info" aria-hidden="true"></i>
@@ -495,9 +496,11 @@
                                         </div>
                                     </div>
                                     <div class="legend-tab2-content">
-                    					<ul class="map-serviceList-legend" id="legendDiv">
-                    						<li><span class="legend-color" style="border:2px solid rgb(10, 0, 255, 0.6); background-color: rgba(75, 137, 220, 0.5);"></span>어장 정보</li>
-                    					</ul>
+                                        <ul class="map-serviceList-legend" id="legendDiv">
+                                            <li><span class="legend-color"
+                                                    style="border:2px solid rgb(10, 0, 255, 0.6); background-color: rgba(75, 137, 220, 0.5);"></span>어장
+                                                정보</li>
+                                        </ul>
                                     </div>
                                     <div class="legend-tab2-content">
                                         <div class="pin-list">
@@ -505,7 +508,7 @@
                                         </div>
                                     </div>
                                     <div class="legend-tab2-content">
-                    					<ul class="map-serviceList-legend" id="legendDiv">
+                                        <ul class="map-serviceList-legend" id="legendDiv">
                                             <!-- <li value="tritPln" class="legend-nm active">국토계획 용도 지역·지구 등</li> -->
                                             <li><span class="legend-color"
                                                     style="border:2px solid rgb(80,130,130); background-color: rgb(80,130,130);"></span>도시지역
@@ -586,10 +589,10 @@
                                                     style="border:2px solid rgb(140,140,140); background-color: rgb(128,128,128);"></span>기타기반시설
                                             </li>
                                         </ul>
-                                        
+                    
                                     </div>
                                     <div class="legend-tab2-content">
-                    					<ul class="map-serviceList-legend" id="legendDiv">
+                                        <ul class="map-serviceList-legend" id="legendDiv">
                                             <li><span class="legend-color"
                                                     style="border:2px solid rgb(19,19,19); background-color: rgb(205,233,247);"></span>기타
                                             </li>
@@ -678,10 +681,10 @@
                                                     style="border:2px solid rgb(19,19,19); background-color: rgb(243,216,248);"></span>잡종지
                                             </li>
                                         </ul>
-                                        
+                    
                                     </div>
                                     <div class="legend-tab2-content">
-                    					<ul class="map-serviceList-legend" id="legendDiv">
+                                        <ul class="map-serviceList-legend" id="legendDiv">
                                             <!-- <li value="indvdLandPrice" class="legend-nm active">개별공시지가 지목</li> -->
                                             <li><span class="legend-color"
                                                     style="border:2px solid rgb(110,110,110); background-color: rgb(205,233,247);"></span>기타
@@ -771,7 +774,7 @@
                                                     style="border:2px solid rgb(110,110,110); background-color: rgb(243,216,248);"></span>잡종지
                                             </li>
                                         </ul>
-                    				</div>
+                                    </div>
                     
                                 </div>
                                 <div class="legend-tab-content">
@@ -781,7 +784,7 @@
                                             <span>통행량 적음</span>
                                             <span>통행량 많음</span>
                                         </div>
-                                      </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1153,7 +1156,7 @@
                 </div>
             </div>
             <!-- // 레이어옵션 -->
-            <div class="option-panel" data-option-panel="optionPanel2">
+            <div class="option-panel" id="background-maps" data-option-panel="optionPanel2">
                 <div class="option-panel-inner">
                     <button class="option-close" type="button" title="닫기"><i class="svg-icon ico-close2"></i></button>
                     <div class="option-panel-title">배경지도</div>
@@ -1250,7 +1253,30 @@
                         <div class="swiper-button-next"></div>
                     </div>
                 </div>
+            </div>            
+            
+            
+            <!-- 무인도서 법률 안내 팝업 -->
+            <div id="law-info-popup" class="law-info-popup" style="    left: 15px;top: 350px;">
+                <div class="law-info-content">
+                    <div class="law-info-header">
+                        <h3>무인도서의 보전 및 관리에 관한 법률</h3>
+                        <button type="button" class="law-info-close">×</button>
+                    </div>
+                    <div class="law-info-body">
+                        <div class="law-article">
+                            <h4>[제 10조]</h4>
+                            <p>
+                                <span class="highlight">이용가능</span> 무인도서는 무인도서의 형상을 훼손하지 아니하는 범위 안에서 사람의 출입 및 활동이 허용되는 무인도서
+                            </p>
+                        </div>
+                        <div class="law-reference">
+                            * <a href="#" class="law-link">[제15조](이용가능무인도서에서의 행위)</a>참고
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- // 무인도서 법률 안내 팝업 -->
             <!-- mobile용 블랙 -->
             <div class="mobile-black-bg"></div>
         </main>

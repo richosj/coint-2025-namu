@@ -109,7 +109,7 @@
         gap: .7rem;
         font-weight: 700;
         line-height: 1;
-        color: var(--text-color-quaternary);
+        color: #17A595;
         font-size: 1.7rem;
         margin-bottom: 1.5rem;
         &::before{
@@ -117,7 +117,7 @@
             display: block;
             width: .6rem;
             height: .6rem;
-            background: var(--text-color-quaternary);
+            background: #17A595;
             border-radius: 50%;
         }
     }
@@ -137,7 +137,7 @@
                 flex-shrink: 0;
             }
             span{
-                color: var(--text-color-primary);
+                //color: var(--text-color-primary);
                 flex: 1;
                 padding-left: 1.2rem;
                 border-left: 1px solid #E4E4E4;

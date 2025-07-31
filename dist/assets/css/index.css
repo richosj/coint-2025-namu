@@ -452,6 +452,21 @@ em {
   background-position: 50% 50%;
 }
 
+.ico-pin-3 {
+  background-image: url("../images/ico-pin-3.png");
+  width: 1.8rem;
+  height: 1.8rem;
+  display: inline-block;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.ico-pin-3 {
+  background-size: cover;
+  background-position: 50% 0;
+}
+
 .marker {
   width: 4rem;
   height: 4rem;
@@ -1014,14 +1029,29 @@ em {
     z-index: 1001;
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
+  #nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: clamp(170px, 29vw, 350px);
+    height: 90%;
+    background: linear-gradient(to bottom, #199F96, #345CD0);
+    border-radius: 0 0 8rem 0;
+  }
   #nav.mobile-active {
     transform: translateX(0);
+  }
+  #nav .gnb {
+    position: relative;
+    z-index: 2;
   }
   #nav .gnb .gnb-lv1 {
     display: flex;
     gap: 0 2rem;
     padding: 2rem;
     border: 1px solid #eee;
+    border-left: 0;
   }
   #nav .gnb .gnb-lv1 + .gnb-lv1 {
     border-top: 0;
@@ -1031,6 +1061,7 @@ em {
     width: clamp(140px, 20vw, 250px);
     font-size: clamp(1.6rem, 2.5vw, 1.8rem);
     white-space: nowrap;
+    color: #fff;
   }
   #nav .gnb .gnb-lv1 .gnb-submenu {
     flex-grow: 1;
@@ -2168,6 +2199,7 @@ body {
 }
 @media (max-width: 768px) {
   .island-as-card .object {
+    display: none;
     transform: scale(0.6);
   }
 }
@@ -2176,24 +2208,15 @@ body {
   right: 4rem;
   bottom: -5rem;
 }
-.islands-as-grid-1-1 .object img {
-  animation: updown 4s infinite ease-in-out alternate;
-}
 
 .islands-as-grid-1-2 .object {
   left: 4rem;
   bottom: -5rem;
 }
-.islands-as-grid-1-2 .object img {
-  animation: updown 6s infinite ease-in-out alternate;
-}
 
 .islands-as-grid-1-3 .object {
   right: 1rem;
   bottom: -6rem;
-}
-.islands-as-grid-1-3 .object img {
-  animation: updown 8s infinite ease-in-out alternate;
 }
 
 .islands-as-grid-2 {
@@ -3399,6 +3422,7 @@ body {
   background-color: #f8f8f8;
   overflow-y: auto;
   height: 25rem;
+  border-radius: 1.2rem 1.2rem 0 0;
 }
 .api-terms h2 {
   font-size: 2rem;
@@ -3513,7 +3537,6 @@ body {
   border: 1px solid #ddd;
   border-radius: 0.6rem;
   padding: 1rem;
-  box-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 768px) {
   .api-form__item input,
@@ -3928,10 +3951,10 @@ body {
 .faq-list .faq-item {
   border: 1px solid #e0e0e0;
   overflow: hidden;
-  border-radius: 0.6rem;
+  border-radius: 1.2rem;
 }
 .faq-list .faq-item + .faq-item {
-  margin-top: 3.4rem;
+  margin-top: 2.4rem;
 }
 .faq-list .faq-item:has(.active) {
   border-color: var(--color-primary);
@@ -4734,7 +4757,7 @@ body {
   top: 50%;
   right: 3rem;
   transform: translateY(-50%);
-  background: url("../images/close.png") no-repeat center center;
+  background: url("../images/close2.png") no-repeat center center;
   border: none;
   width: 2rem;
   height: 2rem;
@@ -4989,7 +5012,7 @@ body {
 }
 
 .home-visual {
-  height: 100dvh;
+  height: 70rem;
   display: flex;
   position: relative;
 }
@@ -5004,7 +5027,7 @@ body {
   display: block;
   background: url("../images/visual-deco.png") no-repeat center bottom;
   width: 54.83%;
-  height: 27%;
+  height: 38%;
   position: absolute;
   bottom: 0;
   right: 4vw;
@@ -5323,6 +5346,10 @@ body {
   border-radius: 20px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
   padding: 4rem;
+  transition: all 0.3s ease;
+}
+.home-month-slide__item:hover {
+  border-color: var(--color-primary);
 }
 .home-month-slide__item .thumb {
   width: 100%;
@@ -5707,8 +5734,7 @@ body {
     padding: 4rem 1.5rem;
   }
   .home-guide__item {
-    background-image: none;
-    border-radius: 1.5rem;
+    background-size: auto 11rem;
   }
   .home-guide__grid {
     gap: 2rem;
@@ -5735,7 +5761,6 @@ body {
     height: auto;
     font-size: 1.5rem;
     margin-bottom: 0;
-    background-color: #26293D;
   }
   .home-guide__content {
     padding: 2rem;
@@ -5750,11 +5775,11 @@ body {
     font-size: 16px;
   }
   .home-guide__icon {
-    position: relative;
-    right: auto;
-    top: auto;
+    right: 3rem;
+    top: 5.5rem;
     align-self: center;
-    margin-top: 1rem;
+    margin-top: 0;
+    width: 4.6rem;
   }
   .home-guide__link {
     align-self: flex-start;

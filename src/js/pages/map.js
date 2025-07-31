@@ -45,10 +45,28 @@
     setupLayerAccordion();
     setupOptionPanels();
     setupBufferControls();
+    setupMarkerOpacityRange()
     
   }
 
-  
+
+  function setupMarkerOpacityRange() {
+    const range = document.getElementById("markerOpacityRange");
+    const rangeValue = document.getElementById("markerOpacityValue");
+
+    function updateRangeBackground(value) {
+      range.style.background = `linear-gradient(to right, #555 ${value}%, #ccc ${value}%)`;
+      rangeValue.textContent = `${value}%`;
+    }
+
+    // 초기 적용
+    updateRangeBackground(range.value);
+
+    // 변경 시 업데이트
+    range.addEventListener("input", (e) => {
+      updateRangeBackground(e.target.value);
+    });
+}
 
   function setupHeaderExtend() {
     const btnHeaderExtend = document.querySelector(".btn-header-extend");

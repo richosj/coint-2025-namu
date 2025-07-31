@@ -1,7 +1,7 @@
-<!-- @pageTitle 지도로 보는 무인도서 -->
+<!-- @pageTitle 지도로 보는 무인도서 숨김창 확인 -->
 <!-- @pageCreated 2025-07-30 -->
-<!-- @pageUpdated 2025-07-30 -->
-<!-- @pageNote  -->
+<!-- @pageUpdated 2025-07-31 -->
+<!-- @pageNote a태그 > button, 정보창, slider 스크립트추가 등! -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -16,6 +16,7 @@
         .poi-popup{display: block;}
         .area-info-popup{display: block;}
         .slide-popup{display: block;}
+        .map-context-menu{display: block !important;}
     </style>
 </head>
 
@@ -89,6 +90,8 @@
             {{> map-poi-popup}}
 
             {{> map-slide-popup}}
+            
+            {{> map-context-menu}}
 
             <!-- mobile용 블랙 -->
             <div class="mobile-black-bg"></div>
