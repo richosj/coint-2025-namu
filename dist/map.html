@@ -125,7 +125,7 @@
             
                     <div class="aside-content-list">
                         <div class="island-card">
-                            <div class="island-card__title"><button type="button" class="btn-island-card">두루더러섬(밤섬, 두루도리도) 두루더러섬(밤섬,
+                            <div class="island-card__title"><button type="button" class="btn-island-card" title="두루더러섬(밤섬, 두루도리도) 두루더러섬(밤섬,두루도리도두루더러섬(밤섬, 두루도리도두루더러섬(밤섬, 두루도리도">두루더러섬(밤섬, 두루도리도) 두루더러섬(밤섬,
                                     두루도리도두루더러섬(밤섬, 두루도리도두루더러섬(밤섬, 두루도리도</button></div>
                             <div class="island-card__address">강원도 강릉시 안현동 853강원도 강릉시 안현동 853강원도 강릉시 안현동 853강원도 강릉시 안현동
                                 853</div>
@@ -238,8 +238,8 @@
             <div class="content-panel">
                 <div class="panel-header">
                     <div class="panel-header-inner">
-                        <button type="button" class="panel-back" aria-label="뒤로가기"><i
-                                class="svg-icon ico-back"></i></button>
+                        <!-- <button type="button" class="panel-back" aria-label="뒤로가기"><i
+                                class="svg-icon ico-back"></i></button> -->
                         <button type="button" class="panel-close" aria-label="닫기"><i
                                 class="svg-icon ico-close"></i></button>
                     </div>
@@ -290,7 +290,11 @@
                             <div class="map-detail-info-section">
                                 <div class="map-detail-info-title">부가 정보</div>
                                 <ul class="map-detail-info-list">
-                                    <li><strong>비고</strong><span>-</span></li>
+                                    <li><strong>비고</strong><span>
+                                        <select name="remark" id="remark" title="부가정보 비고" class="map-input">
+                                            <option value="">-</option>
+                                        </select>
+                                    </span></li>
                                 </ul>
                             </div>
                         </div>
@@ -1180,6 +1184,11 @@
                                 <input type="radio" name="bg-map" value="">
                                 <div class="check-bg-map-img"><img src="./assets/images/map-bg-05.svg" alt=""></div>
                                 <div class="check-bg-map-title">전자해도</div>
+                            </label>
+                            <label class="check-bg-map">
+                                <input type="radio" name="bg-map" value="">
+                                <div class="check-bg-map-img"><img src="./assets/images/map-bg-06.svg" alt=""></div>
+                                <div class="check-bg-map-title">V-월드</div>
                             </label>
                         </div>
                     </div>

@@ -10,6 +10,7 @@
     overflow: hidden;
     position: relative;
     border: .2rem solid #fff;
+    background-color: #fff;
     &:has(.active){
         width: 3.2rem;
         height: 3.2rem;
@@ -32,6 +33,19 @@
         width: 3.2rem;
         height: 3.2rem;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    /* 미니맵 강제 css 추가 */
+    .ol-overviewmap .ol-overviewmap-map{
+        border: 0 !important;
+        width: 140px !important;
+        height: 140px !important;
+        border-radius: 5px !important;
+        overflow: hidden !important;
+    }
+    .ol-overviewmap:not(.ol-collapsed){
+        background: transparent !important;
+        border: 0 !important;
     }
 }
 

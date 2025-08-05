@@ -1936,6 +1936,8 @@ body, html {
   overflow: hidden;
   position: relative;
   border: 0.2rem solid #fff;
+  background-color: #fff;
+  /* 미니맵 강제 css 추가 */
 }
 .map-mini:has(.active) {
   width: 3.2rem;
@@ -1959,6 +1961,17 @@ body, html {
   width: 3.2rem;
   height: 3.2rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.map-mini .ol-overviewmap .ol-overviewmap-map {
+  border: 0 !important;
+  width: 140px !important;
+  height: 140px !important;
+  border-radius: 5px !important;
+  overflow: hidden !important;
+}
+.map-mini .ol-overviewmap:not(.ol-collapsed) {
+  background: transparent !important;
+  border: 0 !important;
 }
 
 @media screen and (max-width: 1024px) {
@@ -3415,7 +3428,7 @@ select.select::after {
 }
 .content-panel .panel-header-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: 0.5rem;
 }
@@ -3654,4 +3667,20 @@ select.select::after {
   .map-audio-list .map-audio-item img {
     border-radius: 0.8rem;
   }
+}
+.map-input {
+  color: #1D1D1D;
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.6rem;
+  padding: 0 1.5rem;
+  padding-right: 4.8rem;
+  font-size: 1.4rem;
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1.6rem;
 }

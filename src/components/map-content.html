@@ -1,8 +1,8 @@
 <div class="content-panel">
     <div class="panel-header">
         <div class="panel-header-inner">
-            <button type="button" class="panel-back" aria-label="뒤로가기"><i
-                    class="svg-icon ico-back"></i></button>
+            <!-- <button type="button" class="panel-back" aria-label="뒤로가기"><i
+                    class="svg-icon ico-back"></i></button> -->
             <button type="button" class="panel-close" aria-label="닫기"><i
                     class="svg-icon ico-close"></i></button>
         </div>
@@ -53,7 +53,11 @@
                 <div class="map-detail-info-section">
                     <div class="map-detail-info-title">부가 정보</div>
                     <ul class="map-detail-info-list">
-                        <li><strong>비고</strong><span>-</span></li>
+                        <li><strong>비고</strong><span>
+                            <select name="remark" id="remark" title="부가정보 비고" class="map-input">
+                                <option value="">-</option>
+                            </select>
+                        </span></li>
                     </ul>
                 </div>
             </div>
