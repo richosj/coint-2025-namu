@@ -462,9 +462,23 @@ em {
   background-position: 50% 50%;
 }
 
+.ico-pin-4 {
+  background-image: url("../images/ico-pin-4.png");
+  width: 1.8rem;
+  height: 1.8rem;
+  display: inline-block;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .ico-pin-3 {
   background-size: cover;
   background-position: 50% 0;
+}
+
+.ico-pin-4 {
+  background-size: 100% auto;
 }
 
 .marker {
@@ -1335,6 +1349,14 @@ body, html {
   flex-direction: column;
   gap: 1rem;
   align-items: flex-end;
+}
+@media (max-width: 1024px) {
+  .map-bottomright {
+    position: relative;
+    right: inherit;
+    bottom: inherit;
+    display: block;
+  }
 }
 
 .view-mode .content-panel {
@@ -2221,6 +2243,7 @@ body, html {
 @media screen and (max-width: 768px) {
   .legend-tab ul li button {
     font-size: 1.2rem;
+    padding: 0 1rem;
   }
 }
 
@@ -2390,7 +2413,7 @@ body, html {
   .legend-trigger {
     display: none;
   }
-  body:has(.legend-float.show) .aside-panel {
+  body:has(.legend-float.show) .aside-panel .aside-content {
     display: none;
   }
   .legend-float {
@@ -2510,13 +2533,15 @@ body, html {
   visibility: visible;
   transform: translateX(0%) translateY(-50%);
 }
-.btn-control-btn:hover,
-.btn-control-popup:hover {
-  border-color: #256EF4;
-}
-.btn-control-btn:hover .svg-icon,
-.btn-control-popup:hover .svg-icon {
-  background: #256EF4;
+@media screen and (min-width: 1025px) {
+  .btn-control-btn:hover,
+  .btn-control-popup:hover {
+    border-color: #256EF4;
+  }
+  .btn-control-btn:hover .svg-icon,
+  .btn-control-popup:hover .svg-icon {
+    background: #256EF4;
+  }
 }
 .btn-control-btn.active,
 .btn-control-popup.active {
@@ -2525,6 +2550,13 @@ body, html {
 .btn-control-btn.active .svg-icon,
 .btn-control-popup.active .svg-icon {
   background: #fff !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .btn-control-legend[aria-pressed=true] .svg-icon {
+    border-color: #256EF4;
+    background: #256EF4;
+  }
 }
 
 .bg-map-list {

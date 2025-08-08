@@ -150,6 +150,15 @@ height: 100%;
     flex-direction: column;
     gap: 1rem;
     align-items: flex-end;
+    @media (max-width: 1024px) {
+        // right:0;
+        // left:0;
+        // bottom:0;
+        position: relative;
+        right: inherit;
+        bottom: inherit;
+        display: block;
+    }
 }
 
 .view-mode{

@@ -250,8 +250,17 @@
       const btnLegend = document.querySelector(".btn-control-legend");
       btnLegend?.addEventListener("click", (e) => {
         e.stopPropagation(); // 이벤트 버블링 방지
+        btnLegend.setAttribute("aria-pressed", legendFloat?.classList.contains("show") ? "false" : "true");
         legendFloat.classList.toggle("show");
       });
+
+      // Mobile 목록 확장
+      const mobileContentExtend = document.querySelector(".mobile-content-extend");
+      mobileContentExtend?.addEventListener("click", () => {
+        //mobileContentExtend.classList.toggle("active");
+        document.querySelector(".aside-content").classList.toggle("max");
+      });
+
     }
   }
 

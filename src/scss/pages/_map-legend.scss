@@ -107,6 +107,7 @@
                 }
                 @media screen and (max-width: 768px) {
                     font-size: 1.2rem;
+                    padding: 0 1rem;
                 }
             }
         }
@@ -269,7 +270,10 @@
     }
     body:has(.legend-float.show){
         .aside-panel{
-            display: none;
+            //display: none;
+            .aside-content{
+                display: none;
+            }
         }
     }
     .legend-float{

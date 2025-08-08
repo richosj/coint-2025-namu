@@ -462,9 +462,23 @@ em {
   background-position: 50% 50%;
 }
 
+.ico-pin-4 {
+  background-image: url("../images/ico-pin-4.png");
+  width: 1.8rem;
+  height: 1.8rem;
+  display: inline-block;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .ico-pin-3 {
   background-size: cover;
   background-position: 50% 0;
+}
+
+.ico-pin-4 {
+  background-size: 100% auto;
 }
 
 .marker {

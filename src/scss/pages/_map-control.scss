@@ -69,12 +69,15 @@
         visibility: visible;
         transform: translateX(0%) translateY(-50%);
       }
-      &:hover{
-        border-color: #256EF4;
-        .svg-icon{
-          background: #256EF4;
+      @media screen and (min-width: 1025px) {
+        &:hover{
+          border-color: #256EF4;
+          .svg-icon{
+            background: #256EF4;
+          }
         }
       }
+      
       &.active{
         //background: linear-gradient(to bottom, #3658D3, #17A595);
         background: #256EF4;
@@ -82,6 +85,17 @@
             background: #fff !important;
         }
       }
+}
+
+.btn-control-legend{
+  @media screen and (max-width: 1024px) {
+    &[aria-pressed="true"]{
+      .svg-icon{
+        border-color: #256EF4;
+        background: #256EF4;
+      }
+    }
+  }
 }
 
 

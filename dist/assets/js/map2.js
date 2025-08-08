@@ -176,7 +176,12 @@
       const btnLegend = document.querySelector(".btn-control-legend");
       btnLegend == null ? void 0 : btnLegend.addEventListener("click", (e) => {
         e.stopPropagation();
+        btnLegend.setAttribute("aria-pressed", (legendFloat == null ? void 0 : legendFloat.classList.contains("show")) ? "false" : "true");
         legendFloat.classList.toggle("show");
+      });
+      const mobileContentExtend = document.querySelector(".mobile-content-extend");
+      mobileContentExtend == null ? void 0 : mobileContentExtend.addEventListener("click", () => {
+        document.querySelector(".aside-content").classList.toggle("max");
       });
     }
   }
