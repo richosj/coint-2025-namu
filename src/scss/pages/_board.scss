@@ -24,6 +24,16 @@
         }
         &-utils{}
     }
+    &__file-icon{
+        @media screen and (max-width: $tablet) {
+            .ico-file{
+                width: 1.8rem;
+                height: 1.8rem;
+                //background-size: 100% 100%;
+                mask-size: 100% 100%;
+            }    
+        }
+    }
     &__body{
         border-top: 2px solid #1d1d1d;
         

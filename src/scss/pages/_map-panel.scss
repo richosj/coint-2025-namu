@@ -296,3 +296,16 @@
     background-position: right .8rem center;
     background-size: 1.6rem;
 }
+
+
+.islands-name{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    font-weight: 600;
+    border-radius:.4rem;
+    font-size: 1.4rem;
+    padding: .6rem 1.4rem;
+    z-index: 100;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.1);
+}

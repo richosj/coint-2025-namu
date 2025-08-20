@@ -131,6 +131,7 @@
     background-position: 50% 0;
 }
 
+
 .ico-pin-4{
     //@include icon-style('@/assets/images/map/ico-pin-special.svg',1.8rem,1.8rem);
     background-size: 100% auto;
@@ -181,4 +182,15 @@
 .ico-arrow-right2{
     @include icon-style('@/assets/images/portal/ico-right-arrow.svg',2rem,2rem);
     background-color: rgb(23,100,220);
+}
+
+/* 파일 아이콘 추가 */
+.ico-file{
+    @include icon-style('@/assets/images/ico_file.svg',2.4rem,2.4rem);
+    background-color: #555;
+    display: inline-block;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
 }

@@ -582,6 +582,20 @@ em {
   background-color: rgb(23, 100, 220);
 }
 
+/* 파일 아이콘 추가 */
+.ico-file {
+  -webkit-mask-image: url("../images/ico_file.svg");
+  mask-image: url("../images/ico_file.svg");
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: #555;
+  display: inline-block;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
 .form-select {
   color: #1D1D1D;
   width: 100%;
@@ -1461,6 +1475,13 @@ body, html {
 @media (max-width: 768px) {
   .board-list__header-info {
     font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .board-list__file-icon .ico-file {
+    width: 1.8rem;
+    height: 1.8rem;
+    mask-size: 100% 100%;
   }
 }
 .board-list__body {
