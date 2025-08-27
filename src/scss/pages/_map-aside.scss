@@ -349,14 +349,14 @@
         border-radius: 12px 12px 0 0;
         max-height: 22rem;
         position: fixed;
-        bottom: 0;
+        bottom: 5rem;
         left: 0;
         width: 100vw;
         background: #fff;
         
         &.max{
             max-height: 100%;
-            height: calc(100dvh - 20rem);
+            height: calc(100dvh - 25rem);
             
         }
     }
@@ -365,6 +365,7 @@
     }
     .aside-content-list{
         height: calc(100% - 12.5rem);
+        padding-bottom: 1rem;
     }
     .island-card{
         padding: 1.3rem;

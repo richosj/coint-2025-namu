@@ -4792,7 +4792,7 @@ body {
   top: 50%;
   right: 3rem;
   transform: translateY(-50%);
-  background: url("../images/close2.png") no-repeat center center;
+  background: url("../images/close.png") no-repeat center center;
   border: none;
   width: 2rem;
   height: 2rem;

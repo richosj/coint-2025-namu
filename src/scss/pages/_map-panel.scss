@@ -180,6 +180,39 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
     padding: 2rem;
+    .map-audio-utils{
+        grid-column: -1 / 1;
+        select{
+            margin-bottom: .7rem;
+        }
+        button{
+            width: 49%;
+            border: 1px solid #D8D8D8;
+            font-size: 1.4rem;
+            padding: .6rem 0;
+            border-radius: .4rem;
+            transition: all .3s ease;
+            &:hover{
+                border-color: #1764DC;
+                background-color: rgba(23, 100, 220, 0.04);
+                i{
+                    background-color: #1764DC;
+                }
+            }
+            i{
+                transition: all .3s ease;
+                vertical-align: middle;
+                mask-image: url('@/assets/images/map/pdf.svg');
+                mask-size: 100% 100%;
+                mask-repeat: no-repeat;
+                mask-position: center;
+                background-color: #000;
+                width: 1.6rem;
+                height: 1.6rem;
+                display: inline-block;
+            }
+        }
+    }
     .map-audio-item{
         position: relative;
         border: 1px solid #D8D8D8;
@@ -206,7 +239,7 @@
     .content-panel{
         z-index: 1005;
         left: 0;
-        bottom: 0;
+        bottom: 5rem;
         top: 0;
         border-radius: 0%;
         width: 100%;
