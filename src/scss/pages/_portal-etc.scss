@@ -1,0 +1,228 @@
+.portal-etc{
+.etc-title{
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 3rem;
+    padding-top: 3rem;
+}
+.box-help-info{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem 0;
+    padding: 3rem;
+    border: 0.1rem solid #d6e0eb;
+    border-radius: 1.2rem;
+    background-color: #eef2f7;
+    font-size: 1.6rem;
+    color: #111;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}
+h2{
+    margin-bottom: 2rem;
+}
+h2+p{
+    margin-bottom: 3.5rem;
+    font-size: 1.6rem;
+}
+ul{
+    padding-left: 2rem;
+    margin-bottom: 3.5rem;
+    li{
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        color: #111;
+        line-height: 1.5;
+    }
+}
+
+.dash{
+    position: relative;
+    margin-top: 0.8rem;
+    padding-left: 2rem;
+    &::before{
+        display: block;
+        content: '';
+        position: absolute;
+        left: .5rem;
+        top: 1.2rem;
+        width: 0.6rem;
+        height: 0.1rem;
+        background-color: #9fa5b4;
+    }
+}
+
+.common{
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #333a46;
+    color: #fff;
+    ul{
+        margin-bottom: 0;
+        li{
+            margin: 0;
+            color: #fff;
+        }
+    }
+    p{
+        font-size: 1.6rem;
+        color: #fff;
+        line-height: 1.5;
+    }
+}
+
+// 반응형 스타일
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+    
+    .etc-title {
+        font-size: 3rem;
+        margin-bottom: 2.5rem;
+        padding-top: 2.5rem;
+    }
+    
+    .box-help-info {
+        padding: 2.5rem;
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1.8rem;
+    }
+    
+    h2+p {
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+    }
+    
+    ul {
+        margin-bottom: 3rem;
+        li {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .etc-title {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+        padding-top: 2rem;
+        line-height: 1.3;
+    }
+    
+    .box-help-info {
+        padding: 2rem;
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+    }
+    
+    h2+p {
+        margin-bottom: 2.5rem;
+        font-size: 1.4rem;
+    }
+    
+    ul {
+        padding-left: 1.5rem;
+        margin-bottom: 2.5rem;
+        li {
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+    }
+    
+    .dash {
+        padding-left: 1.5rem;
+        &::before {
+            left: 0.3rem;
+            top: 1rem;
+        }
+    }
+    
+    .common {
+        padding: 2rem 0;
+        ul li {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .etc-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        padding-top: 1.5rem;
+    }
+    
+    .box-help-info {
+        padding: 1.5rem;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        gap: 0.8rem 0;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    h2+p {
+        margin-bottom: 2rem;
+        font-size: 1.3rem;
+    }
+    
+    ul {
+        padding-left: 1rem;
+        margin-bottom: 2rem;
+        li {
+            margin-bottom: 0.6rem;
+            font-size: 1.3rem;
+        }
+    }
+    
+    .dash {
+        padding-left: 1.2rem;
+        &::before {
+            left: 0.2rem;
+            top: 0.9rem;
+            width: 0.4rem;
+        }
+    }
+    
+    .common {
+        padding: 1.5rem 0;
+        ul li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+    }
+}
+}
