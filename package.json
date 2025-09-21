@@ -1,7 +1,7 @@
 {
-  "name": "2025_AF_P03",
+  "name": "coint-2025-namu",
   "version": "1.0.0",
-  "homepage": "https://all4uiteam.github.io/2025_AF_P03",
+  "homepage": "https://richosj.github.io/coint-2025-namu",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

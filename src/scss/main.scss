@@ -2,23 +2,15 @@
 @use 'abstracts/functions' as *;
 @use 'abstracts/mixins' as *;
 
-
 @use 'base/root';
 @use 'base/reset';
+@use 'base/common';
 
-@use 'components/icon';
+@use 'components/index';
 
-@use 'components/button';
-@use 'components/card';
-
-// 애니메이션 관련 스타일
-@use 'components/animations';
 
 @use 'layout/header';
 @use 'layout/footer';
-
-@use 'pages/map';
-
 
 
 

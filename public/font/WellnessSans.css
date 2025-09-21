@@ -1,0 +1,16 @@
+/* ****** WellnessSans ****** */
+@font-face {
+    font-family: "WellnessSans";
+    font-weight: 400;
+    /*noinspection CssUnknownTarget*/
+    src: url("./wellnesssans/WellnessSans-Regular.otf");
+}
+
+@font-face {
+    font-family: "WellnessSans";
+    font-weight: 700;
+    /*noinspection CssUnknownTarget*/
+    src: url("./wellnesssans/WellnessSans-Bold.otf");
+}
+
+/* ****** Pretendard ****** */
