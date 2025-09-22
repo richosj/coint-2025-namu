@@ -1,8 +1,51 @@
-.form-select{
-    
+.form-select, .form-input, .form-textarea {display:inline-block;height:3.5rem;border:1px solid #5A5A5B;background-color:#99999A;padding:1.125rem 2rem;border-radius:0.625rem;font-size:0.875rem;font-weight:700;color:#5a5a5b;
+	&:disabled {background:#38383A;color:#99999A;}
+}
+.select-wrap {
+	&.input-block {display:block;width:100%;}	
+	
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.form-input{
-    
+.form-radio,
+.form-checkbox {display: flex;position: relative;align-items: center;color: #666666;font-size:14px;
+	input{position: absolute;width: 1px;height: 1px;opacity: 0.01;overflow: hidden;}
+	label {display: inline-block;position: relative;vertical-align: middle; margin-right: 6px; font-weight:400;color:#8D8D8D; line-height:1.5;cursor:pointer;
+		&:before{content:"";position: absolute;border: 1px solid #5a5a5b;width:16px;height:16px;background:#1d1d1f;}
+		&:after{content:"";position: absolute;display: inline-block;transition: all 0.15s;opacity: 0;}
+	}
+	.table-style-basic & {
+		label {line-height:1.5;}
+	}
 }
 
+.form-checkbox {overflow:hidden;padding-bottom:2px;
+	label {padding-left:26px;cursor: pointer;
+		&:before{content:"";position: absolute;left:0;border: 1px solid #5a5a5b;width: 20px;height: 20px;border-radius:3px;}
+		&:after{border:solid #fff;border-width:0 2px 2px 0;transform: translate(0, 100%) rotate(45deg);}
+	}
+	&.single {display:inline-block; vertical-align: middle;
+		label {min-height:20px;padding-left:20px;margin-right:0;}
+	}
+	input{
+		&:disabled {
+			+label{color:#8D8D8D!important;
+				&:before {background:rgba(#5a5a5b, 1)!important;border-color:rgba(#000, 1)!important;}
+				&:after{}
+			}
+		}
+		&:checked {
+			+label{color:#8D8D8D;
+				&:before {background:#8CE2D0;border-color:#8CE2D0;}
+				&:after{opacity: 1;top:1px;left:7px;width:6px;height:14px;transform: translate(0, 0) rotate(45deg);}
+			}
+		}
+		&:focus, &:focus-visible, &:focus-within {
+			+label {outline:2px solid #000; outline-offset:-1px;}
+		}
+	}
+}

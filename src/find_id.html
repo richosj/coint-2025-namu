@@ -1,0 +1,56 @@
+<!-- @pageTitle Find ID -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {{> meta }}
+</head>
+<body>
+    {{> header }}
+    
+    <div id="container" class="content_wrap login_page">
+        <h1 class="page_title narrow">Find ID</h1>
+        <div class="page_content">
+          <div class="wrap_login">
+            <p class="txt_infrom">Please enter the name and mobile phone number you registered with when signing up for NAMUHˣ.</p>
+            <fieldset class="login_form">
+              <legend class="sr-only">Login Form</legend>
+                <form action="#" method="post">
+                  <div class="form_item">
+                      <label for="username" class="label_title">Name <span class="c-red">*</span></label>
+                      <input type="text" id="username" name="username" placeholder="Please enter your ID (email).">
+                  </div>
+                  <div class="form_item">
+                      <label for="mobilenumber" class="label_title">Registered Mobile Number <span class="c-red">*</span></label>
+                      <input type="number" id="mobilenumber" name="mobilenumber" placeholder="Please enter your password.">
+                  </div>
+                  <p class="txt_infrom c-red">
+                    Please enter your name. (up to 25 characters)<br>
+                    Please enter your mobile number.<br>
+                    Unable to find your account information.
+                  </p>
+                  <div class="form_tail">
+                      <button class="btn btn-mint btn-full" type="submit">Find ID</button>
+                  </div>
+              </form>
+            </fieldset>
+          
+
+            <div class="util-title-wrap">
+              <h2>or</h2>
+            </div>
+            <div class="buttons">
+              <a href="#" class="btn btn-primary btn-full">Password Recovery</a>
+              <a href="#" class="btn btn-darkblue btn-full">Login</a>
+            </div>
+    
+
+          </div>
+
+        
+          
+        </div>
+    </div>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>

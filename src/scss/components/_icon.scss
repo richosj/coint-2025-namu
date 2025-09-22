@@ -14,6 +14,8 @@
     transition: all .5s;
 }
 
+i.ico {display: inline-block;}
+
 // 아이콘 mixin 정의
 @mixin icon-style($icon-url, $width: 2.7rem, $height: 2.7rem) {
     -webkit-mask-image: url($icon-url);
@@ -193,4 +195,9 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
+}
+
+
+.ico-infomation{
+    @include icon-style('@/assets/images/icon/proicons_alert-circle.svg',1.25rem,1.25rem);    
 }

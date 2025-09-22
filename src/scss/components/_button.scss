@@ -11,6 +11,8 @@
   opacity: 1;
   padding: 1rem 1.6rem;
   border-radius: .6rem;
+  font-weight: 500;
+  font-size: 1rem;
   &:hover{
     opacity: .8;
   }
@@ -18,8 +20,7 @@
     gap: 0 1rem;
   }
   @media (max-width: $tablet){
-    font-size: 1.2rem;
-    padding: .7rem 1rem;
+    font-size: 1rem;
     gap: 0 .5rem;
     i{
       width: 1.3rem;
@@ -27,10 +28,33 @@
       background-size: cover;
     }
   }
-
+  &-full {
+    width: 100%; 
+    justify-content: center;
+  }
   &-primary{
-    background-color: var(--color-primary);
+    background-color: #1D1D1F;
+    color: #DDDDDD;
+    border-color: #38383A;
+  }
+  &-mint {
+    background-color: #8CE2D0;
+    color: #1D1D1F;
+    border-color: #8CE2D0;
+  }
+  &-red {
+    background-color: #E83B2F;
     color: #fff;
-    border-color: var(--color-primary);
+    border-color: #E83B2F;
+  }
+  &-black {
+    background-color: #2A2A2A;
+    color: #fff;
+    border-color: #2A2A2A;
+  }
+  &-darkblue {
+    background-color: #002554;
+    color: #8CE2D0;
+    border-color: #002554;
   }
 }
