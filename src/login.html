@@ -7,31 +7,31 @@
 <body>
     {{> header }}
     
-    <div id="container" class="content_wrap login_page">
-        <h1 class="page_title narrow">Login</h1>
-        <div class="page_content">
-          <div class="wrap_login">
-            <fieldset class="login_form">
-              <legend class="sr-only">Login Form</legend>
+    <div id="container" class="content-wrap login-page">
+        <h1 class="page-title narrow">Login</h1>
+        <div class="page-content">
+          <div class="wrap-login">
+            <fieldset class="login-form">
+              <legend class="screen-reader-only">Login Form</legend>
                 <form action="#" method="post">
-                  <div class="form_item">
-                      <label for="username" class="sr_only">Username:</label>
+                  <div class="form-item">
+                      <label for="username" class="screen-reader-only">Username:</label>
                       <input type="text" id="username" name="username" placeholder="Please enter your ID (email).">
                   </div>
-                  <div class="form_item">
-                      <label for="password" class="sr_only">Password:</label>
+                  <div class="form-item">
+                      <label for="password" class="screen-reader-only">Password:</label>
                       <input type="password" id="password" name="password" placeholder="Please enter your password.">
                   </div>
                   <div class="form-checkbox">
-                    <input type="checkbox" name="check_remember" id="check_remember">
-                    <label for="check_remember">Remember my ID</label>
+                    <input type="checkbox" name="check-remember" id="check-remember">
+                    <label for="check-remember">Remember my ID</label>
                   </div>
-                  <div class="form_tail">
-                      <button class="btn btn-mint btn-full" type="submit">Login</button>
+                  <div class="form-tail">
+                      <button class="button button-mint button-full" type="submit">Login</button>
                   </div>
               </form>
             </fieldset>
-            <ul class="login_utils">
+            <ul class="login-utils">
               <li><a href="#">Sign Up</a></li>
               <li><a href="#">Find ID</a></li>
               <li><a href="#">Password Recovery</a></li>
@@ -41,48 +41,48 @@
               <h2>Login with SNS</h2>
             </div>
             <div class="buttons">
-              <a href="#" class="btn btn-red btn-full">Sign Up with Google account</a>
-              <a href="#" class="btn btn-black btn-full">Easy Login with Apple</a>
+              <a href="#" class="button button-red button-full">Sign Up with Google account</a>
+              <a href="#" class="button button-black button-full">Easy Login with Apple</a>
             </div>
 
             <div class="util-title-wrap">
               <h2>Order as Guest</h2>
             </div>
             <div class="buttons">
-              <a href="#" class="btn btn-darkblue btn-full">Guest Order Lookup</a>
+              <a href="#" class="button btn-darkblue button-full">Guest Order Lookup</a>
             </div>
 
             <div class="util-title-wrap">
               <h2>Guest Order Lookup</h2>
             </div>
-            <fieldset class="guest_form">
-              <legend class="sr-only">Guest Order Lookup Form</legend>
+            <fieldset class="guest-form">
+              <legend class="screen-reader-only">Guest Order Lookup Form</legend>
                 <form action="#" method="post">
-                  <div class="form_item">
-                      <label for="guestname" class="sr_only">Guest name:</label>
+                  <div class="form-item">
+                      <label for="guestname" class="screen-reader-only">Guest name:</label>
                       <input type="text" id="guestname" name="guestname" placeholder="Please enter the name used when placing the order.">
                   </div>
-                  <div class="form_item">
-                      <label for="guestorder" class="sr_only">Guest Order number:</label>
+                  <div class="form-item">
+                      <label for="guestorder" class="screen-reader-only">Guest Order number:</label>
                       <input type="password" id="guestorder" name="guestorder" placeholder="Please enter the order number (required).">
                   </div>
 
-                  <div class="form_tail">
-                      <button class="btn btn-darkblue btn-full" type="submit">Search Order</button>
+                  <div class="form-tail">
+                      <button class="button btn-darkblue button-full" type="submit">Search Order</button>
                   </div>
               </form>
             </fieldset>
 
-            <div class="inform_wrap">
-              <strong class="inform_title">
-                <i class="ico"><img src="/assets/images/icon/proicons_alert-circle.svg" alt=""></i> 
+            <div class="inform-wrap">
+              <strong class="inform-title">
+                <i class="icon"><img src="/assets/images/icon/proicons_alert-circle.svg" alt=""></i> 
                 Guest Order Lookup Info
               </strong>
 
               <ul class="list-dot">
                 <li>Please enter the name of the person who placed the order, along with the order number used.</li>
                 <li>It is difficult to retrieve your order using only the issued order number. (Input required)</li>
-                <li>If you do not know your order number, please contact our customer service at <span class="c-red">1600-1937.</span></li>
+                <li>If you do not know your order number, please contact our customer service at <span class="color-red">1600-1937.</span></li>
               </ul>
             </div>
 

@@ -11,9 +11,9 @@
 }
 
 
-.page_content {max-width: 464px;margin: 0 auto;}
+.page-content {max-width: 464px;margin: 0 auto;}
 .login_find_id {
-  .page_content {max-width: 620px;margin: 0 auto;
+  .page-content {max-width: 620px;margin: 0 auto;
     .buttons.row {
       max-width:464px; margin:0 auto;
     }
@@ -21,7 +21,7 @@
 }
 
 
-.page_title { padding-top:80px;padding-bottom:60px;
+.page-title { padding-top:80px;padding-bottom:60px;
   &.narrow {max-width: 464px;margin: 0 auto;font-size:24px;}
   @media screen and (max-width: 1024px){
     padding-top:40px;

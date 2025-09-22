@@ -2,26 +2,26 @@
 @use '../abstracts/functions' as *;
 @use '../abstracts/mixins' as *;
 
-.wrap_login {
+.wrap-login {
   max-width:464px;
   margin:0 auto;
 
   .buttons {
     margin-top:40px;
-    .btn {
-      & + .btn {margin-top:16px;}
+    .button {
+      & + .button {margin-top:16px;}
     }
   }
 
-  & > .txt_infrom {margin-bottom:40px;} 
+  & > .text-information {margin-bottom:40px;} 
 }
 
-.login_form, .guest_form {
-  .form_item {
-    & + .form_item {margin-top:16px;
-      .label_title {padding-top:25px}
+.login-form, .guest-form {
+  .form-item {
+    & + .form-item {margin-top:16px;
+      .label-title {padding-top:25px}
     }
-    & + .txt_infrom {
+    & + .text-information {
       margin-top:16px;
     }
     & + .link {
@@ -29,14 +29,14 @@
     }
   }
   .form-checkbox {margin-top:16px;}
-  .form_tail {margin-top:56px;}
+  .form-tail {margin-top:56px;}
 
-  .label_title {display:block;font-size:16px;color:#DDDDDD;margin-bottom:16px;font-weight:600;}
+  .label-title {display:block;font-size:16px;color:#DDDDDD;margin-bottom:16px;font-weight:600;}
 }
 
-.guest_form {margin-top:40px;}
+.guest-form {margin-top:40px;}
 
-.login_utils {display:flex;align-items:center;justify-content: center;margin-top:24px;
+.login-utils {display:flex;align-items:center;justify-content: center;margin-top:24px;
   & > li {position: relative;display: flex; align-items: center; justify-content: center; text-align: center;
     @media (max-width: $tablet){width:100%;}
     & + li:before {
@@ -54,18 +54,18 @@
   a {display:block;padding:0 30px;font-size:14px;color:#8D8D8D;line-height:1.5;font-size:16px;font-weight:400;
     @media (max-width: $tablet){font-size:11px;padding:0 5px;}
   }
-  .btn {padding:0; font-size:14px; font-weight:400; color:#8D8D8D; border:none; background:none; box-shadow:none;
+  .button {padding:0; font-size:14px; font-weight:400; color:#8D8D8D; border:none; background:none; box-shadow:none;
     &:hover {opacity:0.8;}
   }
 }
 
 
-.inform_wrap {
+.inform-wrap {
   margin-top:40px;
   background-color: #1D1D1F;
   padding: 32px;
   border-radius: 10px;
-  .inform_title {
+  .inform-title {
     display: flex;
     align-items: center;
     font-size: 0.875rem;
@@ -103,7 +103,7 @@
     }
   }
 }
-.txt_infrom {
+.text-information {
   font-size: 16px;
   color: #8D8D8D;
   text-align: left;
@@ -116,7 +116,7 @@
   @media (max-width: $tablet){flex-direction: column; gap:16px 0;}
 }
 
-.wrap_text_result {
+.wrap-text-result {
   max-width:620px;
   margin:0 auto;
   background-image: url('@/assets/images/bg_eye_pettern.png');
@@ -126,7 +126,7 @@
   padding:40px 32px;
   min-height:200px;
   margin-bottom:60px;
-  .inner_text {
+  .inner-text {
     max-width:400px;
     margin:0 auto;
     text-align: center;
@@ -139,7 +139,7 @@
 
       @media (max-width: $tablet){font-size:18px;}
     }
-    .txt_infrom {
+    .text-information {
       text-align: center;
       font-size:16px;
       font-weight:600;

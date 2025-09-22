@@ -43,11 +43,14 @@
  --greycolor-grey08: #1d1d1f;
  --greycolor-grey09: #0d0f12;
 
+ --cFFFFFF : #fd5c51;
+ --c8CE2D0 : #8CE2D0;
+
  /* typography */
  --namu-bold: "WellnessSans_B", "Pretendard"; --namu-regular: "WellnessSans_R", "Pretendard"; --font-family-base: "Pretendard", sans-serif; /* 제품타이틀 외 모든 서비스와 문서 */
  --font-family-title: "WellnessSans_Bold", sans-serif; /* 제품 타이틀 */ }
 
-.sr_only {
+.screen-reader-only {
   position: absolute;
   z-index: -1;
   display: inline-block;
@@ -60,8 +63,8 @@
   word-break: initial;
   word-wrap: initial;
 }
-.c-red { color: var(--subcolor-red-normal)!important; }
-.c-mint { color: #8CE2D0!important; }
+.color-red { color: var(--cFFFFFF)!important; }
+.color-mint { color: var(--c8CE2D0)!important; }
 
 .namuB { font-family: var(--namu-bold) !important; font-weight: bold !important; }
 .namuR { font-family: var(--namu-regular) !important; }
