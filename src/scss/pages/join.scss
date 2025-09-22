@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
+
+.wrap-join-agreement {
+  padding-top:30px;
+  padding-bottom:40px;
+  .form-check-list {
+    &>li {padding-left:30px;}
+    &>li:first-child {
+      padding-left:0;
+    }
+  }
+  .button-mini {margin-left:10px;}
+}
+
+.form-check-list {
+  & > li {
+    & + li {margin-top:12px;}
+  }
+}

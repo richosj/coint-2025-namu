@@ -1,0 +1,45 @@
+<!-- @pageTitle Find PW -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {{> meta }}
+</head>
+<body>
+    {{> header }}
+    
+    <div id="container" class="content_wrap login-page">
+        <h1 class="page-title narrow">Password Recovery</h1>
+        <div class="page-content">
+          <div class="wrap-login">
+            <strong class="inform-title">Select Verification Method</strong>
+            <p class="text-information">Please choose a method of identity verification.</p>
+            
+            <div class="member-choice-container">
+              <div class="form-radio">
+                <input type="radio" name="radio-option1" id="radio-option1-1">
+                <label for="radio-option1-1">Email Verification <span class="color-gray">(No registered mobile number found.)</span></label>
+              </div>
+              <div class="radio-bottom-text color-red">A verification code will be sent to the registered email upon sign up.</div>
+
+              <div class="form-radio">
+                <input type="radio" name="radio-option1" id="radio-option1-2">
+                <label for="radio-option1-2">SMS Verification <span class="color-gray">(No registered mobile number found.)</span></label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="radio-option1" id="radio-option1-3">
+                <label for="radio-option1-3">Mobile phone identity verification.</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-tail">
+              <button class="button button-mint button-full" type="submit">Next</button>
+          </div>
+
+        
+          
+        </div>
+    </div>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>

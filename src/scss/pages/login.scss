@@ -2,21 +2,34 @@
 @use '../abstracts/functions' as *;
 @use '../abstracts/mixins' as *;
 
-.wrap-login {
+.wrap-login, .wrap-join {
   max-width:464px;
   margin:0 auto;
 
   .buttons {
     margin-top:40px;
-    .button {
-      & + .button {margin-top:16px;}
+    &.buttons-last {margin-top:60px;}
+    &.column {
+      display:flex;
+      flex-direction: column;
+      gap:16px;
     }
+    @media (max-width: $tablet){
+      &.buttons-last {margin-top:40px;}
+    }
+    
   }
 
   & > .text-information {margin-bottom:40px;} 
+
+  .inform-title {
+    & + .text-information {
+      margin-top:16px;
+    }
+  }
 }
 
-.login-form, .guest-form {
+.login-form, .guest-form, .join-form {
   .form-item {
     & + .form-item {margin-top:16px;
       .label-title {padding-top:25px}
@@ -32,6 +45,8 @@
   .form-tail {margin-top:56px;}
 
   .label-title {display:block;font-size:16px;color:#DDDDDD;margin-bottom:16px;font-weight:600;}
+ 
+  
 }
 
 .guest-form {margin-top:40px;}
@@ -71,7 +86,7 @@
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--greycolor-grey02);
-    margin-top: 24px;
+    margin-top: 0px;
     text-align: left;
     border-radius: 10px;
     i {
@@ -107,6 +122,13 @@
   font-size: 16px;
   color: #8D8D8D;
   text-align: left;
+
+  &.link {
+    margin-top:40px;
+  }
+  &.center {
+    text-align:center;
+  }
 }
 
 .buttons.row {
@@ -145,4 +167,50 @@
       font-weight:600;
     }
   }
+}
+
+
+.member-choice-container {
+  margin-top:40px;
+  background-color: #1D1D1F;
+  padding: 32px;
+  border-radius: 10px;
+
+  .radio-bottom-text {padding-left:28px;padding-bottom:20px;}
+  .form-radio {
+    & + .form-radio {padding-top:20px;}
+  }
+}
+
+.form-tail {margin-top:56px;}
+
+.verify-form {
+  position:relative;
+
+  input[type="text"] {
+    padding-right:280px;
+    @media (max-width: $tablet){
+      padding-right:24px;
+    }
+
+  }
+
+  .verify-message {
+    display:block;
+    position: absolute;
+    font-size:14px;
+    top:50%;
+    right:15px;
+    transform: translate(0, -50%);
+    color: var(--cFFFFFF);
+
+    @media (max-width: $tablet){
+      position:relative;
+      transform: translate(0, 0);
+      text-align: right;
+      right:0;
+      padding-top:10px;
+    }
+  }
+  
 }

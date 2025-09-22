@@ -24,7 +24,7 @@ input::-webkit-inner-spin-button {
 }
 
 .form-checkbox {overflow:hidden;padding-bottom:2px;
-	label {padding-left:26px;cursor: pointer;
+	label {padding-left:30px;cursor: pointer;
 		&:before{content:"";position: absolute;left:0;border: 1px solid #5a5a5b;width: 20px;height: 20px;border-radius:3px;}
 		&:after{border:solid #fff;border-width:0 2px 2px 0;transform: translate(0, 100%) rotate(45deg);}
 	}
@@ -46,6 +46,26 @@ input::-webkit-inner-spin-button {
 		}
 		&:focus, &:focus-visible, &:focus-within {
 			+label {outline:2px solid #000; outline-offset:-1px;}
+		}
+	}
+}
+
+.form-radio{
+	label {padding-left:28px; color:#ddd;
+		&:before {top:2px;left:0;border-radius: 50%;border:1px solid rgba(#ffffff, 0.5);background:#1D1D1F;width:18px;height:18px;}
+	}
+	input{
+		&:disabled {
+			+label{color:#999;
+				&:before {border:1px solid #979797;background:#666;}
+				&:after{background-color: #D8D8D8;width:12px;height:12px;top:3px;left:3px;border-radius: 50%;opacity: 1;}
+			}
+		}
+		&:checked {
+			+label{color:#ddd;
+				&:before {border:1px solid #8CE2D0;background:#1D1D1F;}
+				&:after{background-color: #8CE2D0;width:12px;height:12px;top:6px;left:4px;border-radius: 50%;opacity: 1;}
+			}
 		}
 	}
 }

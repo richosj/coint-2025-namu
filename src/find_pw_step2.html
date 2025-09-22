@@ -1,0 +1,36 @@
+<!-- @pageTitle Find PW -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {{> meta }}
+</head>
+<body>
+    {{> header }}
+    
+    <div id="container" class="content_wrap login-page">
+        <h1 class="page-title narrow">Password Recovery</h1>
+        <div class="page-content">
+          <div class="wrap-login">
+            <strong class="inform-title">Select Verification Method</strong>
+            <p class="text-information">Please choose a method of identity verification.</p>
+            
+            <div class="form-item verify-form">
+                <label for="verification-code" class="screen-reader-only">Name</label>
+                <input type="text" id="verification-code" name="verification-code" placeholder="Enter Verification Code">
+                <b class="verify-message">Remaining time for verification: <span>02:45</span></b>
+            </div>
+
+            
+          </div>
+         
+          <div class="buttons row">
+            <a href="#" class="button button-primary button-full">Previous</a>
+            <a href="#" class="button button-mint button-full">Next</a>
+          </div>
+          
+        </div>
+    </div>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>
