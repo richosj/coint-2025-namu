@@ -1,3 +1,164 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/functions' as *;
 @use '../abstracts/mixins' as *;
+
+$responsive: 1279px;
+
+.footer {
+   background-color: #000;
+   color: var(--greycolor-grey04);
+   padding: 40px 0 20px;
+   margin-top: auto;
+}
+
+.footer-inner {
+   max-width: 1800px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+// 푸터 상단 네비게이션
+.footer-nav {
+   display: flex;
+   justify-content: center;
+   gap: 32px;
+   margin-bottom: 32px;
+   flex-wrap: wrap;
+}
+
+.footer-nav a {
+   color: var(--greycolor-grey04);
+   font-size: 14px;
+   text-decoration: none;
+   transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+   color: #fff;
+}
+
+// 소셜 미디어 아이콘
+.footer-social {
+   display: flex;
+   justify-content: center;
+   gap: 16px;
+   margin-bottom: 32px;
+}
+
+.footer-social a {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 40px;
+   height: 40px;
+   color: var(--greycolor-grey04);
+   transition: color 0.2s ease;
+}
+
+.footer-social a:hover {
+   color: #fff;
+}
+
+// 푸터 하단 정보
+.footer-info {
+   text-align: center;
+   font-size: 12px;
+   line-height: 1.6;
+   color: var(--greycolor-grey05);
+}
+
+.footer-copyright {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+   margin-bottom: 16px;
+   
+}
+
+.footer-copyright-text {
+   color: var(--greycolor-grey04);
+}
+
+.footer-scroll-top {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 24px;
+   height: 24px;
+   color: var(--greycolor-grey04);
+   cursor: pointer;
+   transition: color 0.2s ease;
+}
+
+.footer-scroll-top:hover {
+   color: #fff;
+}
+
+.footer-company {
+   margin-bottom: 8px;
+}
+
+.footer-address {
+   margin-bottom: 8px;
+}
+
+.footer-registration {
+   margin-bottom: 4px;
+}
+
+.footer-registration a {
+   color: var(--greycolor-grey05);
+   text-decoration: underline;
+   transition: color 0.2s ease;
+}
+
+.footer-registration a:hover {
+   color: var(--greycolor-grey04);
+}
+
+.footer-ecommerce {
+   color: var(--greycolor-grey05);
+}
+
+// 반응형
+@media (max-width: $responsive) {
+   .footer {
+      padding: 32px 0 16px;
+   }
+   
+   .footer-inner {
+      padding: 0 16px;
+   }
+   
+   .footer-nav {
+      gap: 16px;
+      margin-bottom: 24px;
+   }
+   
+   .footer-nav a {
+      font-size: 12px;
+   }
+   
+   .footer-social {
+      gap: 12px;
+      margin-bottom: 24px;
+   }
+   
+   .footer-social a {
+      width: 36px;
+      height: 36px;
+   }
+   
+   .footer-info {
+      font-size: 11px;
+   }
+   
+   .footer-copyright {
+      flex-direction: column;
+      gap: 8px;
+   }
+   
+   .footer-scroll-top {
+      align-self: flex-end;
+   }
+}

@@ -1,0 +1,88 @@
+[33m4bcb86c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m update
+[33md1290fd[m feat(godomall-web/module/Controller/Front/Api): add Encrypt API endpoint
+[33md74d07d[m fix(godomall-web): update groupSort data type and mock configuration
+[33md3d9db1[m feat(godomall-web/admin): add distribution fields to member group register form
+[33m0112666[m feat(godomall-web/migration): add distribution group code fields to custom tables
+[33m5573d1c[m feat(godomall-web/module/Component/Member/Group): extend GroupService and GroupDAO for API support
+[33m06a1b17[m feat(godomall-web/module/Controller/Front/Api): add GroupMember API endpoint
+[33m5d0b05c[m fix(web/webroot/data/skin/outline/_footer.html): 모달에서의 사명이 독립적으로 작동하게 수정
+[33m0954a0e[m feat(web/webroot/admin/local_store_white_list.php): 기존 제휴사를 인증점으로 수정
+[33m9e5f53e[m docs(front/README): improve Windows environment setup instructions
+[33m58ddb26[m chore(front/product_v2): update csrf token and sdk parameters
+[33m18a3231[m chore(front/package): add @types/jquery dependency and fix jquery usage
+[33m6330435[m refactor(godomall-web/skin/front/no101): remove unused handleSelectChange function from product_v2.js
+[33mcb6acd7[m feat(front/product/v2): implement modal functionality for accordion items
+[33m1b6bc22[m refactor(godomall-web/skin/front/no101): clean up product_v2 animations and add popup templates
+[33mf62513d[m feat(godomall-web/module/Controller/Front): add IP whitelist for Spoon staff
+[33m42e16f9[m refactor(front): reorganize example structure and improve hero scene overlay
+[33m46d55d5[m feat(godomall-web/skin/front/no101): add GSAP animations for product_v2 page
+[33m659f316[m feat(web/webroot/module/Controller/Front/CommonController.php): 카드 혜택 페이지 리다이렉트 되는 부분 수정
+[33ma770e05[m chore(front/product/v2/view/act): remove todo comment and simplify viewport prop
+[33m3adf4c0[m fix(front/product/example/app): remove duplicate imports and fix import paths
+[33m31d60ff[m Merge branch 'a1'
+[33m1a42854[m refactor(front/product): replace lodash with es-toolkit for better performance
+[33m075271b[m chore(front): update configuration and content structure
+[33mc80c439[m feat(front/product/v2): implement CSS modules architecture
+[33mc0876d1[m docs(godomall-front): add Cloudflare Pages deployment URL
+[33maff42b1[m fix(godomall-front): make build script more robust with rm -rf
+[33m4dd1563[m refactor(godomall-front): setup static site generation for product_v2
+[33m9fd5a09[m refactor(godomall-front): migrate from lodash to es-toolkit
+[33m353c4c0[m feat(tool-py): add layout extraction tool and local serve setup
+[33m423ea99[m refactor(godomall-web/skin/front/no101/product_v2): migrate to React-based implementation
+[33mc4de86e[m feat(godomall-web): implement product_v2 showcase page
+[33m80c82a7[m refactor(godomall-web/module): migrate controllers to Dsr architecture
+[33m6b0c705[m refactor(godomall-web/mock): convert Controller to abstract class with abstract index method
+[33m2f6eaf5[m fix(godomall-web/skin/front/no101/outline): comment out broken script tag with template syntax error
+[33me73b3b4[m feat(godomall-web/module/Controller/Front): add /dev/ path exception for development tools
+[33m578e779[m build(tool-py): initial project setup
+[33m8bf0ce3[m chore(backup): exclude member list ZIP files from backup
+[33m9ca5906[m feat(web/webroot/admin/member_group_expand_list.php): 등급별 회원 조회 메뉴 추가 및 페이지 추가
+[33m5ed7a61[m style(web/webroot/data/skin/outline/_footer.html): select box 스타일 추가
+[33ma7ed65b[m feat(web/webroot/data/skin/outline/_footer.html): 인증점 인증에서 이메일 필드 제거
+[33me5749aa[m fix(front/product/v2/view/scene): adjust viewport intersection threshold for hero scene animation
+[33m30817d2[m docs(godomall-front): add Cloudflare Pages deployment URL
+[33m9201d9f[m fix(godomall-front): make build script more robust with rm -rf
+[33mbaf004f[m refactor(godomall-front): setup static site generation for product_v2
+[33m1d60737[m refactor(godomall-front): migrate from lodash to es-toolkit
+[33m707c031[m feat(tool-py): add layout extraction tool and local serve setup
+[33m88b0c2a[m refactor(godomall-web/skin/front/no101/product_v2): migrate to React-based implementation
+[33maafccfa[m feat(godomall-web): implement product_v2 showcase page
+[33mce8dc09[m refactor(godomall-web/module): migrate controllers to Dsr architecture
+[33me04776f[m refactor(godomall-web/mock): convert Controller to abstract class with abstract index method
+[33mb211d5a[m fix(godomall-web/skin/front/no101/outline): comment out broken script tag with template syntax error
+[33m27f5415[m feat(godomall-web/module/Controller/Front): add /dev/ path exception for development tools
+[33m09e31d6[m build(tool-py): initial project setup
+[33mc44d38e[m chore(backup): exclude member list ZIP files from backup
+[33m03a6e84[m feat(godomall-web/admin): update member group registration view for new group type requirements
+[33m488cc16[m refactor(godomall-web/module/Controller/Admin/Member): update member group controllers for new requirements
+[33m55e0b90[m feat(godomall-web/module/Component): add dao implementations for group entity, enterprise, and local store
+[33m2206071[m feat(godomall-web/module/Component/Database): add enterprise table field definitions
+[33mdae3adf[m fix(godomall-web/migration): fix foreign key references in group entity and enterprise migrations
+[33m678409d[m fix(godomall-web): update local store field naming convention
+[33m431416f[m feat(godomall-web/admin): update member group registration view for new group type requirements
+[33m6ebd7b4[m refactor(godomall-web/module/Controller/Admin/Member): update member group controllers for new requirements
+[33m7061ed9[m feat(godomall-web/module/Component): add dao implementations for group entity, enterprise, and local store
+[33m7954ad1[m feat(godomall-web/module/Component/Database): add enterprise table field definitions
+[33m857398a[m fix(godomall-web/migration): fix foreign key references in group entity and enterprise migrations
+[33m70b6568[m fix(godomall-web): update local store field naming convention
+[33m1dcce40[m feat(web/webroot/admin/member_group_expand_list.php): 등급별 회원 조회 메뉴 추가 및 페이지 추가
+[33m3fbde0f[m style(web/webroot/data/skin/outline/_footer.html): select box 스타일 추가
+[33m9704835[m feat(front/product/v2): add AI wellness service hero section
+[33m04dd2b2[m feat(front/product/v2): add air solution hero animation
+[33m8ba1eb8[m feat(web/webroot/data/skin/outline/_footer.html): 인증점 인증에서 이메일 필드 제거
+[33m9aea4bf[m docs(front/README): add comprehensive project documentation for outsourcing
+[33m8154f4f[m chore(front): update configuration and content structure
+[33ma8bc2fc[m feat(front/product/v2): implement CSS modules architecture
+[33m160fdd1[m test
+[33m8aacdfa[m feat(front/product/example): add hero scene with rotating animation
+[33m76667f3[m feat(front/view/scene): implement word-by-word animation with upward movement
+[33m2d05dc1[m chore(front): configure product example build entry
+[33mb207bfc[m feat(front/product/example): add product example page structure
+[33m5e79117[m feat(front): implement accordion view with air solution content
+[33m461e5e5[m fix(front/view): adjust video to fill height with object-cover
+[33mee6a94d[m feat(godomall-web/admin): enhance member group admin with local store support
+[33m5d78e22[m feat(godomall-web/module/Component): implement local store and member group components
+[33mfbae1d3[m feat(godomall-web/module/Component/Database): add dsr fields to table definitions
+[33me26e70b[m fix(godomall-web/migration): update member group and local store migrations
+[33m7e70d29[m chore(godomall-web): add gitignore configuration
+[33m4e9f5c9[m feat(web/data/skin/no101/js/outline/_footer.html): 그룹사, 제휴사, 인증점 등록 �
