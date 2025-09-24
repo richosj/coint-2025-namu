@@ -1,4 +1,4 @@
-<!-- @pageTitle login -->
+<!-- @pageTitle Find ID result -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,89 +7,52 @@
 <body>
     {{> header }}
     
-    <div id="container" class="content-wrap join-page">
+    <div id="container" class="content-wrap login-find-id">
         <h1 class="page-title narrow">NAMUHˣ Sign Up</h1>
         <div class="page-content">
-          <div class="wrap-join">
-            <fieldset class="join-form">
-              <legend class="screen-reader-only">Login Form</legend>
-                <form action="#" method="post">
-                  <div class="form-item">
-                      <label for="username" class="screen-reader-only">Username:</label>
-                      <input type="text" id="username" name="username" placeholder="Please enter your ID (email).">
-                  </div>
-                  <div class="form-item">
-                      <label for="password" class="screen-reader-only">Password:</label>
-                      <input type="password" id="password" name="password" placeholder="Please enter your password.">
-                  </div>
-                  <div class="form-checkbox">
-                    <input type="checkbox" name="check-remember" id="check-remember">
-                    <label for="check-remember">Remember my ID</label>
-                  </div>
-                  <div class="form-tail">
-                      <button class="button button-mint button-full" type="submit">Login</button>
-                  </div>
-              </form>
-            </fieldset>
-            <ul class="login-utils">
-              <li><a href="#">Sign Up</a></li>
-              <li><a href="#">Find ID</a></li>
-              <li><a href="#">Password Recovery</a></li>
-            </ul>
-
-            <div class="util-title-wrap">
-              <h2>Login with SNS</h2>
+          <div class="wrap-text-result type-single">
+            <div class="inner-text">
+              <p class="text-information">
+                An account already exists with your identity verification information.<br>
+                Please select the ID you would like to use for NAMUHˣ.
+              </p>
             </div>
-            <div class="buttons column">
-              <a href="#" class="button button-red button-full">Sign Up with Google account</a>
-              <a href="#" class="button button-black button-full">Easy Login with Apple</a>
-            </div>
-
-            <div class="util-title-wrap">
-              <h2>Order as Guest</h2>
-            </div>
-            <div class="buttons">
-              <a href="#" class="button button-darkblue button-full">Guest Order Lookup</a>
-            </div>
-
-            <div class="util-title-wrap">
-              <h2>Guest Order Lookup</h2>
-            </div>
-            <fieldset class="guest-form">
-              <legend class="screen-reader-only">Guest Order Lookup Form</legend>
-                <form action="#" method="post">
-                  <div class="form-item">
-                      <label for="guestname" class="screen-reader-only">Guest name:</label>
-                      <input type="text" id="guestname" name="guestname" placeholder="Please enter the name used when placing the order.">
-                  </div>
-                  <div class="form-item">
-                      <label for="guestorder" class="screen-reader-only">Guest Order number:</label>
-                      <input type="password" id="guestorder" name="guestorder" placeholder="Please enter the order number (required).">
-                  </div>
-
-                  <div class="form-tail">
-                      <button class="button button-darkblue button-full" type="submit">Search Order</button>
-                  </div>
-              </form>
-            </fieldset>
-
-            <div class="inform-wrap">
-              <strong class="inform-title">
-                <i class="icon"><img src="/assets/images/icon/proicons_alert-circle.svg" alt=""></i> 
-                Guest Order Lookup Info
-              </strong>
-
-              <ul class="list-dot">
-                <li>Please enter the name of the person who placed the order, along with the order number used.</li>
-                <li>It is difficult to retrieve your order using only the issued order number. (Input required)</li>
-                <li>If you do not know your order number, please contact our customer service at <span class="color-red">1600-1937.</span></li>
-              </ul>
-            </div>
-
           </div>
+          <div class="member-choice-lists">
+            <div class="member-choice-container">
+              <div class="form-radio type-row-middle">
+                <input type="radio" name="radio-option1" id="radio-option1-1">
+                <label for="radio-option1-1">
+                  magic4567@gmail.com <br>
+                  <span class="color-gray">SK매직 SK매직몰 &nbsp; Date Joined: 2021.10.01</span>
+                </label>
+              </div>
+            </div>
 
-        
+            <div class="member-choice-container">
+              <div class="form-radio type-row-middle">
+                <input type="radio" name="radio-option1" id="radio-option1-2">
+                <label for="radio-option1-2">
+                  magic4567@gmail.com <br>
+                  <span class="color-gray">SK매직 SK매직몰 &nbsp; Date Joined: 2021.10.01</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="member-choice-container">
+              <div class="form-radio type-row-middle">
+                <input type="radio" name="radio-option1" id="radio-option1-3">
+                <label for="radio-option1-3">
+                  Register with a new ID
+                </label>
+              </div>
+            </div>
+          </div>
           
+
+          <div class="buttons row">
+            <a href="#" class="button button-mint button-full">Enter Member Information</a>
+          </div>
         </div>
     </div>
 

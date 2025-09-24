@@ -1,0 +1,90 @@
+<!-- @pageTitle Find PW -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {{> meta }}
+</head>
+<body>
+    {{> header }}
+    
+    <div id="container" class="content_wrap join-page">
+        <h1 class="page-title narrow">NAMUHˣ Sign Up</h1>
+        <div class="page-content">
+          <div class="wrap-join">
+            <strong class="inform-title">Enter ID</strong>
+            <p class="text-information">Please enter the ID you want to recover the password for.</p>
+            <fieldset class="join-form">
+              <legend class="screen-reader-only">Login Form</legend>
+                <form action="#" method="post">
+                  <div class="form-item">
+                      <label for="user-email" class="label-title">ID (Email) <span class="color-red">*</span></label>
+                      <div class="items-flex row type-row-button">
+                        <input type="text" id="user-email" name="user-email" placeholder="Please check for duplicates after entering.">
+                        <a href="#" class="button button-darkblue button-medium">Check Duplicates</a>
+                      </div>
+                  </div>
+                  <div class="form-checkbox">
+                    <input type="checkbox" name="check-agreement1" id="check-agreement1">
+                    <label for="check-agreement1">
+                      <span class="color-mint">[Optional]</span> &nbsp;Consent to receive promotional and marketing information
+                      <a href="#" class="button-mini">view details</a>
+                    </label>
+                  </div>
+
+
+                  <div class="form-item">
+                      <label for="text-password" class="label-title">Password <span class="color-red">*</span></label>
+                      <input type="password" id="text-password" name="text-password" placeholder="Please enter your name.">
+                  </div>
+                  
+                  <ul class="list-dot">
+                    <li>Please enter at least 10 characters. Use a combination of at least two of the following: uppercase/lowercase letters, numbers, and special characters.</li>
+                    <li>Allowed special characters: !@#$%^&*()_+-=~</li>
+                    <li>Avoid using your ID, birthdate, sequential numbers, or repeating personal info of more than 3 characters.</li>
+                  </ul>
+
+                  <div class="form-item">
+                      <label for="text-password2" class="label-title">Confirm Password <span class="color-red">*</span></label>
+                      <input type="password" id="text-password2" name="text-password2" placeholder="Please enter your name.">
+                  </div>
+
+                  <div class="form-item">
+                      <label for="name" class="label-title">Name</label>
+                      <input type="text" id="name" name="name" placeholder="" disabled value="name">
+                  </div>
+
+                  <div class="form-item">
+                      <label for="birth" class="label-title">Date of Birth</label>
+                      <input type="number" id="birth" name="birth" placeholder="" disabled value="19000801">
+                  </div>
+
+                  <div class="form-item">
+                      <label for="mobile-number" class="label-title">Mobile Phone Number</label>
+                      <input type="number" id="mobile-number" name="mobile-number" placeholder="" disabled value="01012345678">
+                  </div>
+
+                  <div class="form-checkbox">
+                    <input type="checkbox" name="check-agreement2" id="check-agreement2">
+                    <label for="check-agreement2">
+                      <span class="color-mint">[Optional]</span> &nbsp;Consent to receive promotional and marketing information
+                      <a href="#" class="button-mini">view details</a>
+                    </label>
+                  </div>
+
+
+                  <div class="buttons row">
+                    <a href="#" class="button button-primary button-full">Cancel</a>
+                    <button class="button button-mint button-full" type="submit">Sign Up</button>
+                  </div>
+              </form>
+            </fieldset>
+          </div>
+
+        
+          
+        </div>
+    </div>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>

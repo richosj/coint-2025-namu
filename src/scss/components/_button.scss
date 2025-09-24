@@ -59,7 +59,11 @@
   }
 }
 
-
+.button-medium {
+  padding: 0.625rem 0.5rem;
+  font-size:14px;
+  align-items: center;
+}
 .button-mini {
   display: inline-flex;
   border: 1px solid #1D1D1F;

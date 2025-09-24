@@ -54,6 +54,40 @@ input::-webkit-inner-spin-button {
 	label {padding-left:28px; color:#ddd;
 		&:before {top:2px;left:0;border-radius: 50%;border:1px solid rgba(#ffffff, 0.5);background:#1D1D1F;width:18px;height:18px;}
 	}
+	&.type-row-middle {
+		input {
+			 + label {
+					&:before {top:50%;transform: translate(0, -50%);}
+					&:after {top:50%;transform: translate(0, -50%);}
+				}
+				&:checked {
+					+label {
+						&:after {top:50%;transform: translate(0, -50%);}
+					}	
+					
+				}
+		}
+	}
+	&.single-column {position:relative;text-align:center;
+		img {max-width:48px;}
+		span {font-size:14px;font-weight:bold;}
+		img, span {opacity:0.6;}
+		input {
+			 + label {display:flex; align-items: center; flex-direction: column;padding-left:0;padding-bottom:30px;margin-right:0;
+					&:before {top:auto;bottom:0;left:50%;transform: translate(-50%, 0);}
+					&:after {top:auto;bottom:0;left:50%;transform: translate(-50%, 0);}
+				}
+				&:checked {
+					+label {
+						&:after {top:auto;bottom:4px;left:50%;transform: translate(-50%, 0);}
+						img, span {opacity:1;}
+					}	
+					
+				}
+		}
+		
+		
+	}
 	input{
 		&:disabled {
 			+label{color:#999;

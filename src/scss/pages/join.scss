@@ -19,3 +19,15 @@
     & + li {margin-top:12px;}
   }
 }
+
+.items-flex {display:flex;
+  &.row {gap:16px;}
+  .button-medium  {min-width:130px;text-align:center;}
+}
+
+.form-checkbox {
+  & + .form-item {margin-top:40px;}
+}
+.list-dot {
+  & + .form-item {margin-top:40px;}
+}
