@@ -79,3 +79,236 @@
         }
     }
 }
+
+
+
+@layer components {
+  .modal {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1055;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    opacity: 0%;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-timing-function: linear;
+  }
+  
+  .modal:is(.is-active) {
+    opacity: 100%;
+  }
+  
+  .modal-dialog {
+    pointer-events: none;
+    margin: 16px;
+    display: flex;
+    min-height: calc(100% - 2rem);
+    --tw-translate-y: -48px;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  :where(*:is([data-bs-placement~="top"])) .modal-dialog {
+    justify-content: flex-start;
+  }
+  
+  :where(*:is([data-bs-placement~="bottom"])) .modal-dialog {
+    --tw-translate-y: 16px;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    justify-content: flex-end;
+  }
+  
+  :where(*:is([data-bs-placement~="right"])) .modal-dialog {
+    --tw-translate-x: 48px;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    --tw-translate-y: 0px;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    align-items: flex-end;
+  }
+  
+  :where(*:is([data-bs-placement~="left"])) .modal-dialog {
+    --tw-translate-x: -48px;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    --tw-translate-y: 0px;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    align-items: flex-start;
+  }
+  
+  :where(*:is([data-bs-placement~="full"])) .modal-dialog {
+    margin: 0px;
+    min-height: 100%;
+  }
+  
+  :where(*:is([data-bs-scroll~="inner"])) .modal-dialog {
+    max-height: calc(100% - 2rem);
+  }
+  
+  :where(*:is(.is-static)) .modal-dialog {
+    --tw-scale-x: 101%;
+    --tw-scale-y: 101%;
+    --tw-scale-z: 101%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  
+  :where(*:is(.is-active)) .modal-dialog {
+    translate: none;
+  }
+  
+  .modal-content {
+    pointer-events: auto;
+    display: flex;
+    min-height: clamp(10rem, 33vh, 20rem);
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #000;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 0.15);
+    filter: drop-shadow(0 4px 4px rgb(0 0 0 / 0.15));
+  }
+  
+  .modal-content:where(.dark, .dark *) {
+    background-color: oklch(27.4% 0.006 286.033);
+  }
+  
+  :where(*:is([data-bs-placement~="full"])) .modal-content {
+    max-width: 100%;
+    border-radius: 0;
+  }
+  
+  .modal-header {
+    position: relative;
+    display: flex;
+    flex: none;
+    align-items: center;
+    padding: 60px 60px 50px!important;
+    @media (max-width: $tablet){
+        padding: 50px 50px 30px!important;
+    }
+  }
+  
+  .modal-header:where(.dark, .dark *) {
+    border-bottom-color: color-mix(in srgb, #fff 10%, transparent);
+  }
+  
+  .modal-title {
+    flex: 1;
+    font-size: 24px;
+    text-align:center;
+    @media (max-width: $tablet){
+        font-size: 22px;
+    }
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999em;
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0,0H24V24H0Z' fill='none'/%3E%3Cpath d='M6,14V8H0V6H6V0H8V6h6V8H8v6Z' transform='translate(12 2.101) rotate(45)' fill='%23fff'/%3E%3C/svg%3E");
+    background-size: 24px;
+    opacity: 50%;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+  
+  .modal-close:where(.dark, .dark *) {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0,0H24V24H0Z' fill='none'/%3E%3Cpath d='M6,14V8H0V6H6V0H8V6h6V8H8v6Z' transform='translate(12 2.101) rotate(45)' fill='%23fff'/%3E%3C/svg%3E");
+  }
+  
+  .modal-close:hover {
+    @media (hover: hover) {
+      opacity: 100%;
+    }
+  }
+  
+  
+  
+  .modal-body:not(*:last-child) {
+    padding-bottom: 0px;
+  }
+  
+  :where(*:is([data-bs-scroll~="inner"])) .modal-body {
+    overflow: auto;
+  }
+  
+  .modal-footer {
+    display: flex;
+    flex: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 40px 30px 50px!important;
+
+    @media (max-width: $tablet){
+        padding: 20px 25px 50px!important;
+    }
+    .button {
+        max-width:250px;
+    }
+  }
+  
+  .modal-backdrop {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-timing-function: linear;
+  }
+  
+  .modal-backdrop:is(.is-active) {
+    background-color: color-mix(in srgb, #000 50%, transparent);
+  }
+
+  .modal-body {
+    position: relative;
+    flex: auto;
+    padding-inline: 20px;
+    padding-block: 18px;
+    padding: 50px 60px!important;
+    @media (max-width: $tablet){
+        padding: 25px 20px!important;
+    }
+  }
+
+  .modal-inner {
+    background:#1D1D1F;
+    border-radius: 10px;
+    padding: 60px!important;
+    @media (max-width: $tablet){
+        padding: 20px!important;
+    }
+  }
+
+  .modal-policy {
+    color:#99999A;
+    h6 {padding:10px 0;color:#fff;font-weight:700;font-size:16px;}
+    p {color:#99999A;}
+  }
+}
