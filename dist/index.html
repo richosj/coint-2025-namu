@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="해양수산부 무인도서 종합정보제공">
-    <meta property="og:description" content="무인도서 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
-    
-    <meta name="subject" content="무인도서(무인도)">
-    <meta name="title" content="해양수산부 무인도서(무인도) 종합정보제공">
-    <meta name="description" content="무인도서(무인도) 정보제공은 섬 이름, 지번, 면적, 육지와의 거리 등 일반 개요와 인문･사회, 지형･지질, 육상 및 해양생물 등 환경･생태계 정보를 제공합니다.">
-    <meta name="keywords" content="무인도,무인도 정보,무인도 정보조회,무인도서,무인도서 정보관리,무인도서 종합정보시스템,해양수산부">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta name="subject" content="">
+    <meta name="title" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -19,15 +18,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     
-    
     <link rel="manifest" href="site.webmanifest">
     
-    <title>해양수산부 무인도서 종합정보제공</title>
+    <title></title>
     <link rel="stylesheet" as="style" href="./font/pretendard-gov-subset.css" />
     <script src="./lib/gsap/gsap.min.js"></script>
     <script src="./lib/gsap/ScrollTrigger.min.js"></script>
     <script src="./lib/gsap/ScrollToPlugin.min.js"></script>
-    <script src="./lib/gsap/ScrollSmoother.js"></script>    <style>
+    <script src="./lib/gsap/ScrollSmoother.js"></script>
+    <script src="./lib/bootstrap/core/bootstrap.bundle.custom.js"></script>    <style>
         @font-face {
             font-family: 'ChosunGu';
             src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
@@ -35,15 +34,20 @@
             font-style: normal;
         }
     </style>
-  <script type="module" src="./assets/js/modulepreload-polyfill.js"></script>
+  <script type="module" src="./assets/js/main.js"></script>
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
 <body>
     <style>
+        html,
         body{
+            background-color: #fff;
             padding-top: 3rem;
             font-family: 'ChosunGu';
+        }
+        h1{
+            color: #000;
         }
         table{
             border-collapse: collapse;
@@ -67,9 +71,12 @@
             border: 1px solid #ddd;   
             padding: 7px 10px;
             white-space: nowrap;
+            color: #000;
         }
         
-        
+        table td a, table th a{
+            color: #000;
+        }
         .link-page{
             margin: 0 auto;
             width: 1200px;
@@ -90,6 +97,8 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 1.4rem;
+            color: #000;
+            background-color: #fff;
         }
         .search-box button {
             margin-left: 1rem;
@@ -108,78 +117,12 @@
             display: none;
         }
     </style>
-    <h1>2025 무인도서 서비스 개편 사업</h1>
+    <h1>2025 Publish</h1>
     
     <div class="link-page">
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
-            <button id="searchButton">검색</button>
-
-            <a href="https://twitter.com/intent/tweet?url=https://yourpage.com&text=공유할 텍스트" target="_blank">
-                <img src="twitter-icon.png" alt="트위터 공유">
-              </a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourpage.com" target="_blank">
-                <img src="facebook-icon.png" alt="페이스북 공유">
-              </a>
-
-              <a href="#" id="share-btn">공유</a>
-
-              <script>
-                const shareBtn = document.getElementById('share-btn');
-
-                // OS & 브라우저 감지 함수
-                function detectEnvironment() {
-                const ua = navigator.userAgent.toLowerCase();
-                const isWindows = navigator.platform.startsWith('Win');
-                const isMac = navigator.platform.startsWith('Mac');
-                const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-                const isChrome = ua.includes('chrome') && !ua.includes('edg');
-                const isEdge = ua.includes('edg');
-                const isFirefox = ua.includes('firefox');
-
-                return { isWindows, isMac, isSafari, isChrome, isEdge, isFirefox };
-                }
-
-                shareBtn.addEventListener('click', async () => {
-                const { isWindows, isMac, isSafari, isChrome, isEdge } = detectEnvironment();
-
-                if (navigator.share) {
-                    try {
-                    await navigator.share({
-                        title: '공유 제목',
-                        text: '공유할 내용',
-                        url: 'https://happybean.naver.com'
-                    });
-                    console.log('공유 성공');
-                    } catch (err) {
-                    console.warn('공유 실패', err);
-                    }
-                } else {
-                    // 환경별 안내
-                    if (isWindows) {
-                    alert('이 브라우저는 공유 기능을 지원하지 않아. Chrome 최신버전이나 모바일 기기에서 시도해봐.');
-                    } else if (isMac && isSafari) {
-                    alert('Safari는 공유 기능을 지원하지만 현재 사용 중인 Safari 버전이 안 맞을 수 있어.');
-                    } else if (isMac && !isSafari) {
-                    alert('macOS에서는 Safari에서만 공유 기능이 제대로 작동해.');
-                    } else {
-                    alert('이 환경에서는 공유 기능을 지원하지 않아.');
-                    }
-
-                    // 복사 대안
-                    const url = 'https://happybean.naver.com';
-                    try {
-                    await navigator.clipboard.writeText(url);
-                    alert('공유할 링크가 클립보드에 복사됐어:\n' + url);
-                    } catch {
-                    alert('링크 복사도 실패했어. 수동으로 복사해:\n' + url);
-                    }
-                }
-                });
-
-
-              </script>
-              
+            <input type="text" id="searchInput" placeholder="Search">
+            <button id="searchButton">Search</button>
         </div>
         <table>
             <thead>
@@ -193,129 +136,115 @@
             </thead>
             <tbody id="tableBody">
                 <tr>
+                    <td><a href="./find_id.html" target="_blank">find_id.html</a></td>
+                    <td>Find ID</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./find_id_result.html" target="_blank">find_id_result.html</a></td>
+                    <td>Find ID result</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./find_pw.html" target="_blank">find_pw.html</a></td>
+                    <td>Find PW</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./find_pw_change1.html" target="_blank">find_pw_change1.html</a></td>
+                    <td>Find PW</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./find_pw_change2.html" target="_blank">find_pw_change2.html</a></td>
+                    <td>Find PW</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./find_pw_step1.html" target="_blank">find_pw_step1.html</a></td>
+                    <td>Find PW</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./find_pw_step2.html" target="_blank">find_pw_step2.html</a></td>
+                    <td>Find PW</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./find_pw_step2_resend.html" target="_blank">find_pw_step2_resend.html</a></td>
+                    <td>Find PW</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
                     <td><a href="./layout.html" target="_blank">layout.html</a></td>
-                    <td>기초구성</td>
-                    <td>2025-07-16</td>
-                    <td>2025-07-16</td>
+                    <td>layout</td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td><a href="./map-open.html" target="_blank">map-open.html</a></td>
-                    <td>지도로 보는 무인도서 숨김창 확인</td>
-                    <td>2025-07-30</td>
-                    <td>2025-07-31</td>
-                    <td>a태그 &gt; button, 정보창, slider 스크립트추가 등!</td>
-                </tr>
-                <tr>
-                    <td><a href="./map.html" target="_blank">map.html</a></td>
-                    <td>지도로 보는 무인도서</td>
-                    <td>2025-07-08</td>
-                    <td>2025-07-31</td>
-                    <td>a태그 &gt; button, 정보창, slider 스크립트추가 등!</td>
-                </tr>
-                <tr>
-                    <td><a href="./기타_개인정보처리방침.html" target="_blank">기타_개인정보처리방침.html</a></td>
-                    <td>개인정보처리방침</td>
-                    <td>2025-09-01</td>
-                    <td>-</td>
+                    <td><a href="./login.html" target="_blank">login.html</a></td>
+                    <td>login</td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td><a href="./메인.html" target="_blank">메인.html</a></td>
-                    <td>메인</td>
-                    <td>2025-07-29</td>
-                    <td>2025-07-31</td>
-                    <td>메인효과 추가</td>
-                </tr>
-                <tr>
-                    <td><a href="./무인도서안내_무인도서정의.html" target="_blank">무인도서안내_무인도서정의.html</a></td>
-                    <td>무인도서안내-무인도서정의</td>
-                    <td>2025-07-17</td>
-                    <td>2025-07-17</td>
+                    <td><a href="./sign_up_1.html" target="_blank">sign_up_1.html</a></td>
+                    <td>login</td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td><a href="./무인도서안내_무인도서현황.html" target="_blank">무인도서안내_무인도서현황.html</a></td>
-                    <td>무인도서안내-무인도서 현황</td>
-                    <td>2025-07-16</td>
-                    <td>2025-07-30</td>
-                    <td>지역별 갯수 text화</td>
-                </tr>
-                <tr>
-                    <td><a href="./무인도서안내_이용방법.html" target="_blank">무인도서안내_이용방법.html</a></td>
-                    <td>무인도서안내-이용방법</td>
-                    <td>2025-07-17</td>
-                    <td>2025-07-21</td>
-                    <td>띄워쓰기,이미지 교체</td>
-                </tr>
-                <tr>
-                    <td><a href="./무인도서자료실_무인도서OPENAPI-신청.html" target="_blank">무인도서자료실_무인도서OPENAPI-신청.html</a></td>
-                    <td>무인도서 자료실-무인도서 OpenAPI 신청</td>
-                    <td>2025-07-21</td>
-                    <td>2025-07-21</td>
-                    <td>Code 플러그인 추가</td>
-                </tr>
-                <tr>
-                    <td><a href="./무인도서자료실_무인도서OPENAPI-조회.html" target="_blank">무인도서자료실_무인도서OPENAPI-조회.html</a></td>
-                    <td>무인도서 자료실-무인도서 OpenAPI 조회</td>
-                    <td>2025-07-21</td>
-                    <td>2025-07-21</td>
-                    <td>모바일 지원 안함</td>
-                </tr>
-                <tr>
-                    <td><a href="./무인도서자료실_무인도서OPENAPI.html" target="_blank">무인도서자료실_무인도서OPENAPI.html</a></td>
-                    <td>무인도서 자료실-무인도서 OPENAPI</td>
-                    <td>2025-07-18</td>
-                    <td>2025-07-18</td>
+                    <td><a href="./sign_up_2.html" target="_blank">sign_up_2.html</a></td>
+                    <td>login</td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td><a href="./무인도서자료실_무인도서통계.html" target="_blank">무인도서자료실_무인도서통계.html</a></td>
-                    <td>무인도서 자료실-무인도서 통계</td>
-                    <td>2025-07-18</td>
-                    <td>2025-07-18</td>
+                    <td><a href="./sign_up_3.html" target="_blank">sign_up_3.html</a></td>
+                    <td>Find ID result</td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td><a href="./무인도서자료실_무인도서홍보-상세.html" target="_blank">무인도서자료실_무인도서홍보-상세.html</a></td>
-                    <td>무인도서 자료실-무인도서 상세</td>
-                    <td>2025-07-23</td>
-                    <td>2025-07-23</td>
+                    <td><a href="./sign_up_4.html" target="_blank">sign_up_4.html</a></td>
+                    <td>Find PW</td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td><a href="./무인도서자료실_무인도서홍보.html" target="_blank">무인도서자료실_무인도서홍보.html</a></td>
-                    <td>무인도서 자료실-무인도서 홍보</td>
-                    <td>2025-07-23</td>
-                    <td>2025-07-23</td>
+                    <td><a href="./sign_up_5.html" target="_blank">sign_up_5.html</a></td>
+                    <td>Find ID result</td>
                     <td></td>
-                </tr>
-                <tr>
-                    <td><a href="./무인도서커뮤니티_FAQ.html" target="_blank">무인도서커뮤니티_FAQ.html</a></td>
-                    <td>무인도서 커뮤니티-FAQ</td>
-                    <td>2025-07-21</td>
-                    <td>2025-07-21</td>
                     <td></td>
-                </tr>
-                <tr>
-                    <td><a href="./무인도서커뮤니티_공지사항_목록.html" target="_blank">무인도서커뮤니티_공지사항_목록.html</a></td>
-                    <td>무인도서 커뮤니티-공지사항-목록</td>
-                    <td>2025-07-21</td>
-                    <td>2025-07-21</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><a href="./무인도서커뮤니티_공지사항_상세.html" target="_blank">무인도서커뮤니티_공지사항_상세.html</a></td>
-                    <td>무인도서 커뮤니티-공지사항-상세</td>
-                    <td>2025-07-21</td>
-                    <td>2025-07-21</td>
                     <td></td>
                 </tr>
             </tbody>
         </table>
         <div class="no-results" id="noResults">검색 결과가 없습니다.</div>
     </div>
-
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.getElementById('searchInput');

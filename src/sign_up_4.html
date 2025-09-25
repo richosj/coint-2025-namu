@@ -1,152 +1,173 @@
 <!-- @pageTitle Find PW -->
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    {{> meta }}
+  {{> meta }}
 </head>
+
 <body>
-    {{> header }}
-    
-    <div id="container" class="content_wrap join-page">
-        <h1 class="page-title narrow">NAMUHˣ Sign Up</h1>
-        <div class="page-content">
-          <div class="wrap-join">
-            <strong class="inform-title">Enter ID</strong>
-            <p class="text-information">Please enter the ID you want to recover the password for.</p>
-            <fieldset class="join-form">
-              <legend class="screen-reader-only">Login Form</legend>
-                <form action="#" method="post">
-                  <div class="form-item">
-                      <label for="user-email" class="label-title">ID (Email) <span class="color-red">*</span></label>
-                      <div class="items-flex row type-row-button">
-                        <input type="text" id="user-email" name="user-email" placeholder="Please check for duplicates after entering.">
-                        <a href="#" class="button button-darkblue button-medium">Check Duplicates</a>
-                      </div>
-                  </div>
-                  <div class="form-checkbox">
-                    <input type="checkbox" name="check-agreement1" id="check-agreement1">
-                    <label for="check-agreement1">
-                      <span class="color-mint">[Optional]</span> &nbsp;Consent to receive promotional and marketing information
-                      <a href="#" class="button-mini" data-bs-toggle="modal" data-bs-target="#modal1">view details</a>
-                    </label>
-                  </div>
+  {{> header }}
 
-
-                  <div class="form-item">
-                      <label for="text-password" class="label-title">Password <span class="color-red">*</span></label>
-                      <input type="password" id="text-password" name="text-password" placeholder="Please enter your name.">
-                  </div>
-                  
-                  <ul class="list-dot">
-                    <li>Please enter at least 10 characters. Use a combination of at least two of the following: uppercase/lowercase letters, numbers, and special characters.</li>
-                    <li>Allowed special characters: !@#$%^&*()_+-=~</li>
-                    <li>Avoid using your ID, birthdate, sequential numbers, or repeating personal info of more than 3 characters.</li>
-                  </ul>
-
-                  <div class="form-item">
-                      <label for="text-password2" class="label-title">Confirm Password <span class="color-red">*</span></label>
-                      <input type="password" id="text-password2" name="text-password2" placeholder="Please enter your name.">
-                  </div>
-
-                  <div class="form-item">
-                      <label for="name" class="label-title">Name</label>
-                      <input type="text" id="name" name="name" placeholder="" disabled value="name">
-                  </div>
-
-                  <div class="form-item">
-                      <label for="birth" class="label-title">Date of Birth</label>
-                      <input type="number" id="birth" name="birth" placeholder="" disabled value="19000801">
-                  </div>
-
-                  <div class="form-item">
-                      <label for="mobile-number" class="label-title">Mobile Phone Number</label>
-                      <input type="number" id="mobile-number" name="mobile-number" placeholder="" disabled value="01012345678">
-                  </div>
-
-                  <div class="form-checkbox">
-                    <input type="checkbox" name="check-agreement2" id="check-agreement2">
-                    <label for="check-agreement2">
-                      <span class="color-mint">[Optional]</span> &nbsp;Consent to receive promotional and marketing information
-                      <a href="#" class="button-mini" data-bs-toggle="modal" data-bs-target="#modal1">view details</a>
-                    </label>
-                  </div>
-
-
-                  <div class="buttons row">
-                    <a href="#" class="button button-primary button-full">Cancel</a>
-                    <button class="button button-mint button-full" type="submit">Sign Up</button>
-                  </div>
-              </form>
-            </fieldset>
-          </div>
-
-        
-          
-        </div>
-
-
-        <div class="modal" id="modal1" tabindex="-1" aria-labelledby="modal1Label" data-bs-placement="full">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 id="modal1Label" class="modal-title">Privacy Policy</h5>
-                        <button type="button" data-bs-dismiss="modal" class="modal-close">Close</button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="modal-inner">
-                        <!-- contents -->
-                        <div class="modal-policy">
-                          
-                          <p>
-                            We at SK Intellix Malaysia Sdn Bhd (“the Company“) recognise the importance of the privacy of your personal data and this Privacy Notice (“Notice”) is given in accordance with the Personal Data Protection Act 2010.<br><br>
-                            This Notice is issued for the purpose of informing you how we collect, process, use and/or disclose your personal data which is submitted by you when you enquire about our product(s) and/or service(s), when you access our website, when you enter into a contract and/or agreement with us, when you participate in any of our events and through our general business contact with you (collectively referred to as “Engagement”).
-                          </p>
-                          <br>
-                          <h6>PERSONAL DATA COLLECTION</h6>
-                          <br>
-                          <p>
-                            The types of personal data collected from you and processed by us include without limitation:-<br><br>
-
-                            1. name, date of birth, nationality, race, gender, NRIC / passport number, marital status, correspondence address, contact details including mobile, office and residential telephone number, e-mail address;<br>
-                            2. banking / financial details and/or creditworthiness information;<br>
-                            3. all other information required to comply with legal and regulatory requirements; and<br>
-                            4. any other additional information provided by you or third parties.<br><br>
-
-                            (collectively referred to as “Personal Data”)<br>
-                          </p>
-                          <br>
-                          <h6>PURPOSES OF PERSONAL DATA COLLECTION</h6>
-                          <br>
-                          <p>
-                            Your Personal Data is collected and processed by us for all and any purpose including but not limited to the following:-<br><br>
-
-                            1. to verify your identity;<br>
-                            2. to communicate with you;<br>
-                            3. to provide customer care and/or service including but not limited to responding to queries, comments, feedbacks and/or complaints and resolving them;<br>
-                            4. to keep you informed of our products, services, events, promotions and/or discounts;<br>
-                            5. to comply with legal and/or regulatory requirements;<br>
-                            6. to assist in the prevention, detection or investigation of crime or possible criminal activities or for the administration of justice;<br>
-                            7. for credit reference agencies, credit reporting agencies, Bank Negara Malaysia, any credit bureau and/or the Central Credit Reference Information System (“CCRIS”), government department or agencies, public registries, websites and publications;<br>
-                            8. for such other purpose as may be directed or consented to by you; and<br>
-                            9. for all other purposes in relation to or incidental to the above.<br><br>
-
-                            (collectively referred to as “Purposes ”)
-                          </p>
-
-                        </div>
-                        <!--// contents -->
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                        
-                        <button type="button" class="button button-mint button-full" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
+  <div id="container" class="content_wrap join-page">
+    <h1 class="page-title narrow">NAMUHˣ Sign Up</h1>
+    <div class="page-content">
+      <div class="wrap-join">
+        <strong class="inform-title">Enter ID</strong>
+        <p class="text-information">Please enter the ID you want to recover the password for.</p>
+        <fieldset class="join-form">
+          <legend class="screen-reader-only">Login Form</legend>
+          <form action="#" method="post">
+            <div class="form-item">
+              <label for="user-email" class="label-title">ID (Email) <span class="color-red">*</span></label>
+              <div class="items-flex row type-row-button">
+                <input type="text" id="user-email" name="user-email"
+                  placeholder="Please check for duplicates after entering.">
+                <a href="#" class="button button-darkblue button-medium">Check Duplicates</a>
+              </div>
             </div>
-        </div>
+            <div class="form-checkbox">
+              <input type="checkbox" name="check-agreement1" id="check-agreement1">
+              <label for="check-agreement1">
+                <span class="color-mint">[Optional]</span> &nbsp;Consent to receive promotional and marketing
+                information
+                <a href="#" class="button-mini" data-bs-toggle="modal" data-bs-target="#modal1">view details</a>
+              </label>
+            </div>
+
+
+            <div class="form-item">
+              <label for="text-password" class="label-title">Password <span class="color-red">*</span></label>
+              <input type="password" id="text-password" name="text-password" placeholder="Please enter your name.">
+            </div>
+
+            <ul class="list-dot">
+              <li>Please enter at least 10 characters. Use a combination of at least two of the following:
+                uppercase/lowercase letters, numbers, and special characters.</li>
+              <li>Allowed special characters: !@#$%^&*()_+-=~</li>
+              <li>Avoid using your ID, birthdate, sequential numbers, or repeating personal info of more than 3
+                characters.</li>
+            </ul>
+
+            <div class="form-item">
+              <label for="text-password2" class="label-title">Confirm Password <span class="color-red">*</span></label>
+              <input type="password" id="text-password2" name="text-password2" placeholder="Please enter your name.">
+            </div>
+
+            <div class="form-item">
+              <label for="name" class="label-title">Name</label>
+              <input type="text" id="name" name="name" placeholder="" disabled value="name">
+            </div>
+
+            <div class="form-item">
+              <label for="birth" class="label-title">Date of Birth</label>
+              <input type="number" id="birth" name="birth" placeholder="" disabled value="19000801">
+            </div>
+
+            <div class="form-item">
+              <label for="mobile-number" class="label-title">Mobile Phone Number</label>
+              <input type="number" id="mobile-number" name="mobile-number" placeholder="" disabled value="01012345678">
+            </div>
+
+            <div class="form-checkbox">
+              <input type="checkbox" name="check-agreement2" id="check-agreement2">
+              <label for="check-agreement2">
+                <span class="color-mint">[Optional]</span> &nbsp;Consent to receive promotional and marketing
+                information
+                <a href="#" class="button-mini" data-bs-toggle="modal" data-bs-target="#modal1">view details</a>
+              </label>
+            </div>
+
+
+            <div class="buttons row">
+              <a href="#" class="button button-primary button-full">Cancel</a>
+              <button class="button button-mint button-full" type="submit">Sign Up</button>
+            </div>
+          </form>
+        </fieldset>
+      </div>
+
+
 
     </div>
 
-    <script type="module" src="/js/main.js"></script>
+
+    <div class="modal" id="modal1" tabindex="-1" aria-labelledby="modal1Label" data-bs-placement="full">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="modal1Label" class="modal-title">Privacy Policy</h5>
+            <button type="button" data-bs-dismiss="modal" class="modal-close">Close</button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-inner">
+              <!-- contents -->
+              <div class="modal-policy">
+
+                <p>
+                  We at SK Intellix Malaysia Sdn Bhd (“the Company“) recognise the importance of the privacy of your
+                  personal data and this Privacy Notice (“Notice”) is given in accordance with the Personal Data
+                  Protection Act 2010.<br><br>
+                  This Notice is issued for the purpose of informing you how we collect, process, use and/or disclose
+                  your personal data which is submitted by you when you enquire about our product(s) and/or service(s),
+                  when you access our website, when you enter into a contract and/or agreement with us, when you
+                  participate in any of our events and through our general business contact with you (collectively
+                  referred to as “Engagement”).
+                </p>
+                <br>
+                <h6>PERSONAL DATA COLLECTION</h6>
+                <br>
+                <p>
+                  The types of personal data collected from you and processed by us include without limitation:-<br><br>
+
+                  1. name, date of birth, nationality, race, gender, NRIC / passport number, marital status,
+                  correspondence address, contact details including mobile, office and residential telephone number,
+                  e-mail address;<br>
+                  2. banking / financial details and/or creditworthiness information;<br>
+                  3. all other information required to comply with legal and regulatory requirements; and<br>
+                  4. any other additional information provided by you or third parties.<br><br>
+
+                  (collectively referred to as “Personal Data”)<br>
+                </p>
+                <br>
+                <h6>PURPOSES OF PERSONAL DATA COLLECTION</h6>
+                <br>
+                <p>
+                  Your Personal Data is collected and processed by us for all and any purpose including but not limited
+                  to the following:-<br><br>
+
+                  1. to verify your identity;<br>
+                  2. to communicate with you;<br>
+                  3. to provide customer care and/or service including but not limited to responding to queries,
+                  comments, feedbacks and/or complaints and resolving them;<br>
+                  4. to keep you informed of our products, services, events, promotions and/or discounts;<br>
+                  5. to comply with legal and/or regulatory requirements;<br>
+                  6. to assist in the prevention, detection or investigation of crime or possible criminal activities or
+                  for the administration of justice;<br>
+                  7. for credit reference agencies, credit reporting agencies, Bank Negara Malaysia, any credit bureau
+                  and/or the Central Credit Reference Information System (“CCRIS”), government department or agencies,
+                  public registries, websites and publications;<br>
+                  8. for such other purpose as may be directed or consented to by you; and<br>
+                  9. for all other purposes in relation to or incidental to the above.<br><br>
+
+                  (collectively referred to as “Purposes ”)
+                </p>
+
+              </div>
+              <!--// contents -->
+            </div>
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" class="button button-mint button-full" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  {{> footer }}
+  <script type="module" src="/js/main.js"></script>
 </body>
+
 </html>

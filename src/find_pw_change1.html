@@ -1,63 +1,71 @@
 <!-- @pageTitle Find PW -->
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    {{> meta }}
+  {{> meta }}
 </head>
+
 <body>
-    {{> header }}
-    
-    <div id="container" class="content_wrap login-page">
-        <h1 class="page-title narrow">Change Password</h1>
-        <div class="page-content">
-          <div class="wrap-login">
-            <p class="text-information">
-              Please enter a new password.<br>
-              Be careful not to expose your password to others.
-            </p>
-            
-            <fieldset class="login-form">
-              <legend class="screen-reader-only">change Password Form</legend>
-                <form action="#" method="post">
-                  <div class="form-item">
-                      <label for="user-id" class="label-title">ID (Email)</label>
-                      <input type="text" id="user-id" name="user-id" placeholder="Please enter your ID (email)." value="ID@emial_account.com" disabled>
-                  </div>
-                  <div class="form-item">
-                      <label for="new-password1" class="label-title">New Password <span class="color-red">*</span></label>
-                      <input type="number" id="new-password1" name="new-password1" placeholder="Please enter at least 10 characters.">
-                  </div>
-                  <div class="form-item">
-                      <label for="new-password2" class="label-title">Confirm New Password <span class="color-red">*</span></label>
-                      <input type="number" id="new-password2" name="new-password2" placeholder="Please enter the same password.">
-                  </div>
-                  
-                  <div class="buttons row buttons-last">
-                    <a href="#" class="button button-primary button-full">Login</a>
-                    <a href="#" class="button button-mint button-full">Change Password</a>
-                  </div>
-          
-              </form>
-            </fieldset>
+  {{> header }}
 
-            <div class="inform-wrap">
-              <strong class="inform-title">
-                <i class="icon"><img src="/assets/images/icon/proicons_alert-circle.svg" alt=""></i> 
-                Password Rules:
-              </strong>
+  <div id="container" class="content_wrap login-page">
+    <h1 class="page-title narrow">Change Password</h1>
+    <div class="page-content">
+      <div class="wrap-login">
+        <p class="text-information">
+          Please enter a new password.<br>
+          Be careful not to expose your password to others.
+        </p>
 
-              <ul class="list-dot">
-                <li>Must be at least 10 characters long.</li>
-                <li>Use a combination of uppercase/lowercase letters, numbers, and at least two special characters.</li>
-                <li>Allowed special characters: !@#$%^&*()_+-=~</li>
-                <li>Avoid using personal information such as your ID (email), birthdate, or phone number, and do not use three or more consecutive characters in order.</li>
-                <li>For better security, use a password that you haven’t used on other sites or previously on this site</li>
-              </ul>
+        <fieldset class="login-form">
+          <legend class="screen-reader-only">change Password Form</legend>
+          <form action="#" method="post">
+            <div class="form-item">
+              <label for="user-id" class="label-title">ID (Email)</label>
+              <input type="text" id="user-id" name="user-id" placeholder="Please enter your ID (email)."
+                value="ID@emial_account.com" disabled>
             </div>
-         
-        </div>
-    </div>
+            <div class="form-item">
+              <label for="new-password1" class="label-title">New Password <span class="color-red">*</span></label>
+              <input type="number" id="new-password1" name="new-password1"
+                placeholder="Please enter at least 10 characters.">
+            </div>
+            <div class="form-item">
+              <label for="new-password2" class="label-title">Confirm New Password <span
+                  class="color-red">*</span></label>
+              <input type="number" id="new-password2" name="new-password2"
+                placeholder="Please enter the same password.">
+            </div>
 
-    <script type="module" src="/js/main.js"></script>
+            <div class="buttons row buttons-last">
+              <a href="#" class="button button-primary button-full">Login</a>
+              <a href="#" class="button button-mint button-full">Change Password</a>
+            </div>
+
+          </form>
+        </fieldset>
+
+        <div class="inform-wrap">
+          <strong class="inform-title">
+            <i class="icon"><img src="/assets/images/icon/proicons_alert-circle.svg" alt=""></i>
+            Password Rules:
+          </strong>
+
+          <ul class="list-dot">
+            <li>Must be at least 10 characters long.</li>
+            <li>Use a combination of uppercase/lowercase letters, numbers, and at least two special characters.</li>
+            <li>Allowed special characters: !@#$%^&*()_+-=~</li>
+            <li>Avoid using personal information such as your ID (email), birthdate, or phone number, and do not use
+              three or more consecutive characters in order.</li>
+            <li>For better security, use a password that you haven’t used on other sites or previously on this site</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{> footer }}
+  <script type="module" src="/js/main.js"></script>
 </body>
+
 </html>

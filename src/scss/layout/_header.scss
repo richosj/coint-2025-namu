@@ -268,7 +268,7 @@ body{
    -webkit-backdrop-filter: blur(50px);
    backdrop-filter: blur(50px);
    z-index: 1100;
-   background: url('@/assets/images/bg/mobile_menu_bg.svg') no-repeat 50% 100% / 100% auto rgba(13, 15, 18, 0.8);
+   background: url('@/assets/images/mobile_menu_bg.svg') no-repeat 50% 100% / 100% auto rgba(13, 15, 18, 0.8);
    transition: transform 0.3s ease;
 }
 
