@@ -88,15 +88,15 @@ document.addEventListener("DOMContentLoaded", function() {
     btn.addEventListener("click", function() {
       const submenu = btn.closest("li").querySelector(".mobile-menu-submenu");
       if (submenu) {
-        const isActive = submenu.style.display === "block";
+        const isActive = submenu.classList.contains("active");
         document.querySelectorAll(".mobile-menu-submenu").forEach((menu) => {
-          menu.style.display = "none";
+          menu.classList.remove("active");
         });
         document.querySelectorAll(".toggle-btn").forEach((toggleBtn) => {
           toggleBtn.classList.remove("active");
         });
         if (!isActive) {
-          submenu.style.display = "block";
+          submenu.classList.add("active");
           btn.classList.add("active");
         }
       }
